@@ -48,10 +48,9 @@
 
 ### 2.2 Use Case Diagram
 
-![UseCaseDiagram]()
+![UseCaseDiagram](https://user-images.githubusercontent.com/62339676/197333633-46ff9ed8-137f-4a6b-8b57-3e35bdc309aa.png)
 
 ### 2.3 Technology Stack
-
 
 
 ## 3. Specific Requirements
