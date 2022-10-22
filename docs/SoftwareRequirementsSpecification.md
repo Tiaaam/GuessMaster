@@ -4,7 +4,7 @@
 
 - [Table of contens](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#table-of-contents)
 - [Introduction](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#1-introduction)
-  - Purpose
+  - [Purpose](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#11-purpose)
   - Scope
   - Definitions, Acronyms and Abbreviations
   - References
@@ -32,6 +32,8 @@
 ## 1. Introduction
 
 ### 1.1 Purpose
+
+This Software Requirements Specification (SRS) describes all specifications for the application “GuessMaster”. It includes an overview about this project and its vision, detailed information about the planned features and boundary conditions of the development process.
 
 ### 1.2 Scope
 
