@@ -96,6 +96,8 @@ Until the End of Semester 4 we plan to implement:
 
 Explain the feature ...
 
+[Gamemode Selection](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SRS_Gammode_Selection.md)
+
 #### 3.1.2 Settings
 
 Explain the feature ...
