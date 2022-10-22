@@ -3,7 +3,7 @@
 ## Table of contents
 
 - [Table of contens](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#table-of-contents)
-- [Introduction](https://github.com/Tiaaam/GuessMaster/edit/master/docs/SoftwareRequirementsSpecification.md#1-introduction)
+- [Introduction](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#1-introduction)
   - Purpose
   - Scope
   - Definitions, Acronyms and Abbreviations
@@ -11,9 +11,9 @@
   - Overview
 - [Overall Description](https://github.com/Tiaaam/GuessMaster/edit/master/docs/SoftwareRequirementsSpecification.md#2-overall-description)
   - Vision
-  - [Use Case Diagram](https://github.com/Tiaaam/GuessMaster/edit/master/docs/SoftwareRequirementsSpecification.md#22-use-case-diagram)
+  - [Use Case Diagram](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#22-use-case-diagram)
   - Technology Stack
-- [Specific Requirments](https://github.com/Tiaaam/GuessMaster/edit/master/docs/SoftwareRequirementsSpecification.md#3-specific-requirements)
+- [Specific Requirments](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#3-specific-requirements)
   - Functionality
   - Usability
   - Reliability
@@ -26,7 +26,7 @@
   - Legal, Copyright And Other Notices
   - Applicable Standards
   - Specitifc Requirements
-- [Supporting Information](https://github.com/Tiaaam/GuessMaster/edit/master/docs/SoftwareRequirementsSpecification.md#4-supporting-information)
+- [Supporting Information](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#4-supporting-information)
   
  
 ## 1. Introduction
