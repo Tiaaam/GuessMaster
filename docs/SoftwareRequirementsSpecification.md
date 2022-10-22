@@ -12,7 +12,7 @@
 - [Overall Description](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#2-overall-description)
   - Vision
   - [Use Case Diagram](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#22-use-case-diagram)
-  - Technology Stack
+  - [Technology Stack](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#23-technology-stack)
 - [Specific Requirments](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#3-specific-requirements)
   - Functionality
   - Usability
@@ -92,3 +92,4 @@ The technology we use is:
 
 ## 4. Supporting Information
 
+For any further information you can contact the GuessMaster Team or check out our weekly blog post on discord.
