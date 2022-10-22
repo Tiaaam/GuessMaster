@@ -54,6 +54,16 @@ This Software Requirements Specification (SRS) describes all specifications for 
 
 ### 2.3 Technology Stack
 
+The technology we use is:
+
+| Section            | Technology                             |
+| ------------------ | -------------------------------------- |
+| Backend            | ?                                      |
+| Frontend           | ?                                      |
+| IDE                | ?                                      |
+| Project Management | Azure DevOps, Github                   |
+| Testing            | ?                                      |
+
 
 ## 3. Specific Requirements
 
