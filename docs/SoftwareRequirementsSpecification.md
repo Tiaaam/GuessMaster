@@ -11,7 +11,7 @@
   - Overview
 - [Overall Description](https://github.com/Tiaaam/GuessMaster/edit/master/docs/SoftwareRequirementsSpecification.md#2-overall-description)
   - Vision
-  - Use Case Diagram
+  - [Use Case Diagram](https://github.com/Tiaaam/GuessMaster/edit/master/docs/SoftwareRequirementsSpecification.md#22-use-case-diagram)
   - Technology Stack
 - [Specific Requirments](https://github.com/Tiaaam/GuessMaster/edit/master/docs/SoftwareRequirementsSpecification.md#3-specific-requirements)
   - Functionality
