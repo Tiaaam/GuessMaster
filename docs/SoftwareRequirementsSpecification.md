@@ -9,7 +9,7 @@
   - Definitions, Acronyms and Abbreviations
   - References
   - Overview
-- [Overall Description](https://github.com/Tiaaam/GuessMaster/edit/master/docs/SoftwareRequirementsSpecification.md#2-overall-description)
+- [Overall Description](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#2-overall-description)
   - Vision
   - [Use Case Diagram](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#22-use-case-diagram)
   - Technology Stack
