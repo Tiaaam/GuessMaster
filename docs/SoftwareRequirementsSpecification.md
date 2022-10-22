@@ -5,10 +5,10 @@
 - [Table of contens](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#table-of-contents)
 - [Introduction](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#1-introduction)
   - [Purpose](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#11-purpose)
-  - Scope
-  - Definitions, Acronyms and Abbreviations
-  - References
-  - Overview
+  - [Scope](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#12-scope)
+  - [Definitions, Acronyms and Abbreviations](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#13-definitions-acronyms-and-abbreviations)
+  - [References](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#14-references)
+  - [Overview](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#15-overview)
 - [Overall Description](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#2-overall-description)
   - Vision
   - [Use Case Diagram](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#22-use-case-diagram)
