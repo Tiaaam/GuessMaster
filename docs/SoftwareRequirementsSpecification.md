@@ -48,6 +48,8 @@
 
 ### 2.2 Use Case Diagram
 
+![UseCaseDiagram]()
+
 ### 2.3 Technology Stack
 
 
