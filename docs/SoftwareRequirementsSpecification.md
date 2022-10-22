@@ -14,7 +14,7 @@
   - [Use Case Diagram](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#22-use-case-diagram)
   - [Technology Stack](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#23-technology-stack)
 - [Specific Requirments](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#3-specific-requirements)
-  - Functionality
+  - [Functionality](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#31-functionality)
   - Usability
   - Reliability
   - Performance
@@ -82,6 +82,32 @@ The technology we use is:
 ## 3. Specific Requirements
 
 ### 3.1 Functionality
+
+In this subsection, we will explain the different Use Cases with the associated functionalities. The individual Use Cases can be taken from the Use Case Diagram in 2.2.
+
+Until the End of Semester 4 we plan to implement:
+
+- 3.1.1 Gamemode Selection
+- 3.1.2 Settings
+- 3.1.3 Lobby System
+- 3.1.4 The Game itself
+
+#### 3.1.1 Gamemode Selection
+
+Explain the feature ...
+
+#### 3.1.2 Settings
+
+Explain the feature ...
+
+#### 3.1.3 Lobby System
+
+Explain the feature ...
+
+#### 3.1.1 The Game itself
+
+Explain the feature ...
+
 
 ### 3.2 Usability
 
