@@ -2,7 +2,7 @@
 
 ## Table of contents
 
-- [Table of contens](https://github.com/Tiaaam/GuessMaster/edit/master/docs/SoftwareRequirementsSpecification.md#table-of-contents)
+- [Table of contens](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#table-of-contents)
 - [Introduction](https://github.com/Tiaaam/GuessMaster/edit/master/docs/SoftwareRequirementsSpecification.md#1-introduction)
   - Purpose
   - Scope
