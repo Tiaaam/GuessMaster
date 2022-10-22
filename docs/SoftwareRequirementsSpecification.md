@@ -37,12 +37,26 @@ This Software Requirements Specification (SRS) describes all specifications for 
 
 ### 1.2 Scope
 
+The project is going to be realized as a web application.
+
+...
+
+
 ### 1.3 Definitions, Acronyms and Abbreviations
+
+| Abbrevation | Explanation                            |
+| ----------- | -------------------------------------- |
+| SRS         | Software Requirements Specification    |
 
 ### 1.4 References
 
+| Title                                                              | Publishing organization   |
+| -------------------------------------------------------------------| ------------------------- |
+| [GitHub](https://github.com/Tiaaam/GuessMaster)                    | GuessMaster Team          |
+
 ### 1.5 Overview
 
+In the next chapter we will give you an overview of our vision and our Use Case Diagram. Furthermore you will get tho know more about the technology we use. The third chapter (Specific Requirements) provides more details about the Functionality, Usability and more. And last but not least you can find more helpful information about the project.
 
 ## 2. Overall Description
 
