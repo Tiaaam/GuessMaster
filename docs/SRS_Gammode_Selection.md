@@ -3,6 +3,8 @@
 ## 1. Gamemode Selection
 
 ### 1.1 Brief Description
+The home page of the game should allow to enter various info and allow the user to choose between the various choices.
+At first, the user can enter his game name.Afterwards the player can join a quick game (with radnom players) or entering a friends lobby. For that he has to type in the lobby code. Furthermore the player also has the possibilty to create a new lobby.
 
 ### 1.2 Mockup
 
