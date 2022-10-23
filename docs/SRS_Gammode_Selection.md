@@ -6,7 +6,7 @@
 
 ### 1.2 Mockup
 
-
+![Game Selection](https://user-images.githubusercontent.com/62339676/197399336-873d976e-2287-48c8-a130-b24047585da8.jpg)
 
 ## 2 Flow of Events
 
