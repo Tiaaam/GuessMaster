@@ -3,8 +3,11 @@
 ## 1. Gamemode Selection
 
 ### 1.1 Brief Description
-The home page of the game should allow to enter various info and allow the user to choose between the various choices.
-At first, the user can enter his game name.Afterwards the player can join a quick game (with radnom players) or entering a friends lobby. For that he has to type in the lobby code. Furthermore the player also has the possibilty to create a new lobby.
+The startscreen of GuessMaster shows various possibilities to navigate threw the game. At first the user is supposed to type in his ingame name. Then he has the opportunity to select between two ways to join a new game:
+
+The player can enter a quick game with random players (Quick game - Join now) or join a friends lobby (Private Game - Join now). For joining a friends lobby the user has to type in a specific code.
+
+Furthermore the player has also the possibility to create a new lobby (Create Game or Create now)
 
 ### 1.2 Mockup
 
