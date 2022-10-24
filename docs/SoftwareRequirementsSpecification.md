@@ -17,7 +17,7 @@
   - [Functionality](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#31-functionality)
   - [Usability](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#32-usability)
   - [Reliability](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#33-reliability)
-  - Performance
+  - [Performance](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#34-performance)
   - Supportability
   - Design Constraints
   - Online User Documentation and Help System Requirements
