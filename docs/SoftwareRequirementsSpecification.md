@@ -15,7 +15,7 @@
   - [Technology Stack](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#23-technology-stack)
 - [Specific Requirments](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#3-specific-requirements)
   - [Functionality](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#31-functionality)
-  - Usability
+  - [Usability](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#32-usability)
   - Reliability
   - Performance
   - Supportability
