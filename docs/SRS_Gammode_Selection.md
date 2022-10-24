@@ -3,11 +3,12 @@
 ## 1. Gamemode Selection
 
 ### 1.1 Brief Description
-The startscreen of GuessMaster shows various possibilities to navigate threw the game. At first the user is supposed to type in his ingame name. Then he has the opportunity to select between two ways to join a new game:
+Starting from our landing page our players will have to add their name (or alias) and can then choose from one of three options.
+1. When clicking on "Quick Game" they either join an ongoing public game or a public lobby with predefined settings will be opened.
+2. Joining a private game for guessing with e.g. friends or colleagues is easy, all you need to know is a code, enter it in the textbox and click on "Join now".
+3. If a player wants to create a lobby with custom settings, he/she can do so by simply clicking on the corresponding button. The player will then have some options, including the possibility to choose between a public or private game.
 
-The player can enter a quick game with random players (Quick game - Join now) or join a friends lobby (Private Game - Join now). For joining a friends lobby the user has to type in a specific code.
-
-Furthermore the player has also the possibility to create a new lobby (Create Game or Create now)
+We will change this section with the same frequency as we publish our blog posts. There we will post mockups of the different game pages online on a weekly basis.
 
 ### 1.2 Mockup
 
