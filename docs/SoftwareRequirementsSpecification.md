@@ -108,7 +108,7 @@ If the user chooses to create a game, they have the option to configure multiple
 
 #### 3.1.3 Lobby System
 
-Explain the feature ...
+To play a game with multiple users, it is nesseacry to implement a system, which allows the users to join the same lobby. This feature works as a waiting room until the creator of the lobby starts the game.
 
 [Lobby System](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SRS_Lobby_System.md)
 
