@@ -8,18 +8,21 @@ Starting from our landing page our players will have to add their name (or alias
 2. Joining a private game for guessing with e.g. friends or colleagues is easy, all you need to know is a code, enter it in the textbox and click on "Join now".
 3. If a player wants to create a lobby with custom settings, he/she can do so by simply clicking on the corresponding button. The player will then have some options, including the possibility to choose between a public or private game.
 
-We will change this section with the same frequency as we publish our blog posts. There we will post mockups of the different game pages online on a weekly basis.
-
 ### 1.2 Mockup
 
 ![Game Selection](https://user-images.githubusercontent.com/62339676/197399336-873d976e-2287-48c8-a130-b24047585da8.jpg)
 
 ## 2 Flow of Events
+·WIP·
 
 ## 3 Special requirement 
+·WIP·
 
 ## 4 Preconditions
+·WIP·
 
-## 5 Post conditions  
+## 5 Post conditions
+·WIP·
 
 ## 6 Effort estimation 
+·WIP·
