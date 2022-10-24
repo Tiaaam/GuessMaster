@@ -15,10 +15,21 @@ On the right side you can see a brief description for each game mode.
 
 ## 2 Flow of Events
 
+·WIP·
+
 ## 3 Special requirement 
+
+·WIP·
 
 ## 4 Preconditions
 
-## 5 Post conditions  
+·WIP·
+
+## 5 Post conditions 
+
+·WIP·
 
 ## 6 Effort estimation 
+
+·WIP·
+
