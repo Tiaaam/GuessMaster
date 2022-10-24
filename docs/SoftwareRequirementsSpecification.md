@@ -114,6 +114,7 @@ Explain the feature ...
 
 Explain the feature ...
 
+[The Game itself](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SRS_Game.md)
 
 ### 3.2 Usability
 
