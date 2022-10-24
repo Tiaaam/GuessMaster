@@ -39,14 +39,14 @@ This Software Requirements Specification (SRS) describes all specifications for 
 
 The project is going to be realized as a web application.
 
-...
-
+·WIP·
 
 ### 1.3 Definitions, Acronyms and Abbreviations
 
 | Abbrevation | Explanation                            |
 | ----------- | -------------------------------------- |
 | SRS         | Software Requirements Specification    |
+| ·WIP·       | Work in Progress                       |
 
 ### 1.4 References
 
@@ -62,6 +62,8 @@ In the next chapter we will give you an overview of our vision and our Use Case 
 
 ### 2.1 Vision
 
+·WIP·
+
 ### 2.2 Use Case Diagram
 
 ![UseCaseDiagram](https://user-images.githubusercontent.com/62339676/197333633-46ff9ed8-137f-4a6b-8b57-3e35bdc309aa.png)
@@ -72,9 +74,9 @@ The technology we use is:
 
 | Section            | Technology                             |
 | ------------------ | -------------------------------------- |
-| Backend            | ?                                      |
-| Frontend           | ?                                      |
-| IDE                | ?                                      |
+| Backend            | Unity                                  |
+| Frontend           | Unity                                  |
+| IDE                | Visual Studio 2022                     |
 | Project Management | Azure DevOps, Github                   |
 | Testing            | ?                                      |
 
@@ -118,25 +120,45 @@ Explain the feature ...
 
 ### 3.2 Usability
 
+·WIP·
+
 ### 3.3 Reliability
+
+·WIP·
 
 ### 3.4 Performance
 
+·WIP·
+
 ### 3.5 Supportability
+
+·WIP·
 
 ### 3.6 Design Constraints
 
+·WIP·
+
 ### 3.7 Online User Documentation and Help System Requirements
+
+·WIP·
 
 ### 3.8 Purchased Components
 
+·WIP·
+
 ### 3.9 Licensing Requirements
+
+·WIP·
 
 ### 3.10 Legal, Copyright And Other Notices
 
+·WIP·
+
 ### 3.11 Applicable Standards
+
+·WIP·
 
 
 ## 4. Supporting Information
 
-For any further information you can contact the GuessMaster Team or check out our weekly blog post on discord.
+For any further information you can contact the GuessMaster Team or check out our weekly blog post on discord. 
