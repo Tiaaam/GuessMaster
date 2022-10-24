@@ -22,13 +22,18 @@ Players will have the option to quit the lobby and the creator will additionally
 
 ·WIP·
 
-## 4 Preconditions
+## 4 Precondition
 
-·WIP·
+The precondition for this use case is:
+1. The user has either
+  1. Created a lobby and finished all settings or
+  2. joined a lobby (via Quick Game-join or code)
 
-## 5 Post conditions 
+## 5 Postconditions 
 
-·WIP·
+The postcondition for this usecase are:
+1. A lobby starts and the game begins or
+2. The user quits and ends up on our landingpage
 
 ## 6 Effort estimation 
 
