@@ -1,13 +1,10 @@
 # Use-Case Specification: The Game itself
 
 ## 1. The Game itself
+### 1.1 Brief Description
 
 Depending on the chosen gamemode there will be different questions. After a question is displayed, the players have a certain amount of time to answer each question. Each answer will be rewarded with GuessPoints. The better the guess the more points will be added. 
 The player with the most points wins the game.
-
-### 1.1 Brief Description
-
-·WIP·
 
 ### 1.2 Mockup
 
