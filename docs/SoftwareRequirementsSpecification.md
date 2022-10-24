@@ -62,7 +62,7 @@ In the next chapter we will give you an overview of our vision and our Use Case 
 
 ### 2.1 Vision
 
-·WIP·
+Our goal is to create a fun game to connect with others.
 
 ### 2.2 Use Case Diagram
 
