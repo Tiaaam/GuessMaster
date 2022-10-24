@@ -25,7 +25,7 @@
   - [Licensing Requirements](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#39-licensing-requirements)
   - [Legal, Copyright And Other Notices](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#310-legal-copyright-and-other-notices)
   - [Applicable Standards](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#311-applicable-standards)
-  - Specitifc Requirements
+  - [Specitifc Requirements](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#312-specitifc-requirements)
 - [Supporting Information](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#4-supporting-information)
   
  
