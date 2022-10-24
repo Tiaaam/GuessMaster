@@ -19,7 +19,7 @@
   - [Reliability](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#33-reliability)
   - [Performance](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#34-performance)
   - [Supportability](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#35-supportability)
-  - Design Constraints
+  - [Design Constraints](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#36-design-constraints)
   - Online User Documentation and Help System Requirements
   - Purchased Components
   - Licensing Requirements
