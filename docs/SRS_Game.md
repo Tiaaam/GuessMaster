@@ -22,11 +22,20 @@
 
 ## 4 Preconditions
 
-·WIP·
+The preconditions for this use case are:
 
-## 5 Post conditions  
+  1. The user has started the web-application
+  2. The user decided to create/join a game
+  3. The game got started in the lobby
 
-·WIP·
+## 5 Postconditions  
+
+The postconditions for this use case are:
+
+  1. The last round of the game ends
+  2. The final scoreboard gets displayed
+  3. The lobby gets terminated
+  4. The users get sent back to the Gamemode Selection
 
 ## 6 Effort estimation 
 
