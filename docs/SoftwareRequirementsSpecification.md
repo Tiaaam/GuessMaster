@@ -22,7 +22,7 @@
   - [Design Constraints](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#36-design-constraints)
   - [Online User Documentation and Help System Requirements](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#37-online-user-documentation-and-help-system-requirements)
   - [Purchased Components](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#38-purchased-components)
-  - Licensing Requirements
+  - [Licensing Requirements](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#39-licensing-requirements)
   - Legal, Copyright And Other Notices
   - Applicable Standards
   - Specitifc Requirements
