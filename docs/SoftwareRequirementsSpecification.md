@@ -10,7 +10,7 @@
   - [References](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#14-references)
   - [Overview](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#15-overview)
 - [Overall Description](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#2-overall-description)
-  - Vision
+  - [Vision](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#21-vision)
   - [Use Case Diagram](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#22-use-case-diagram)
   - [Technology Stack](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#23-technology-stack)
 - [Specific Requirments](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#3-specific-requirements)
