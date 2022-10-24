@@ -24,7 +24,7 @@
   - [Purchased Components](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#38-purchased-components)
   - [Licensing Requirements](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#39-licensing-requirements)
   - [Legal, Copyright And Other Notices](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#310-legal-copyright-and-other-notices)
-  - Applicable Standards
+  - [Applicable Standards](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#311-applicable-standards)
   - Specitifc Requirements
 - [Supporting Information](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#4-supporting-information)
   
@@ -158,6 +158,9 @@ Explain the feature ...
 
 ·WIP·
 
+### 3.12 Specitifc Requirements
+
+·WIP·
 
 ## 4. Supporting Information
 
