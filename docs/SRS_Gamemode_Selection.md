@@ -19,10 +19,15 @@ Starting from our landing page our players will have to add their name (or alias
 ·WIP·
 
 ## 4 Preconditions
-·WIP·
+
+The precondition for this use case is:
+
+  1. The user has started the web-application
 
 ## 5 Post conditions
-·WIP·
+The postcondition for this use case is:
+
+  1. The user is added to a specific lobby or creates one
 
 ## 6 Effort estimation 
 ·WIP·
