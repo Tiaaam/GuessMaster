@@ -102,7 +102,7 @@ This feature is very important for the project as it represents the different wa
 
 #### 3.1.2 Settings
 
-Explain the feature ...
+If the user chooses to create a game, they have the option to configure multiple aspects like number of rounds, number of players and more. This feature directly affects the properties of the game.
 
 [Settings](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SRS_Settings.md)
 
