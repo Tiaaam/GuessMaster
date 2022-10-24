@@ -114,7 +114,7 @@ To play a game with multiple users, it is nesseacry to implement a system, which
 
 #### 3.1.1 The Game itself
 
-Explain the feature ...
+In the game a question is displayed and the user has a specific amount of time to submit an answer. A correct or close answer is worth a certain amount of points getting saved and displayed in a scoreboard until the end of the game.
 
 [The Game itself](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SRS_Game.md)
 
