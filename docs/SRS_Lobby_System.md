@@ -3,11 +3,12 @@
 ## 1. Lobby System
 
 ### 1.1 Brief Description
-While creating a new lobby the creator can choose between different game modes, can enter the rounds and the timelimit. It is also possible to set the maximum number of players.
+While a GuessMaster-round is created but the actual game has not yet started, players will be able to join the lobby.
 
-The players who have already joined are displayed in the center of the screen.
+All the players who have already joined the lobby will be shown in the cetner of the screen.
+The game's settings will be displayed on the left side of the screen and a brief descirption of the gamemode on the right.
 
-On the right side you can see a brief description for each game mode.
+Players will have the option to quit the lobby and the creator will additionally be able to start the game.
 
 ### 1.2 Mockup
 
