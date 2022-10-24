@@ -4,7 +4,7 @@
 
 ### 1.1 Brief Description
 
-·WIP·
+If a user decides to create a game with custom settings he/she will be redirected to a new site. GuessMaster will offer various gamemodes to choose from. The amount of rounds, maximum lobby capacity (playerwise) and a timelimit for each round has to be set. The user must also decide whether the lobby should be public or private.
 
 ### 1.2 Mockup
 
