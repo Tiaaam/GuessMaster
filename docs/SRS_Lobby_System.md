@@ -26,8 +26,8 @@ Players will have the option to quit the lobby and the creator will additionally
 
 The precondition for this use case is:
 1. The user has either
-  1. Created a lobby and finished all settings or
-  2. joined a lobby (via Quick Game-join or code)
+  - Created a lobby and finished all settings or
+  - joined a lobby (via Quick Game-join or code)
 
 ## 5 Postconditions 
 
