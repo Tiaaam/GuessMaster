@@ -20,7 +20,7 @@
   - [Performance](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#34-performance)
   - [Supportability](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#35-supportability)
   - [Design Constraints](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#36-design-constraints)
-  - Online User Documentation and Help System Requirements
+  - [Online User Documentation and Help System Requirements](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#37-online-user-documentation-and-help-system-requirements)
   - Purchased Components
   - Licensing Requirements
   - Legal, Copyright And Other Notices
