@@ -8,7 +8,7 @@ If a user decides to create a game with custom settings he/she will be redirecte
 
 ### 1.2 Mockup
 
-·WIP·
+![Settings - GuessMaster](https://user-images.githubusercontent.com/62339676/197520833-bd1dbed7-c55a-4361-a8dc-9636a30f1c82.png)
 
 ## 2 Flow of Events
 
