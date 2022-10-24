@@ -96,7 +96,7 @@ Until the End of Semester 4 we plan to implement:
 
 #### 3.1.1 Gamemode Selection
 
-Explain the feature ...
+This feature is very important for the project as it represents the different ways for a user to enter a game. It is possible to join a public or private game. However, the user has the option to directly create a game by themself too.  
 
 [Gamemode Selection](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SRS_Gammode_Selection.md)
 
