@@ -25,7 +25,7 @@ The preconditions for this use case are:
   1. The user has started the web-application
   2. The user decided to create a game
 
-## 5 Post conditions
+## 5 Postconditions
 
 The postconditions for this use case are:
 
