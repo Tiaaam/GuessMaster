@@ -27,7 +27,7 @@ The preconditions for this use case are:
 
 ## 5 Post conditions
 
-The postcondition for this use case is:
+The postconditions for this use case are:
 
   1. A Lobby is created
   2. The creator gets added as the first member to the lobby
