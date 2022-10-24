@@ -20,11 +20,17 @@ If a user decides to create a game with custom settings he/she will be redirecte
 
 ## 4 Preconditions
 
-·WIP·
+The preconditions for this use case are:
+
+  1. The user has started the web-application
+  2. The user decided to create a game
 
 ## 5 Post conditions
 
-·WIP·
+The postcondition for this use case is:
+
+  1. A Lobby is created
+  2. The creator gets added as the first member to the lobby
 
 ## 6 Effort estimation 
 
