@@ -3,31 +3,64 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using TMPro;
 
 public class LobbyController : MonoBehaviourPunCallbacks
 {
     [SerializeField]
-    private GameObject quickStartButton;
+    private GameObject joinRandomRoomButton;
     [SerializeField]
-    private GameObject quickCancelButton;
+    private GameObject joinSpecificRoomButton;
+    [SerializeField]
+    private GameObject HostRoomButton;
+    [SerializeField]
+    private TextMeshProUGUI RoomIDInput;
+    [SerializeField]
+    private TextMeshProUGUI RoomIDLog;
+
+    [SerializeField]
+    private int multiplayerSceneIndex;
+    [SerializeField]
+    private int roomSceneIndex;
 
     public override void OnConnectedToMaster()
     {
         PhotonNetwork.AutomaticallySyncScene = true;
-        quickStartButton.SetActive(true);
+        joinRandomRoomButton.SetActive(true);
+        joinSpecificRoomButton.SetActive(true);
+        HostRoomButton.SetActive(true); 
     }
 
-    public void QuickStart()
+    public void JoinRandomRoom()
     {
-        quickStartButton.SetActive(false);
-        quickCancelButton.SetActive(true);
+        joinRandomRoomButton.SetActive(false);
         PhotonNetwork.JoinRandomRoom();
+    }
+
+    public void JoinSpecificRoom()
+    {
+        joinSpecificRoomButton.SetActive(false);
+        RoomIDLog.text = "";
+        string roomID = RoomIDInput.text.Substring(0,6); ;
+        PhotonNetwork.JoinRoom(roomID);
+    }
+
+    public void HostRoom()
+    {
+        HostRoomButton.SetActive(false);
+        CreateRoom(3, true);
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)
     {
         Debug.Log("Failed to join random Room");
-        CreateRoom(4, true);
+        CreateRoom(8, true);
+    }
+
+    public override void OnJoinRoomFailed(short returnCode, string message)
+    {
+        RoomIDLog.text = "Room not found...";
+        joinSpecificRoomButton.SetActive(true);
     }
 
     public void CreateRoom(int roomSize, bool isPublic)
@@ -35,15 +68,15 @@ public class LobbyController : MonoBehaviourPunCallbacks
         Debug.Log("Creating new Room");
         string roomid = generateRoomID();
         RoomOptions roomOps = new RoomOptions() { IsVisible = isPublic, IsOpen = true, MaxPlayers = (byte)roomSize };
-        PhotonNetwork.CreateRoom(roomid, roomOps);
+        PhotonNetwork.CreateRoom(roomid, roomOps, TypedLobby.Default);
         Debug.Log("Room(" + roomid + ") created");
     }
 
     private string generateRoomID()
     {
-        const string glyphs = "abcdefghijklmnopqrstuvwxyz0123456789";
+        const string glyphs = "ABCDEFGHJKLMNPQRSTUVWXYZ123456789";
         string myid = "";
-        for (int i = 0; i <= 6; i++)
+        for (int i = 0; i < 6; i++)
         {
             myid += glyphs[Random.Range(0, glyphs.Length)];
         }
@@ -55,10 +88,20 @@ public class LobbyController : MonoBehaviourPunCallbacks
         Debug.Log("Failed to create room... try again");
     }
 
-    public void QuickCancel()
+    public override void OnEnable()
     {
-        quickCancelButton.SetActive(false);
-        quickStartButton.SetActive(true);
-        PhotonNetwork.LeaveRoom();
+        PhotonNetwork.AddCallbackTarget(this);
     }
+
+    public override void OnDisable()
+    {
+        PhotonNetwork.RemoveCallbackTarget(this);
+    }
+
+    public override void OnJoinedRoom()
+    {
+        Debug.Log("Joined Room");
+        PhotonNetwork.LoadLevel(roomSceneIndex);
+    }
+
 }

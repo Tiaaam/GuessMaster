@@ -1,33 +1,21 @@
 using Photon.Pun;
+using TMPro;
 using UnityEngine;
 
 public class RoomController : MonoBehaviourPunCallbacks
 {
+
     [SerializeField]
-    private int multiplayerSceneIndex;
+    private TextMeshProUGUI roomNameField;
+    [SerializeField]
+    private GameObject changeSettingsPanel;
 
-    public override void OnEnable()
+    void Start()
     {
-        PhotonNetwork.AddCallbackTarget(this);
-    }
-
-    public override void OnDisable()
-    {
-        PhotonNetwork.RemoveCallbackTarget(this);
-    }
-
-    public override void OnJoinedRoom()
-    {
-        Debug.Log("Joined Room");
-        StartGame();
-    }
-
-    private void StartGame()
-    {
+        roomNameField.text = PhotonNetwork.CurrentRoom.Name;
         if (PhotonNetwork.IsMasterClient)
         {
-            Debug.Log("Starting Game");
-            PhotonNetwork.LoadLevel(multiplayerSceneIndex);
+            changeSettingsPanel.SetActive(true);
         }
     }
 }
