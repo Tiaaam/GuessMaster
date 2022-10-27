@@ -2,7 +2,7 @@
 
 ## Table of contents
 
-- Table of contents
+- [Table of contents](https://github.com/Tiaaam/GuessMaster/blob/master/docs/UCRS_Results.md#table-of-contents)
 - Introduction
   - Purpose
   - Scope
