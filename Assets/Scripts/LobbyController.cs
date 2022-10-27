@@ -23,6 +23,9 @@ public class LobbyController : MonoBehaviourPunCallbacks
     [SerializeField]
     private int roomSceneIndex;
 
+    [SerializeField]
+    private TextMeshProUGUI PlayerNameInput;
+
     public override void OnConnectedToMaster()
     {
         PhotonNetwork.AutomaticallySyncScene = true;
@@ -41,7 +44,7 @@ public class LobbyController : MonoBehaviourPunCallbacks
     {
         joinSpecificRoomButton.SetActive(false);
         RoomIDLog.text = "";
-        string roomID = RoomIDInput.text.Substring(0,6); ;
+        string roomID = RoomIDInput.text.Substring(0,6);
         PhotonNetwork.JoinRoom(roomID);
     }
 
@@ -101,6 +104,16 @@ public class LobbyController : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         Debug.Log("Joined Room");
+        string playername = PlayerNameInput.text;
+        if (playername.Length > 1)
+        {
+            playername = playername.Substring(0, playername.Length - 1);
+        }
+        else
+        {
+            playername = "Player";
+        }
+        PhotonNetwork.LocalPlayer.NickName = playername;
         PhotonNetwork.LoadLevel(roomSceneIndex);
     }
 
