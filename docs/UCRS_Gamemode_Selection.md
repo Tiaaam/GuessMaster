@@ -32,6 +32,7 @@ Users enter GuessMaster games from this site. First of all it offers the user th
 ·WIP·
 
 ## 2 Flow of Events - Design
-·WIP·
+There are different ways for a user to enter a game. He can join a private/public game or create a game by him/herself. As an example we created a Sequence Diagram for a player who joins a private game.
 
+![Sequence Diagram - Gamemode Selection](https://user-images.githubusercontent.com/62339676/198323795-a6732c8b-c035-4671-9c05-933f7e948c7f.png)
 
