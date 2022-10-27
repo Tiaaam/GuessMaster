@@ -3,7 +3,7 @@
 ## Table of contents
 
 - [Table of contents](https://github.com/Tiaaam/GuessMaster/blob/master/docs/UCRS_Gamemode_Selection.md#table-of-contents)
-- Introduction
+- [Introduction](https://github.com/Tiaaam/GuessMaster/blob/master/docs/UCRS_Gamemode_Selection.md#1-introduction)
   - Purpose
   - Scope
   - Definitions, Acronyms and Abbreviations
