@@ -9,7 +9,7 @@
   - Definitions, Acronyms and Abbreviations
   - References
   - Overview
-- Flow of Events - Design
+- [Flow of Events - Design](https://github.com/Tiaaam/GuessMaster/blob/master/docs/UCRS_Results.md#2-flow-of-events---design)
 
 ## 1. Introduction
 
