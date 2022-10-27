@@ -7,7 +7,7 @@
   - [Purpose](https://github.com/Tiaaam/GuessMaster/blob/master/docs/UCRS_Results.md#11-purpose)
   - [Scope](https://github.com/Tiaaam/GuessMaster/blob/master/docs/UCRS_Results.md#12-scope)
   - [Definitions, Acronyms and Abbreviations](https://github.com/Tiaaam/GuessMaster/blob/master/docs/UCRS_Results.md#13-definitions-acronyms-and-abbreviations)
-  - References
+  - [References](https://github.com/Tiaaam/GuessMaster/blob/master/docs/UCRS_Results.md#14-references)
   - Overview
 - [Flow of Events - Design](https://github.com/Tiaaam/GuessMaster/blob/master/docs/UCRS_Results.md#2-flow-of-events---design)
 
