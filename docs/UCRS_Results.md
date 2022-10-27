@@ -32,4 +32,6 @@ After the game ends the user gets redirected to a new page. The GuessMaster, the
 ·WIP·
 
 ## 2 Flow of Events - Design
-·WIP·
+
+![result sequence diagram](https://user-images.githubusercontent.com/62339676/198307988-ede027af-8a01-4fec-b7c1-f4bf1e04cbc6.png)
+
