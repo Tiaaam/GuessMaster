@@ -14,7 +14,7 @@
 ## 1. Introduction
 
 ### 1.1 Purpose
-·WIP·
+This Use-Case-Realization specifies the Gamemode Selection-screen as the landingpage of the game. It shows the different options for the players to join a GuessMaster-Game.
 
 ### 1.2 Scope
 ·WIP·
