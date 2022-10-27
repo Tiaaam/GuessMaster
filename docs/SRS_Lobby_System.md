@@ -16,7 +16,9 @@ Players will have the option to quit the lobby and the creator will additionally
 
 ## 2 Flow of Events
 
-·WIP·
+**Activity Diagram**
+
+
 
 ## 3 Special requirement 
 
