@@ -8,7 +8,7 @@
   - [Scope](https://github.com/Tiaaam/GuessMaster/blob/master/docs/UCRS_Gamemode_Selection.md#12-scope)
   - [Definitions, Acronyms and Abbreviations](https://github.com/Tiaaam/GuessMaster/blob/master/docs/UCRS_Gamemode_Selection.md#13-definitions-acronyms-and-abbreviations)
   - [References](https://github.com/Tiaaam/GuessMaster/blob/master/docs/UCRS_Gamemode_Selection.md#14-references)
-  - Overview
+  - [Overview](https://github.com/Tiaaam/GuessMaster/blob/master/docs/UCRS_Gamemode_Selection.md#15-overview)
 - Flow of Events - Design
 
 ## 1. Introduction
