@@ -16,7 +16,7 @@ Starting from our landing page our players will have to add their name (or alias
 
 **Activity Diagram**
 
-![GameSelection](https://user-images.githubusercontent.com/62339676/198307097-82e1a015-53c1-4d5a-a8a8-9361098ea82a.jpeg)
+![GameSelection2](https://user-images.githubusercontent.com/62339676/198310158-de6605c9-acc1-4aeb-b9f6-e6732df356da.jpeg)
 
 Use-Case-Realization Specification: [Gamemode Selection](https://github.com/Tiaaam/GuessMaster/blob/master/docs/UCRS_Gamemode_Selection.md)
 
