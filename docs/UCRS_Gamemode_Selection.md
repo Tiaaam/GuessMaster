@@ -23,7 +23,10 @@
 ·WIP·
 
 ### 1.4 References
-·WIP·
+
+| Title                                                              | Publishing organization   |
+| -------------------------------------------------------------------| ------------------------- |
+| [GitHub](https://github.com/Tiaaam/GuessMaster)                    | GuessMaster Team          |
 
 ### 1.5 Overview
 ·WIP·
