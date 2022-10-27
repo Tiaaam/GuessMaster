@@ -13,7 +13,9 @@ Starting from our landing page our players will have to add their name (or alias
 ![Game Selection](https://user-images.githubusercontent.com/62339676/197399336-873d976e-2287-48c8-a130-b24047585da8.jpg)
 
 ## 2 Flow of Events
-·WIP·
+
+**Activity Diagram**
+
 
 Use-Case-Realization Specification: [Gamemode Selection](https://github.com/Tiaaam/GuessMaster/blob/master/docs/UCRS_Gamemode_Selection.md)
 
