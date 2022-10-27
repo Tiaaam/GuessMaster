@@ -18,10 +18,9 @@ public class LobbyController : MonoBehaviourPunCallbacks
     [SerializeField]
     private TextMeshProUGUI RoomIDLog;
 
+
     [SerializeField]
-    private int multiplayerSceneIndex;
-    [SerializeField]
-    private int roomSceneIndex;
+    private GameObject HostingPanel;
 
     [SerializeField]
     private TextMeshProUGUI PlayerNameInput;
@@ -48,10 +47,14 @@ public class LobbyController : MonoBehaviourPunCallbacks
         PhotonNetwork.JoinRoom(roomID);
     }
 
-    public void HostRoom()
+    public void OpenHostPanel()
     {
-        HostRoomButton.SetActive(false);
-        CreateRoom(3, true);
+        HostingPanel.SetActive(true);
+    }
+
+    public void StartHosting()
+    {
+        CreateRoom(5, true);
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)
@@ -114,7 +117,7 @@ public class LobbyController : MonoBehaviourPunCallbacks
             playername = "Player";
         }
         PhotonNetwork.LocalPlayer.NickName = playername;
-        PhotonNetwork.LoadLevel(roomSceneIndex);
+        PhotonNetwork.LoadLevel(1);
     }
 
 }

@@ -9,7 +9,7 @@ public class RoomController : MonoBehaviourPunCallbacks
     [SerializeField]
     private TextMeshProUGUI roomNameField;
     [SerializeField]
-    private GameObject changeSettingsPanel;
+    private GameObject masterPanel;
     [SerializeField]
 
     void Start()
@@ -17,16 +17,10 @@ public class RoomController : MonoBehaviourPunCallbacks
         roomNameField.text = PhotonNetwork.CurrentRoom.Name;
         if (PhotonNetwork.IsMasterClient)
         {
-            changeSettingsPanel.SetActive(true);
+            masterPanel.SetActive(true);
         }
     }
 
-    public void ChangeRoomSize()
-    {
-        //int roomsize = (int) roomSizeSlider.value;
-        //Debug.Log(roomsize);
-        //roomSizeField.text = roomsize.ToString();
-    }
 
     public void StartGame()
     {

@@ -6,9 +6,21 @@ using System.IO;
 
 public class GameSetupController : MonoBehaviour
 {
+
+    public string playerAnswer1;
+    private GameObject myplayer;
     void Start()
     {
         Debug.Log("Creating Player");
-        PhotonNetwork.Instantiate(Path.Combine("Prefabs", "TestObject"), Vector3.zero, Quaternion.identity);
+        playerAnswer1 = "";
+        myplayer = PhotonNetwork.Instantiate(Path.Combine("Prefabs", "TestObject"), Vector3.zero, Quaternion.identity);
+        myplayer.gameObject.name = "MyPlayerObject";
     }
+
+    public void SendDataToPrefab()
+    {
+        myplayer.GetComponent<PlayerController>().SendData();
+    }
+
+
 }
