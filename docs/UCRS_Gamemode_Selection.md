@@ -17,7 +17,7 @@
 This Use-Case-Realization specifies the Gamemode Selection-screen as the landingpage of the game. It shows the different options for the players to join a GuessMaster-Game.
 
 ### 1.2 Scope
-Users enter GuessMaster games from this site. First of all it offers the user the possibility to enter a custom name. The user can also choose between starting a Quickgame, joining a private game after entering a code or creating a new game. 
+Users enter GuessMaster games from this site. First of all it offers the user the possibility to enter a custom name. For starting the actual game, the user can choose between starting a Quickgame, joining a private game after entering a code or creating a new game. Depending on which option the user chooses, he/she is redirected to a gamelobby or to a new page where he/she can modify the settings for his/her game.
 
 ### 1.3 Definitions, Acronyms and Abbreviations
 ·WIP·
