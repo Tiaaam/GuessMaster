@@ -17,7 +17,7 @@
 This Use-Case-Realization specifies the result-screen as the final part of a game. It shows the order of the players according to the points scored during the game. 
 
 ### 1.2 Scope
-After the game ends the user gets redirected to a new page. There the GuessMaster, the player who scored the most points, is presented ceremonially and the other players are displayed in a list depending on their points. After leaving the page the player will end up back to the Gamemode Selection.
+After the game ends the user gets redirected to a new page. The GuessMaster, the player who scored the most points, is presented ceremonially there and the other players are displayed in a list depending on their points. After leaving the page the player will end up back on the Gamemode Selection.
 
 ### 1.3 Definitions, Acronyms and Abbreviations
 ·WIP·
