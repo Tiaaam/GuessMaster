@@ -18,7 +18,7 @@ Players will have the option to quit the lobby and the creator will additionally
 
 **Activity Diagram**
 
-
+![Activity Diagrame Lobby System](https://user-images.githubusercontent.com/62339676/198328956-cd8f3347-5139-4994-a456-fe4b742b239b.jpeg)
 
 ## 3 Special requirement 
 
