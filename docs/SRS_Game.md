@@ -16,6 +16,8 @@ The player with the most points wins the game.
 
 ·WIP·
 
+Use-Case-Reasilation Specification: [Results](https://github.com/Tiaaam/GuessMaster/blob/master/docs/UCRS_Results.md)
+
 ## 3 Special requirement
 
 ·WIP·
