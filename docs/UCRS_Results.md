@@ -5,7 +5,7 @@
 - [Table of contents](https://github.com/Tiaaam/GuessMaster/blob/master/docs/UCRS_Results.md#table-of-contents)
 - [Introduction](https://github.com/Tiaaam/GuessMaster/blob/master/docs/UCRS_Results.md#1-introduction)
   - [Purpose](https://github.com/Tiaaam/GuessMaster/blob/master/docs/UCRS_Results.md#11-purpose)
-  - Scope
+  - [Scope](https://github.com/Tiaaam/GuessMaster/blob/master/docs/UCRS_Results.md#12-scope)
   - Definitions, Acronyms and Abbreviations
   - References
   - Overview
