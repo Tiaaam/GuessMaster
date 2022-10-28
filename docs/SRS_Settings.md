@@ -12,7 +12,8 @@ If a user decides to create a game with custom settings he/she will be redirecte
 
 ## 2 Flow of Events
 
-·WIP·
+**Activity Diagram**
+![Settings_Activity_Diagram](https://user-images.githubusercontent.com/62339676/198303336-a1da5845-7930-4b4c-8fd2-53f68d96ab75.jpeg)
 
 ## 3 Special requirement 
 

@@ -14,7 +14,7 @@ The player with the most points wins the game.
 
 ## 2 Flow of Events
 
-·WIP·
+Use-Case-Reasilation Specification for the results: [Results](https://github.com/Tiaaam/GuessMaster/blob/master/docs/UCRS_Results.md)
 
 ## 3 Special requirement
 

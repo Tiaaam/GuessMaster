@@ -13,7 +13,7 @@
   - [Vision](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#21-vision)
   - [Use Case Diagram](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#22-use-case-diagram)
   - [Technology Stack](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#23-technology-stack)
-- [Specific Requirments](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#3-specific-requirements)
+- [Specific Requirements](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#3-specific-requirements)
   - [Functionality](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#31-functionality)
   - [Usability](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#32-usability)
   - [Reliability](https://github.com/Tiaaam/GuessMaster/blob/master/docs/SoftwareRequirementsSpecification.md#33-reliability)
@@ -158,7 +158,7 @@ In the game a question is displayed and the user has a specific amount of time t
 
 ·WIP·
 
-### 3.12 Specitifc Requirements
+### 3.12 Specific Requirements
 
 ·WIP·
 
