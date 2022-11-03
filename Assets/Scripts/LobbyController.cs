@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using TMPro;
+using UnityEngine.UIElements;
 
 public class LobbyController : MonoBehaviourPunCallbacks
 {
@@ -21,9 +22,21 @@ public class LobbyController : MonoBehaviourPunCallbacks
 
     [SerializeField]
     private GameObject HostingPanel;
+    [SerializeField]
+    private GameObject RoomSizeSlider;
+    [SerializeField]
+    private TextMeshProUGUI RoomSizeTextField;
+    [SerializeField]
+    private GameObject PublicGameToggle;
+    [SerializeField]
+    private GameObject PrivateGameToggle;
 
     [SerializeField]
     private TextMeshProUGUI PlayerNameInput;
+
+
+
+    private bool isPublic = true;
 
     public override void OnConnectedToMaster()
     {
@@ -51,6 +64,12 @@ public class LobbyController : MonoBehaviourPunCallbacks
     {
         HostingPanel.SetActive(true);
     }
+
+    public void RoomSizeSilderChangeValue()
+    {
+        RoomSizeTextField.text = RoomSizeSlider.GetComponent<Slider>().value.ToString();
+    }
+
 
     public void StartHosting()
     {
