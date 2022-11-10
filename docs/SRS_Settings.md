@@ -13,7 +13,7 @@ If a user decides to create a game with custom settings he/she will be redirecte
 ## 2 Flow of Events
 
 **Activity Diagram**
-![Settings_Activity_Diagram](https://user-images.githubusercontent.com/62339676/198303336-a1da5845-7930-4b4c-8fd2-53f68d96ab75.jpeg)
+![ActivityDiagram Settings](https://user-images.githubusercontent.com/62339676/199759923-8a648990-e9b4-4956-8665-210419b905a1.jpg)
 
 ## 3 Special requirement 
 
