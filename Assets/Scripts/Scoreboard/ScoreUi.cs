@@ -12,8 +12,7 @@ public class ScoreUi : MonoBehaviour
     {
         scoreManager.AddScore(new Score( name: "eran", score: 6));
         scoreManager.AddScore(new Score( name: "en", score: 62));
-
-        var scores = scoreManager.GetHighScores().ToArray();
+    var scores = scoreManager.GetHighScores().ToArray();
         for (int i = 0; i < scores.Length; i++)
         {
             var row = Instantiate(rowUi, transform).GetComponent<RowUi>();

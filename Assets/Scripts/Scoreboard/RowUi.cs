@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class RowUi : MonoBehaviour
 {
-    public Text rank;
-    public Text name;
-    public Text score;
+    public TextMeshProUGUI rank;
+    public TextMeshProUGUI name;
+    public TextMeshProUGUI score;
 }
