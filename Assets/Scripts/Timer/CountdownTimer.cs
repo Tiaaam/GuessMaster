@@ -12,10 +12,14 @@ public class CountdownTimer : MonoBehaviour
     float currentTime = 0f;
     float startingTime = 11f;
 
-    public TextMeshProUGUI countdownText;
-    public TextMeshProUGUI questionText;
-    public Image uiFill;
-    public TextMeshProUGUI roundText;
+    [SerializeField]
+    private TextMeshProUGUI countdownText;
+    [SerializeField]
+    private TextMeshProUGUI questionText;
+    [SerializeField]
+    private Image uiFill;
+    [SerializeField]
+    private TextMeshProUGUI roundText;
 
     void Start()
     {
