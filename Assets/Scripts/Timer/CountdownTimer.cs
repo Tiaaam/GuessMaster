@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class CountdownTimer : MonoBehaviour
 {
     int currentround = 1;
@@ -11,6 +12,7 @@ public class CountdownTimer : MonoBehaviour
     int questionCount = 0;
     float currentTime = 0f;
     float startingTime = 11f;
+    float answerTime = 5f;
 
     [SerializeField]
     private TextMeshProUGUI countdownText;
@@ -20,10 +22,15 @@ public class CountdownTimer : MonoBehaviour
     private Image uiFill;
     [SerializeField]
     private TextMeshProUGUI roundText;
+    [SerializeField]
+    private GameObject HideWhenAnswerShows;
+    [SerializeField]
+    private GameObject HideWhenQuestionShows;
 
     void Start()
     {
         currentTime = startingTime;
+        HideWhenQuestionShows.SetActive(false);
     }
 
     void Update()
@@ -35,8 +42,16 @@ public class CountdownTimer : MonoBehaviour
 
         uiFill.fillAmount = Mathf.InverseLerp(0, startingTime, currentTime);
 
-        if (currentTime <= 0)
+        if (currentTime <= 0 && currentTime >= -answerTime)
         {
+            HideWhenQuestionShows.SetActive(true);
+            HideWhenAnswerShows.SetActive(false);
+        }
+
+        if (currentTime <= -answerTime)
+        {
+            HideWhenQuestionShows.SetActive(false);
+            HideWhenAnswerShows.SetActive(true);
             currentround++;
             questionCount++;
             currentTime = startingTime;

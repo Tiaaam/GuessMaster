@@ -2053,6 +2053,8 @@ MonoBehaviour:
   questionText: {fileID: 70186837}
   uiFill: {fileID: 451946042}
   roundText: {fileID: 1028291053}
+  HideWhenAnswerShows: {fileID: 1087061264}
+  HideWhenQuestionShows: {fileID: 1122811502}
 --- !u!1 &1211416597
 GameObject:
   m_ObjectHideFlags: 0
