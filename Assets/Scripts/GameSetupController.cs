@@ -19,7 +19,7 @@ public class GameSetupController : MonoBehaviour
 
     public void SendDataToPrefab()
     {
-        myplayer.GetComponent<PlayerController>().SendData();
+       myplayer.GetComponent<PlayerController>().EndOfRound();
     }
 
 

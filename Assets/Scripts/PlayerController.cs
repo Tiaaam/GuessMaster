@@ -5,9 +5,11 @@ using Photon.Pun;
 
 public class PlayerController : MonoBehaviourPunCallbacks
 {
+    private string answer;
     // Start is called before the first frame update
     void Start()
     {
+        answer = "this is an answer";
     }
 
     // Update is called once per frame
@@ -17,14 +19,32 @@ public class PlayerController : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    public void SendDataToServer()
+    public void SendPlayerAnswer(string _answer, int _playerID) //Wird beim Master aufgerufen von jedem Spieler
     {
-        Debug.Log("test");
+        Debug.Log(_answer + _playerID.ToString());
     }
 
-    public void SendData()
+    [PunRPC]
+    public void RequestPlayerAnswer() //Wird bei jeden Spieler von Master aufgerufen
+    {
+        this.photonView.RPC("SendPlayerAnswer", RpcTarget.MasterClient,answer,this.photonView.ViewID);
+    }
+
+    public void EndOfRound()
     {
         Debug.Log(this.photonView.ViewID);
-        this.photonView.RPC("SendDataToServer", RpcTarget.All);
+        this.photonView.RPC("RequestPlayerAnswer", RpcTarget.All);
     }
+
+    //[PunRPC]
+    //public void SendDataToServer()
+    //{
+    //    Debug.Log("test");
+    //}
+
+    //public void SendData()
+    //{
+    //    Debug.Log(this.photonView.ViewID);
+    //    this.photonView.RPC("SendDataToServer", RpcTarget.All);
+    //}
 }
