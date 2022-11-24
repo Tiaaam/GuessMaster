@@ -6,4 +6,4 @@ Here you can get access to our [Utility tree](https://github.com/Tiaaam/GuessMas
 
 ### 2. Architecture decisions and Concrete design patterns
 
-WIP
+·WIP·
