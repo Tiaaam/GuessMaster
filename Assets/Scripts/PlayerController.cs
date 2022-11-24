@@ -21,18 +21,20 @@ public class PlayerController : MonoBehaviourPunCallbacks
     [PunRPC]
     public void SendPlayerAnswer(string _answer, int _playerID) //Wird beim Master aufgerufen von jedem Spieler
     {
+        if (!photonView.IsMine) return;
         Debug.Log(_answer + _playerID.ToString());
     }
 
     [PunRPC]
     public void RequestPlayerAnswer() //Wird bei jeden Spieler von Master aufgerufen
     {
-        this.photonView.RPC("SendPlayerAnswer", RpcTarget.MasterClient,answer,this.photonView.ViewID);
+        if (!this.gameObject.GetComponent<PhotonView>().IsMine) Debug.Log("not mine");
+        Debug.Log(this.photonView.ViewID);
+        this.photonView.RPC("SendPlayerAnswer", RpcTarget.MasterClient,answer, this.gameObject.GetComponent<PhotonView>().ViewID);
     }
 
     public void EndOfRound()
     {
-        Debug.Log(this.photonView.ViewID);
         this.photonView.RPC("RequestPlayerAnswer", RpcTarget.All);
     }
 
