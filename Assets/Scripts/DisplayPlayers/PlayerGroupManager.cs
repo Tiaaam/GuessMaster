@@ -20,6 +20,7 @@ public class PlayerGroupManager : MonoBehaviour
         for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
         {
             usernames[i] = PhotonNetwork.PlayerList[i].NickName;
+
             namesDisplay.text = string.Join("\n", usernames);
         }
     }
