@@ -15,7 +15,7 @@ public class ScoreProperty : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _myCustomProperties["Score"] = 420;
+        _myCustomProperties["Score"] = 100;
         PhotonNetwork.LocalPlayer.CustomProperties = _myCustomProperties;
 
     }

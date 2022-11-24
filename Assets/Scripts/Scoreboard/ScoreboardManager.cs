@@ -38,7 +38,7 @@ public class ScoreboardManager : MonoBehaviour
             string a = string.Join("", usernames);
             scoreboardText.text = $"\n {rank.ToString()}.              " + a + $"              {score.ToString()}";
 
-            rank++;
+            //rank++;
         }
         rank = 1;
     }
