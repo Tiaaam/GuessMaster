@@ -4736,7 +4736,7 @@ GameObject:
   - component: {fileID: 1147151986}
   - component: {fileID: 1147151985}
   m_Layer: 5
-  m_Name: RoomIDInputField
+  m_Name: PlayerNameInputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9179,7 +9179,7 @@ MonoBehaviour:
   RoomIDInput: {fileID: 1860787723}
   RoomIDLog: {fileID: 1983012452}
   HostingPanel: {fileID: 2007500405}
-  PlayerNameInput: {fileID: 0}
+  PlayerNameInput: {fileID: 1147151985}
 --- !u!4 &1945290049
 Transform:
   m_ObjectHideFlags: 0
