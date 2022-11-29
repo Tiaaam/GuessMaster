@@ -37,7 +37,7 @@ That gets us to the following design patterns:
 
 ### Performance:
 - have synchronous properties of the communication mechanism (Coordination Model)
-- add resources to reduce bottlenekcs for the creation, initialization, persistence and destruction (Data Model)
+- add resources to reduce bottlenecks for the creation, initialization, persistence and destruction (Data Model)
 - monitore critical resources / system elements to be aware of (Resource Management)
 - ensure that values from elements after compile time do not pose unacceptable performance penalties (Binding Time) 
 
