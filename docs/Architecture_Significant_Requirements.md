@@ -15,7 +15,7 @@ Here are some ouf our thoughts that influenced our priorities in the Utility tre
 With one of them not working GuessMaster cannot be played. (high business value)
 
 ### Modifiability (in our case: settings):
-- gamemode modifications (e.g. time to answers, amount of rounds ...)
+- gamemode modifications (e.g. time to answer, amount of rounds ...)
 
 Important for user satisfaction. Standard values probably aren´t optimal for everyone, players might stop guessing. (high business value)
 
