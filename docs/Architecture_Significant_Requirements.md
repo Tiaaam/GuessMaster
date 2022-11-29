@@ -31,7 +31,7 @@ Important for user satisfaction. Unnecessarily wasted time might demotivate play
 
 Important for user satisfaction. (high priority)
 
-Based on these points and our understanding of our tolls we decided that an Event-Driven-Architecture would suit these goals best, specifically the Mediator topology model. Also we realised that user satisfaction is extremely important for our project. Therefore we seit usability und performance as our main architecture decisions.
+Based on these points and our understanding of our tolls we decided that an Event-Driven-Architecture would suit these goals best, specifically the Mediator topology model. We realised that user satisfaction is extremely important for our project. Therefore we set usability und performance as our main architecture decisions.
 
 That gets us to the following design patterns:
 
