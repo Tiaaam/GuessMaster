@@ -37,11 +37,14 @@ That gets us to the following design patterns:
 
 ### Performance:
 - have synchronous properties of the communication mechanism (Coordination Model)
-- add resources to reduce bottlenekcs for the creation, initialization, persistence and destruction (Data Model)#
+- add resources to reduce bottlenekcs for the creation, initialization, persistence and destruction (Data Model)
 - monitore critical resources / system elements to be aware of (Resource Management)
 - ensure that values from elements after compile time do not pose unacceptable performance penalties (Binding Time) 
 
 ### Usability:
-- 
+- adapting and configuring the system / game (Allocation of Responsibilities)
+- determine architectural elements visible to the end user (Mapping among Architectural Elements)
+- ensure resource limitations that the level of resources will not affect the users´ability to learn how to use the system (Resource Management)
+- binding time decisions should be under control that several configurations do not decrease confidence or satisfaction (Binding Time)
 
 The desing patterns are based on the book: Len Bass, Paul Clements, Rick Kazman. Software Architecture in Practice. Addison-Wesley, 3rd Edition.
