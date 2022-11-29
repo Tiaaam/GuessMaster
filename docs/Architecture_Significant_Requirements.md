@@ -35,4 +35,13 @@ Based on these points and our understanding of our tolls we decided that an Even
 
 That gets us to the following design patterns:
 
+### Performance:
+- have synchronous properties of the communication mechanism (Coordination Model)
+- add resources to reduce bottlenekcs for the creation, initialization, persistence and destruction (Data Model)#
+- monitore critical resources / system elements to be aware of (Resource Management)
+- ensure that values from elements after compile time do not pose unacceptable performance penalties (Binding Time) 
+
+### Usability:
 - 
+
+The desing patterns are based on the book: Len Bass, Paul Clements, Rick Kazman. Software Architecture in Practice. Addison-Wesley, 3rd Edition.
