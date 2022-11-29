@@ -6,7 +6,7 @@ Here you can get access to our [Utility tree](https://github.com/Tiaaam/GuessMas
 
 ### 2. Architecture decisions and Concrete design patterns
 
-We realised that user satisfaction is extremely important for our project. Therefore we seit usability und performance as our main architecture decisions. Furthermore here are some ouf our thoughts that influenced our priorities in the Utility tree that are important:
+Here are some ouf our thoughts that influenced our priorities in the Utility tree that are important:
 
 #### Availability:
 - Photon (Hosting Service used for playermanagement)
@@ -31,6 +31,8 @@ Important for user satisfaction. Unnecessarily wasted time might demotivate play
 
 Important for user satisfaction. (high priority)
 
-Based on these points and our understanding of our tolls we decided that an Event-Driven-Architecture would suit these goals best, specifically the Mediator topology model.
+Based on these points and our understanding of our tolls we decided that an Event-Driven-Architecture would suit these goals best, specifically the Mediator topology model. Also we realised that user satisfaction is extremely important for our project. Therefore we seit usability und performance as our main architecture decisions.
 
+That gets us to the following design patterns:
 
+- 
