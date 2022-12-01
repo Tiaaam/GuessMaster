@@ -5,16 +5,18 @@ using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.SceneManagement;
 
-public class LeaveLobbyButton : MonoBehaviour
+public class LeaveLobbyButton : MonoBehaviourPunCallbacks
 {
     public void OnClick_LeaveRoom()
     {
-        //(Player player)
-        PhotonNetwork.LeaveRoom(true);
-        //PhotonNetwork.DestroyPlayerObjects(PhotonNetwork.player);
-        Debug.Log("Leave");
-        //SceneManager.LoadScene("MainMenuScene");
-       
+        PhotonNetwork.LeaveRoom();
+        Debug.Log("Left Room");
     }
+
+    public override void OnLeftRoom()
+    {
+        PhotonNetwork.LoadLevel(0);
+    }
+
 
 }
