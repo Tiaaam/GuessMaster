@@ -37,9 +37,7 @@ public class LobbyController : MonoBehaviourPunCallbacks
         {
             playername = "Player";
         }
-        int value = Random.Range(1000, 9999);
-
-        PhotonNetwork.NickName = playername + value.ToString();
+        PhotonNetwork.NickName = playername;
     }
 
     public override void OnConnectedToMaster()
@@ -129,9 +127,5 @@ public class LobbyController : MonoBehaviourPunCallbacks
         Debug.Log("Joined Room");
         generateName();
         PhotonNetwork.LoadLevel(1);
-    }
-    public override void OnLeftRoom()
-    {
-        PhotonNetwork.LoadLevel(0);
     }
 }
