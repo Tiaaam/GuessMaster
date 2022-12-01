@@ -59,7 +59,7 @@
 
 ## 3. Architectural Goals and Constraints
 
-·WIP·
+We saved our Architectural Goals and Constraints in the [Architecture Significant Requirements (ASR)](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Architecture_Significant_Requirements.md).
 
 ## 4. Use-Case View
   
