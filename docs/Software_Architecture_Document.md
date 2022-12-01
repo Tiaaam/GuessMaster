@@ -55,7 +55,23 @@ In our ASR we decided that an Event-Driven-Architecture suits best for our proje
 
 ## 2. Architectural Representation
 
-·WIP·
+This section describes what software architecture is for the current system, and how it is represented in different views:
+
+Use-Case View:
+- ·WIP·
+
+Logical View:
+- ·WIP·
+
+Process View:
+- ·WIP·
+
+Deployment View:
+- ·WIP·
+
+Implementation View:
+- ·WIP·
+
 
 ## 3. Architectural Goals and Constraints
 
@@ -101,6 +117,6 @@ We saved our Architectural Goals and Constraints in the [Architecture Significan
 
 ## 10. Quality
 
-·WIP·
+The event driven architecture (mediator topology model) helps us in other aspects than functionality as well. The mediator topology enables us to easily change settings, for both the game in general and for users. Also, users can theoretically join a running round and leave a running round without causing any problems to the game itself. Our game benefits greatly from this, especially because of gains in the area of reliability. 
 
 
