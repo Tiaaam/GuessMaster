@@ -21,7 +21,6 @@
 - [Implementation View](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#7-deployment-view)
   -  [Overwiev](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#81-overwiev)
   -  [Layers](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#82-layers)
-- [Data View](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#9-data-view)
 - [Size and Performance](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#10-size-and-performance)
 - [Quality](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#11-quality)
   
@@ -96,15 +95,11 @@
 
 ·WIP·
 
-## 9. Data View
+## 9. Size and Performance
 
 ·WIP·
 
-## 10. Size and Performance
-
-·WIP·
-
-## 11. Quality
+## 10. Quality
 
 ·WIP·
 
