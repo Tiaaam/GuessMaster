@@ -69,6 +69,11 @@ public class LobbyController : MonoBehaviourPunCallbacks
         HostingPanel.SetActive(true);
     }
 
+    public void CloseHostPanel()
+    {
+        HostingPanel.SetActive(false);
+    }
+
 
     public void StartHosting()
     {
