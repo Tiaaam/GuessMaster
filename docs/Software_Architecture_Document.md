@@ -1,4 +1,4 @@
-# GuessMaster - Software Requirements Specification
+# GuessMaster - Software Architecture Document
 
 ## Table of contents
 
@@ -29,7 +29,7 @@
 
 ### 1.1 Purpose
 
-·WIP·
+This document provides a comprehensive architectural overview of the system. It is intended to capture and convey the significant architectural decisions which have been made on the system.
 
 ### 1.2 Scope
 
@@ -51,7 +51,8 @@
 
 ### 1.5 Overview
 
-·WIP·
+In our ASR we decided that an Event-Driven-Architecture suits best for our project, specifically the Mediator topology model. We also realised that user satisfaction is extremely important for our project. Therefore we set usability and performance as our main architecture decisions.
+
 
 ## 2. Architectural Representation
 
