@@ -33,7 +33,7 @@ This document provides a comprehensive architectural overview of the system. It 
 
 ### 1.2 Scope
 
-·WIP·
+We realised that user satisfaction is extremely important for our project. Therefore we set usability and performance as our main scope of architecture.
 
 ### 1.3 Definitions, Acronyms and Abbreviations
 
@@ -51,8 +51,7 @@ This document provides a comprehensive architectural overview of the system. It 
 
 ### 1.5 Overview
 
-In our ASR we decided that an Event-Driven-Architecture suits best for our project, specifically the Mediator topology model. We also realised that user satisfaction is extremely important for our project. Therefore we set usability and performance as our main architecture decisions.
-
+In our ASR we decided that an Event-Driven-Architecture suits best for our project, specifically the Mediator topology model. 
 
 ## 2. Architectural Representation
 
