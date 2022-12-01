@@ -26,6 +26,21 @@ public class LobbyController : MonoBehaviourPunCallbacks
     [SerializeField]
     private TextMeshProUGUI PlayerNameInput;
 
+    private void generateName()
+    {
+        string playername = PlayerNameInput.text;
+        if (playername.Length > 1 && playername.Length < 12)
+        {
+            playername = playername.Substring(0, playername.Length - 1);
+        }
+        else
+        {
+            playername = "Player";
+        }
+        int value = Random.Range(1000, 9999);
+
+        PhotonNetwork.NickName = playername + value.ToString();
+    }
 
     public override void OnConnectedToMaster()
     {
@@ -37,12 +52,14 @@ public class LobbyController : MonoBehaviourPunCallbacks
 
     public void JoinRandomRoom()
     {
+        generateName();
         joinRandomRoomButton.SetActive(false);
         PhotonNetwork.JoinRandomRoom();
     }
 
     public void JoinSpecificRoom()
     {
+        generateName();
         joinSpecificRoomButton.SetActive(false);
         RoomIDLog.text = "";
         string roomID = RoomIDInput.text.Substring(0,6);
@@ -110,17 +127,11 @@ public class LobbyController : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         Debug.Log("Joined Room");
-        string playername = PlayerNameInput.text;
-        if (playername.Length > 1)
-        {
-            playername = playername.Substring(0, playername.Length - 1);
-        }
-        else
-        {
-            playername = "Player";
-        }
-        PhotonNetwork.LocalPlayer.NickName = playername;
+        generateName();
         PhotonNetwork.LoadLevel(1);
     }
-
+    public override void OnLeftRoom()
+    {
+        PhotonNetwork.LoadLevel(0);
+    }
 }
