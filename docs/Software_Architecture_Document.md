@@ -2,28 +2,28 @@
 
 ## Table of contents
 
-- [Table of contens]()
-- [Introduction]()
-  - [Purpose]()
-  - [Scope]()
-  - [Definitions, Acronyms and Abbreviations]()
-  - [References]()
-  - [Overview]()
-- [Architectural Representation]()
-- [Architectural Goals and Constraints]()
-- [Use-Case View]()
-  - [Use-Case Realizations]()
-- [Logical View]()
-  - [Overview]()
-  - [Architecturally Significant Design Packages]()
-- [Process View]()
-- [Deployment View]()
-- [Implementation View]()
-  -  [Overwiev]()
-  -  [Layers]()
-- [Data View]()
-- [Size and Performance]()
-- [Quality]()
+- [Table of contens](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#table-of-contents)
+- [Introduction](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#1-introduction)
+  - [Purpose](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#11-purpose)
+  - [Scope](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#12-scope)
+  - [Definitions, Acronyms and Abbreviations](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#13-definitions-acronyms-and-abbreviations)
+  - [References](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#14-references)
+  - [Overview](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#15-overview)
+- [Architectural Representation](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#2-architectural-representation)
+- [Architectural Goals and Constraints](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#3-architectural-goals-and-constraints)
+- [Use-Case View](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#4-use-case-view)
+  - [Use-Case Realizations](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#41-use-case-realizations)
+- [Logical View](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#5-logical-view)
+  - [Overview](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#51-overview)
+  - [Architecturally Significant Design Packages](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#52-architecturally-significant-design-packages)
+- [Process View](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#6-process-view)
+- [Deployment View](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#7-deployment-view)
+- [Implementation View](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#7-deployment-view)
+  -  [Overwiev](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#81-overwiev)
+  -  [Layers](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#82-layers)
+- [Data View](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#9-data-view)
+- [Size and Performance](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#10-size-and-performance)
+- [Quality](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Software_Architecture_Document.md#11-quality)
   
  
 ## 1. Introduction
@@ -45,10 +45,10 @@
 
 ### 1.4 References
 
-| Title                                                              | Publishing organization   |
-| -------------------------------------------------------------------| ------------------------- |
-| [GitHub](https://github.com/Tiaaam/GuessMaster)                    | GuessMaster Team          |
-| [ASR]()                                                            | GuessMaster Team          |
+| Title                                                                                                 | Publishing organization   |
+| ------------------------------------------------------------------------------------------------------| ------------------------- |
+| [GitHub](https://github.com/Tiaaam/GuessMaster)                                                       | GuessMaster Team          |
+| [ASR](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Architecture_Significant_Requirements.md)| GuessMaster Team          |
 
 ### 1.5 Overview
 
