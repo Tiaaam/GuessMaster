@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 20766677}
   - component: {fileID: 20766676}
   - component: {fileID: 20766675}
+  - component: {fileID: 20766678}
   m_Layer: 5
   m_Name: LeaveButton
   m_TagString: Untagged
@@ -206,7 +207,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 20766676}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 20766678}
+        m_TargetAssemblyTypeName: LeaveLobbyButton, Assembly-CSharp
+        m_MethodName: OnClick_LeaveRoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &20766676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +258,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20766673}
   m_CullTransparentMesh: 1
+--- !u!114 &20766678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20766673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ac7bf372f485f40aaff01228c9d6ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &44128934
 GameObject:
   m_ObjectHideFlags: 0
@@ -2205,6 +2230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dee04800b54cc9848873b768a002a95b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  answer: 
 --- !u!114 &1200869523
 MonoBehaviour:
   m_ObjectHideFlags: 0
