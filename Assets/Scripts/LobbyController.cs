@@ -26,6 +26,14 @@ public class LobbyController : MonoBehaviourPunCallbacks
     [SerializeField]
     private TextMeshProUGUI PlayerNameInput;
 
+    private ExitGames.Client.Photon.Hashtable _myCustomProperties = new ExitGames.Client.Photon.Hashtable();
+
+    private void giveProperties()
+    {
+        _myCustomProperties["Score"] = 0;
+        _myCustomProperties["Rank"] = 1;
+        PhotonNetwork.LocalPlayer.CustomProperties = _myCustomProperties;
+    }
     private void generateName()
     {
         string playername = PlayerNameInput.text;
@@ -51,6 +59,7 @@ public class LobbyController : MonoBehaviourPunCallbacks
     public void JoinRandomRoom()
     {
         generateName();
+        giveProperties();
         joinRandomRoomButton.SetActive(false);
         PhotonNetwork.JoinRandomRoom();
     }
@@ -58,6 +67,7 @@ public class LobbyController : MonoBehaviourPunCallbacks
     public void JoinSpecificRoom()
     {
         generateName();
+        giveProperties();
         joinSpecificRoomButton.SetActive(false);
         RoomIDLog.text = "";
         string roomID = RoomIDInput.text.Substring(0,6);
@@ -131,6 +141,7 @@ public class LobbyController : MonoBehaviourPunCallbacks
     {
         Debug.Log("Joined Room");
         generateName();
+        giveProperties();
         PhotonNetwork.LoadLevel(1);
     }
 }

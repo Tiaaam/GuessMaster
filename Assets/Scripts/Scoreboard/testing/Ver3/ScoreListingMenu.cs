@@ -5,21 +5,20 @@ using TMPro;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class PlayerListingMenu : MonoBehaviourPunCallbacks
+public class ScoreListingMenu : MonoBehaviourPunCallbacks
 {
 
     [SerializeField]
     private Transform _content;
     [SerializeField]
-    private PlayerList _playerList;
+    private ScoreList _scoreList;
 
-    private List<PlayerList> _listings = new List<PlayerList>();
+    private List<ScoreList> _listings = new List<ScoreList>();
 
     private void Awake()
     {
         GetCurrentPlayers();
     }
-
     private void GetCurrentPlayers()
     {
         foreach (KeyValuePair<int, Player> playerInfo in PhotonNetwork.CurrentRoom.Players)
@@ -30,7 +29,8 @@ public class PlayerListingMenu : MonoBehaviourPunCallbacks
 
     private void AddPLayerListing(Player player)
     {
-        PlayerList listing = Instantiate(_playerList, _content);
+        Debug.Log("AddPlay");
+        ScoreList listing = Instantiate(_scoreList, _content);
         if (listing != null)
         {
             listing.SetPlayerInfo(player);
@@ -40,9 +40,9 @@ public class PlayerListingMenu : MonoBehaviourPunCallbacks
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
-        Debug.Log("I entered");
+        Debug.Log("I entereddddd");
         AddPLayerListing(newPlayer);
-        
+
     }
 
     public override void OnPlayerLeftRoom(Player otherPlayer)
@@ -54,5 +54,4 @@ public class PlayerListingMenu : MonoBehaviourPunCallbacks
             _listings.RemoveAt(index);
         }
     }
-
 }
