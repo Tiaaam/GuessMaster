@@ -39,8 +39,6 @@ This Software Requirements Specification (SRS) describes all specifications for 
 
 The project is going to be realized as a web application.
 
-·WIP·
-
 ### 1.3 Definitions, Acronyms and Abbreviations
 
 | Abbrevation | Explanation                            |
