@@ -163,7 +163,7 @@ We don't have any purchased components yet. If there will be purchased component
 
 ### 3.10 Legal, Copyright And Other Notices
 
-CC BY-NC-SA
+CC BY-NC-SA 4.0
 
 ### 3.11 Applicable Standards
 
