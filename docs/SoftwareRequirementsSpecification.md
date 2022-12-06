@@ -124,7 +124,11 @@ We intend to implement GuessMaster as well as possible in order to achieve a hig
 
 ### 3.3 Reliability
 
-·WIP·
+The availability of GuessMaster depends on external components. On the one hand, to be online we are dependent on our hosting service Photon. On the other hand, we are dependent on various API services for the creation of the questions and answers. 
+
+Of course we want to keep the availability of GuessMaster as high as possible, so we regularly check the availability of the external components through our system.
+
+If you encounter any problems, please contact us.
 
 ### 3.4 Performance
 
