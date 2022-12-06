@@ -139,7 +139,7 @@ Meaning:
 
 ### 3.5 Supportability
 
-·WIP·
+GuessMaster's code is easily understandable for anyone who knows his way around the tools we use. We use speaking names for our variables, funtions and scipts where possible.
 
 ### 3.6 Design Constraints
 
