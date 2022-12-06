@@ -150,7 +150,7 @@ The GuessMaster-team will be reachable on GitHub and Discord for further assista
 
 ### 3.8 Purchased Components
 
-·WIP·
+We don't have any purchased components yet. If there will be purchased components in the future we will list them here.
 
 ### 3.9 Licensing Requirements
 
