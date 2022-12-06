@@ -173,7 +173,7 @@ The development will follow the common clean code standards and naming conventio
 
 ### 3.12 Specific Requirements
 
-·WIP·
+(n/r)
 
 ## 4. Supporting Information
 
