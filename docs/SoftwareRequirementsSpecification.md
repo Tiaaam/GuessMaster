@@ -128,7 +128,10 @@ In the game a question is displayed and the user has a specific amount of time t
 
 ### 3.4 Performance
 
-·WIP·
+Because GuessMaster is a simple 2D-WebGame, the overall system requirements are low. We intend the game to be available for a maximum of 20 players at a time and our services should run smoothly under this condition.
+Meaning: 
+- Waitingtime when creating a lobby should be <1.5 seconds
+- Waitingtime between questions/answers/score-updates must not excel 1.5 seconds
 
 ### 3.5 Supportability
 
@@ -139,6 +142,10 @@ In the game a question is displayed and the user has a specific amount of time t
 ·WIP·
 
 ### 3.7 Online User Documentation and Help System Requirements
+
+As the game is supposed to be self-explanatory, we will include a help-option in the game itself, which will explain the basics. These instructions will also be uploaded here on GitHub in a seperate document, which will be linked down below (once available).
+
+The GuessMaster-team will be reachable on GitHub and Discord for further assistance and support requests.
 
 ·WIP·
 
