@@ -45,6 +45,7 @@ The project is going to be realized as a web application.
 | ----------- | -------------------------------------- |
 | SRS         | Software Requirements Specification    |
 | ·WIP·       | Work in Progress                       |
+| n/r         | not required                           |
 
 ### 1.4 References
 
@@ -154,7 +155,7 @@ We don't have any purchased components yet. If there will be purchased component
 
 ### 3.9 Licensing Requirements
 
-·WIP·
+(n/r)
 
 ### 3.10 Legal, Copyright And Other Notices
 
