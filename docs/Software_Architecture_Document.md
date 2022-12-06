@@ -59,7 +59,7 @@ In our ASR we decided that an Event-Driven-Architecture suits best for our proje
 This section describes what software architecture is for the current system, and how it is represented in different views:
 
 Use-Case View:
-- ·WIP·
+- Our game is divided into 4 essential sections: Select Game, Lobby, Settings and Game.
 
 Logical View:
 - The program consists mainly of 3 subsystems named after their classes: RoomController, PlayerController and GameController. 
