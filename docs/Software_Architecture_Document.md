@@ -83,6 +83,8 @@ We saved our Architectural Goals and Constraints in the [Architecture Significan
 
 ## 4. Use-Case View
   
+![UseCaseDiagram](https://user-images.githubusercontent.com/62339676/197333633-46ff9ed8-137f-4a6b-8b57-3e35bdc309aa.png)
+  
 ### 4.1 Use-Case Realizations
 
 ·WIP·
