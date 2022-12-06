@@ -118,7 +118,8 @@ In the game a question is displayed and the user has a specific amount of time t
 
 ### 3.2 Usability
 
-·WIP·
+We intend to implement GuessMaster as well as possible in order to achieve a high level of user satisfaction. Therefore, we have decided to run GuessMaster as an online service, so that the user does not need to install any additional software to play the game. Getting into a game, starting your own game and playing itself should be made intuitive and self-explanatory by the user interface
+
 
 ### 3.3 Reliability
 
