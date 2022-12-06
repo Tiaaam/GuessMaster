@@ -65,7 +65,7 @@ Logical View:
 The RoomController is responsible for the room/lobby in which the players are located. A player creates or joins a room. As soon as a room is filled and the game has been started by the host, the PlayerController and GameController are used. The GameController manages all operations of the game, such as managing modes and rounds. The PlayerController communicates directly with the GameController and exchanges the data of the individual players depending on the game status. It also manages the respective player answers.
 
 Process View:
-- It is differentiated between the following Heavy Weight Processes: Start Game, New Round, Comapare Answer, Get Result.
+- It is differentiated between the following Heavy Weight Processes: Start Game, New Round, Compare Answer, Get Result.
 The Start Game process is called at the start of a game and initializes the game. Afterwards, this calls the Start Round process.
 This assigns all player variables and retrieves a question via a GET requester by the Light Weight Process Generate Question Process. Subsequently, the Compare Answer process causes the answers to be sent to the host to compare them there. The Get Result process stores all results,
 synchronizes it with all players and outputs it to the UI.
