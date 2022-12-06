@@ -95,7 +95,9 @@ The RoomController is responsible for the room/lobby in which the players are lo
  
  ### 5.2 Architecturally Significant Design Packages
  
- ·WIP·
+ On this section you can find our class diagram.
+ 
+![Class-Diagram](https://user-images.githubusercontent.com/62339676/199744380-08408e17-e07b-4db5-bb9d-62a1bb99b51e.jpg)
  
 ## 6. Process View
 
