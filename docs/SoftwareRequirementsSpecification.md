@@ -169,7 +169,7 @@ We do not take responsibilty for any incorrect data or errors in the application
 
 ### 3.11 Applicable Standards
 
-·WIP·
+The development will follow the common clean code standards and naming conventions.
 
 ### 3.12 Specific Requirements
 
