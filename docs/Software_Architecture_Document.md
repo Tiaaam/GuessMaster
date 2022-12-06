@@ -65,10 +65,7 @@ Logical View:
 - The program consists mainly of 3 subsystems named after their classes: RoomController, PlayerController and GameController. 
 
 Process View:
-- It is differentiated between the following Heavy Weight Processes: Start Game, New Round, Compare Answer, Get Result.
-The Start Game process is called at the start of a game and initializes the game. Afterwards, this calls the Start Round process.
-This assigns all player variables and retrieves a question via a GET requester by the Light Weight Process Generate Question Process. Subsequently, the Compare Answer process causes the answers to be sent to the host to compare them there. The Get Result process stores all results,
-synchronizes it with all players and outputs it to the UI.
+- Our processes are divided into Heavy Weight Processes and Light Weight Processes. 
 
 Deployment View:
 - ·WIP·
@@ -102,7 +99,7 @@ The RoomController is responsible for the room/lobby in which the players are lo
  
 ## 6. Process View
 
-·WIP·
+It is differentiated between the following Heavy Weight Processes: Start Game, New Round, Compare Answer, Get Result. The Start Game process is called at the start of a game and initializes the game. Afterwards, this calls the Start Round process. This assigns all player variables and retrieves a question via a GET requester by the Light Weight Process Generate Question Process. Subsequently, the Compare Answer process causes the answers to be sent to the host to compare them there. The Get Result process stores all results, synchronizes it with all players and outputs it to the UI.
 
 ## 7. Deployment View
 
