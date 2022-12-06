@@ -86,6 +86,8 @@ We saved our Architectural Goals and Constraints in the [Architecture Significan
 
 Our user starts on our landingpage, where he can choose between joining a "Quickgame" (where he will be moved into any public session with enough space for one more player), joining a private game (where he has to enter a code to enter the lobby) and creating a new game with the attributes he wishes to use. When creating a new game, the user can modify settings such as the time for answering, the amount of questions asked and the player capacity of his lobby. After creating a game or joining a game the user enters a lobby which leads into the game itself, where questions are to be answered, points can be collected for the answers given by the users and in the end the results are displayed.
 
+You can find specific UCRs in our "docs" folder. 
+
 ## 5. Logical View
  
  ### 5.1 Overview
