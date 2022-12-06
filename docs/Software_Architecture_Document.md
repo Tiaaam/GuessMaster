@@ -41,6 +41,7 @@ We realised that user satisfaction is extremely important for our project. There
 | ----------- | -------------------------------------- |
 | ASR         | Architecture Significant Requirements  |
 | ·WIP·       | Work in Progress                       |
+| n/r         | not required                           |
 
 ### 1.4 References
 
