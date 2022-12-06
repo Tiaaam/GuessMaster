@@ -62,7 +62,7 @@ Use-Case View:
 
 Logical View:
 - The program consists mainly of 3 subsystems named after their classes: RoomController, PlayerController and GameController. 
-The RoomController is responsible for the room or lobby in which the players are located. A player creates or joins a room. As soon as a room is filled and the game has been started by the host, the PlayerController and GameController are used. The GameController manages all operations of the game, such as managing modes and rounds. The PlayerController communicates directly with the GameController and exchanges the data of the individual players depending on the game status. It also manages the respective player answers.
+The RoomController is responsible for the room/lobby in which the players are located. A player creates or joins a room. As soon as a room is filled and the game has been started by the host, the PlayerController and GameController are used. The GameController manages all operations of the game, such as managing modes and rounds. The PlayerController communicates directly with the GameController and exchanges the data of the individual players depending on the game status. It also manages the respective player answers.
 
 Process View:
 - ·WIP·
