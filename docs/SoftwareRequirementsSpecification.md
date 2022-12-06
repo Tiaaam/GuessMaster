@@ -143,7 +143,7 @@ GuessMaster's code is easily understandable for anyone who knows his way around 
 
 ### 3.6 Design Constraints
 
-·WIP·
+We want GuessMaster to be self-explanatory in all possible ways. Therefore we will use simple, not overloaded designs with a clear structure.
 
 ### 3.7 Online User Documentation and Help System Requirements
 
