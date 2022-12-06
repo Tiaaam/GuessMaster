@@ -165,6 +165,8 @@ We don't have any purchased components yet. If there will be purchased component
 
 CC BY-NC-SA 4.0
 
+We do not take responsibilty for any incorrect data or errors in the application.
+
 ### 3.11 Applicable Standards
 
 ·WIP·
