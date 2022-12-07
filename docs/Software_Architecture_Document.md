@@ -103,7 +103,10 @@ It is differentiated between the following Heavy Weight Processes: Start Game, N
 
 ## 7. Deployment View
 
-·WIP·
+Three components are used for a complete game: Server, Master, Clients. The server runs at the PhotonServices and stores all rooms and corresponding player information.
+A master player is also required. This creates a room and then manages it. He is also responsible for the gameplay and the choice of questions. 
+The third component is the player clients. They are responsible for their own answers and send them to the master. Every communication takes place via
+the server (photon) instead. As soon as the master receives the answers, he compares them and then sends the respective score back to the players.
 
 ## 8. Implementation View
 
