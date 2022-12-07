@@ -117,7 +117,12 @@ It is differentiated between the following Heavy Weight Processes: Start Game, N
 
 ## 9. Size and Performance
 
-·WIP·
+We plan to have a maximum total user capacity of 20 at a time. There must be at least one user in each lobby (gameroom) and a maximum of eight users can be in the same lobby. The amount of gamerooms at a time is not limited itself but indirectly by the total user capacity.
+
+Because of those limitations each lobby is closed after the match is done, all users return to the main landingpage. This way, no users can occupy the resources permanently, so that everyone can play at some point.
+
+Therefore we agreed on other limitations:
+The maximum time to answer one question is set to 90 seconds. Per match, up to 15 questions are available to be answered. 
 
 ## 10. Quality
 
