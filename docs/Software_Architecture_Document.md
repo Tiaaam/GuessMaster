@@ -68,7 +68,7 @@ Process View:
 - Our processes are divided into Heavy Weight Processes and Light Weight Processes. 
 
 Deployment View:
-- ·WIP·
+- Three components are used for a complete game: Server, Master, Clients.
 
 ## 3. Architectural Goals and Constraints
 
