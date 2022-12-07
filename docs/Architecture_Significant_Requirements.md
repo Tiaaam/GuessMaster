@@ -12,22 +12,18 @@ Here are some ouf our thoughts that influenced our priorities in the Utility tre
 - Photon (Hosting Service used for playermanagement)
 - APIs (Used to create questions and answers)
 
-With one of them not working GuessMaster cannot be played. (high business value)
-
-### Modifiability (in our case: settings):
-- gamemode modifications (e.g. time to answer, amount of rounds ...)
-
-Important for user satisfaction. Standard values probably aren´t optimal for everyone, players might stop guessing. (high business value)
+With one of them not working GuessMaster cannot be played. In case of an error, the users and developers will be notified. (high business value)
 
 ### Peformance:
-- Waitingtime between questions / answers / score - updates as short as possible
+- Waitingtime between questions / answers / score - updates / game-creation as short as possible (max. 1.5s)
 - enough performance for 20 players at a time 
 - minimise downtime caused by external circumstances
 
 Important for user satisfaction. Unnecessarily wasted time might demotivate players. On one hand we don´t want users to not be able to play but we can´t cover the costs for more than 20 players at a time. That fact is dependet on our Hosting Service Photon allowing us to host a game / games with max 20 players combined for free. 
 
 ### Usability:
-- easy-to-use UI
+- easy-to-use UI; simple structure, no unneccessary buttons/information
+- settings: gamemode, amt. of players in lobby, amt. of questions, time to answer. Page available in <1.5s.
 
 Important for user satisfaction. (high priority)
 
