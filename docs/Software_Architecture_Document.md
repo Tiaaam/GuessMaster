@@ -101,6 +101,9 @@ The RoomController is responsible for the room/lobby in which the players are lo
 
 It is differentiated between the following Heavy Weight Processes: Start Game, New Round, Compare Answer, Get Result. The Start Game process is called at the start of a game and initializes the game. Afterwards, this calls the Start Round process. This assigns all player variables and retrieves a question via a GET requester by the Light Weight Process Generate Question Process. Subsequently, the Compare Answer process causes the answers to be sent to the host to compare them there. The Get Result process stores all results, synchronizes it with all players and outputs it to the UI.
 
+![Sequence Diagram](https://user-images.githubusercontent.com/62339676/206184580-403996cd-29e9-433d-9bfd-f603d879860b.png)
+
+
 ## 7. Deployment View
 
 Three components are used for a complete game: Server, Master, Clients. The server runs at the PhotonServices and stores all rooms and corresponding player information.
