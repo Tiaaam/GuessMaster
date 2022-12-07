@@ -70,10 +70,6 @@ Process View:
 Deployment View:
 - ·WIP·
 
-Implementation View:
-- ·WIP·
-
-
 ## 3. Architectural Goals and Constraints
 
 We saved our Architectural Goals and Constraints in the [Architecture Significant Requirements (ASR)](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Architecture_Significant_Requirements.md).
@@ -113,11 +109,11 @@ It is differentiated between the following Heavy Weight Processes: Start Game, N
 
 ### 8.1 Overwiev
 
-·WIP·
+(n/r)
 
 ### 8.2 Layers
 
-·WIP·
+(n/r)
 
 ## 9. Size and Performance
 
