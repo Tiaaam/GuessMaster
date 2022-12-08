@@ -26,6 +26,28 @@ public class LobbyController : MonoBehaviourPunCallbacks
     [SerializeField]
     private TextMeshProUGUI PlayerNameInput;
 
+    private ExitGames.Client.Photon.Hashtable _myCustomProperties = new ExitGames.Client.Photon.Hashtable();
+
+    private void giveProperties()
+    {
+        _myCustomProperties["Score"] = 0;
+        _myCustomProperties["Rank"] = 1;
+        _myCustomProperties["ID"] = "#";
+        PhotonNetwork.LocalPlayer.CustomProperties = _myCustomProperties;
+    }
+    private void generateName()
+    {
+        string playername = PlayerNameInput.text;
+        if (playername.Length > 1 && playername.Length < 12)
+        {
+            playername = playername.Substring(0, playername.Length - 1);
+        }
+        else
+        {
+            playername = "Player";
+        }
+        PhotonNetwork.NickName = playername;
+    }
 
     public override void OnConnectedToMaster()
     {
@@ -37,12 +59,16 @@ public class LobbyController : MonoBehaviourPunCallbacks
 
     public void JoinRandomRoom()
     {
+        generateName();
+        giveProperties();
         joinRandomRoomButton.SetActive(false);
         PhotonNetwork.JoinRandomRoom();
     }
 
     public void JoinSpecificRoom()
     {
+        generateName();
+        giveProperties();
         joinSpecificRoomButton.SetActive(false);
         RoomIDLog.text = "";
         string roomID = RoomIDInput.text.Substring(0,6);
@@ -52,6 +78,11 @@ public class LobbyController : MonoBehaviourPunCallbacks
     public void OpenHostPanel()
     {
         HostingPanel.SetActive(true);
+    }
+
+    public void CloseHostPanel()
+    {
+        HostingPanel.SetActive(false);
     }
 
 
@@ -110,17 +141,8 @@ public class LobbyController : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         Debug.Log("Joined Room");
-        string playername = PlayerNameInput.text;
-        if (playername.Length > 1)
-        {
-            playername = playername.Substring(0, playername.Length - 1);
-        }
-        else
-        {
-            playername = "Player";
-        }
-        PhotonNetwork.LocalPlayer.NickName = playername;
+        generateName();
+        giveProperties();
         PhotonNetwork.LoadLevel(1);
     }
-
 }

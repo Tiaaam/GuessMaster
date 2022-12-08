@@ -28,18 +28,18 @@ public class ScoreboardManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        usernames = new string[PhotonNetwork.PlayerList.Length];
-        for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
-        {
-            usernames[i] = PhotonNetwork.PlayerList[i].NickName;
+        //usernames = new string[PhotonNetwork.PlayerList.Length];
+        //for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
+        //{
+        //    usernames[i] = PhotonNetwork.PlayerList[i].NickName;
 
-            int score = (int)PhotonNetwork.PlayerList[i].CustomProperties["Score"];
+        //    int score = (int)PhotonNetwork.PlayerList[i].CustomProperties["Score"];
 
-            string a = string.Join("", usernames);
-            scoreboardText.text = $"\n {rank.ToString()}.              " + a + $"              {score.ToString()}";
+        //    string a = string.Join("", usernames);
+        //    scoreboardText.text = $"\n {rank.ToString()}.              " + a + $"              {score.ToString()}";
 
-            //rank++;
-        }
-        rank = 1;
+        //    //rank++;
+        //}
+        //rank = 1;
     }
 }

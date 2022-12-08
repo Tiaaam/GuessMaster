@@ -5,7 +5,7 @@ using Photon.Pun;
 
 public class PlayerController : MonoBehaviourPunCallbacks
 {
-    private string answer;
+    public string answer;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,13 +27,12 @@ public class PlayerController : MonoBehaviourPunCallbacks
     [PunRPC]
     public void RequestPlayerAnswer() //Wird bei jeden Spieler von Master aufgerufen
     {
-        this.photonView.RPC("SendPlayerAnswer", RpcTarget.MasterClient,answer,this.photonView.ViewID);
+        this.photonView.RPC("SendPlayerAnswer", RpcTarget.MasterClient,answer, 0);
     }
 
     public void EndOfRound()
     {
-        Debug.Log(this.photonView.ViewID);
-        this.photonView.RPC("RequestPlayerAnswer", RpcTarget.All);
+        this.photonView.RPC("RequestPlayerAnswer", RpcTarget.Others);
     }
 
     //[PunRPC]

@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 4655589503642940887}
   - component: {fileID: 4655589503642940880}
   - component: {fileID: 4655589503642940881}
-  - component: {fileID: 4655589503642940883}
+  - component: {fileID: 1160545000249717637}
   m_Layer: 5
   m_Name: Row 1
   m_TagString: Untagged
@@ -211,7 +211,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4655589503642940884}
   m_CullTransparentMesh: 1
---- !u!114 &4655589503642940883
+--- !u!114 &1160545000249717637
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -220,12 +220,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4655589503642940884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37e907228711bcb42b815904635c28ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 2062257e493bde54a94568ec0f2d3ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rank: {fileID: 0}
-  name: {fileID: 0}
-  score: {fileID: 0}
+  rank: {fileID: 4655589504102079853}
+  playerName: {fileID: 4655589502749128814}
+  score: {fileID: 4655589504113763873}
 --- !u!1 &4655589504102079635
 GameObject:
   m_ObjectHideFlags: 0
