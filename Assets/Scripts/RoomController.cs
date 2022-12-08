@@ -4,6 +4,7 @@ using Photon.Realtime;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class RoomController : MonoBehaviourPunCallbacks
 {
@@ -15,9 +16,19 @@ public class RoomController : MonoBehaviourPunCallbacks
     [SerializeField]
 
 
+
     void Start()
     {
-        PhotonNetwork.NickName += "#" + CreatePlayerHashtag();
+
+        string id = (string)PhotonNetwork.LocalPlayer.CustomProperties["ID"];
+
+        id += CreatePlayerHashtag();
+        Hashtable hash = PhotonNetwork.LocalPlayer.CustomProperties;
+        hash["ID"] = id;
+        PhotonNetwork.LocalPlayer.CustomProperties = hash;
+        //Debug.Log((string)PhotonNetwork.LocalPlayer.CustomProperties["ID"]);
+
+        //PhotonNetwork.NickName += "#" + CreatePlayerHashtag();
 
 
         roomNameField.text = PhotonNetwork.CurrentRoom.Name;

@@ -32,6 +32,7 @@ public class LobbyController : MonoBehaviourPunCallbacks
     {
         _myCustomProperties["Score"] = 0;
         _myCustomProperties["Rank"] = 1;
+        _myCustomProperties["ID"] = "#";
         PhotonNetwork.LocalPlayer.CustomProperties = _myCustomProperties;
     }
     private void generateName()
