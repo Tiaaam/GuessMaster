@@ -111,7 +111,7 @@ A master player is also required. This creates a room and then manages it. He is
 The third component is the player clients. They are responsible for their own answers and send them to the master. Every communication takes place via
 the server (photon) instead. As soon as the master receives the answers, he compares them and then sends the respective score back to the players.
 
-![DeploymentDiagram](https://user-images.githubusercontent.com/62339676/206179313-75ff8090-4b5a-40b0-8b37-0e8ba519d08d.png)
+![DeploymentDiagram](https://user-images.githubusercontent.com/62339676/206647175-6c4f88b0-94f8-4c94-a943-fea3176c70e4.png)
 
 
 ## 8. Implementation View
