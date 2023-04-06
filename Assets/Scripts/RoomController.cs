@@ -20,12 +20,14 @@ public class RoomController : MonoBehaviourPunCallbacks
     void Start()
     {
 
-        string id = (string)PhotonNetwork.LocalPlayer.CustomProperties["ID"];
+        //string id = (string)PhotonNetwork.LocalPlayer.CustomProperties["ID"];
 
-        id += CreatePlayerHashtag();
+        /*id += CreatePlayerHashtag();
         Hashtable hash = PhotonNetwork.LocalPlayer.CustomProperties;
         hash["ID"] = id;
-        PhotonNetwork.LocalPlayer.CustomProperties = hash;
+        PhotonNetwork.LocalPlayer.CustomProperties = hash;*/
+
+        PhotonNetwork.LocalPlayer.CustomProperties["ID"] = "#" + CreatePlayerHashtag();
         //Debug.Log((string)PhotonNetwork.LocalPlayer.CustomProperties["ID"]);
 
         //PhotonNetwork.NickName += "#" + CreatePlayerHashtag();
