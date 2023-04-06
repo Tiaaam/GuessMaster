@@ -25,9 +25,9 @@ public class RoomController : MonoBehaviourPunCallbacks
         /*id += CreatePlayerHashtag();
         Hashtable hash = PhotonNetwork.LocalPlayer.CustomProperties;
         hash["ID"] = id;
-        PhotonNetwork.LocalPlayer.CustomProperties = hash;*/
+        PhotonNetwork.LocalPlayer.CustomProperties = hash;
 
-        PhotonNetwork.LocalPlayer.CustomProperties["ID"] = "#" + CreatePlayerHashtag();
+        PhotonNetwork.LocalPlayer.CustomProperties["ID"] = "#" + CreatePlayerHashtag();*/
         //Debug.Log((string)PhotonNetwork.LocalPlayer.CustomProperties["ID"]);
 
         //PhotonNetwork.NickName += "#" + CreatePlayerHashtag();
@@ -43,10 +43,11 @@ public class RoomController : MonoBehaviourPunCallbacks
 
     public void StartGame()
     {
+        Debug.Log("Starting Game...");
         PhotonNetwork.LoadLevel(2);
     }
 
-    public string CreatePlayerHashtag()
+    /*public string CreatePlayerHashtag()
     {
         bool isFree = false;
         string randomHashtag ="";
@@ -66,6 +67,6 @@ public class RoomController : MonoBehaviourPunCallbacks
         }
         return randomHashtag;
 
-    }
+    }*/
 
 }

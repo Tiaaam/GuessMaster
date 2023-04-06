@@ -29,18 +29,13 @@ public class PlayerController : MonoBehaviourPunCallbacks
     {
         string tst = PhotonNetwork.LocalPlayer.ActorNumber.ToString();
         Debug.Log(tst);
-        this.photonView.RPC("SendPlayerAnswer", RpcTarget.MasterClient,answer, tst);
+        this.photonView.RPC("SendPlayerAnswer", RpcTarget.MasterClient,answer, PhotonNetwork.LocalPlayer.ActorNumber.ToString());
     }
 
     public void EndOfRound()
     {
         Debug.Log("EIGENSE VIEW ID:" + PhotonNetwork.LocalPlayer.ActorNumber);
         this.photonView.RPC("RequestPlayerAnswer", RpcTarget.Others);
-    }
-
-    public void MasterManager()
-    {
-
     }
 
     //[PunRPC]
