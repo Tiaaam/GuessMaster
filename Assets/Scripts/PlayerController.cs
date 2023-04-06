@@ -27,14 +27,14 @@ public class PlayerController : MonoBehaviourPunCallbacks
     [PunRPC]
     public void RequestPlayerAnswer() //Wird bei jeden Spieler von Master aufgerufen
     {
-        string tst = PhotonNetwork.LocalPlayer.CustomProperties["ID"].ToString();
+        string tst = PhotonNetwork.LocalPlayer.ActorNumber.ToString();
         Debug.Log(tst);
         this.photonView.RPC("SendPlayerAnswer", RpcTarget.MasterClient,answer, tst);
     }
 
     public void EndOfRound()
     {
-        Debug.Log("EIGENSE VIEW ID:" + PhotonNetwork.LocalPlayer.CustomProperties["ID"]);
+        Debug.Log("EIGENSE VIEW ID:" + PhotonNetwork.LocalPlayer.ActorNumber);
         this.photonView.RPC("RequestPlayerAnswer", RpcTarget.Others);
     }
 

@@ -61,15 +61,14 @@ public class LobbyController : MonoBehaviourPunCallbacks
 
     public void JoinRandomRoom()
     {
-        generateName();
-        
+        Debug.Log("JOINED RANDOM ROOM!");
         joinRandomRoomButton.SetActive(false);
         PhotonNetwork.JoinRandomRoom();
     }
 
     public void JoinSpecificRoom()
     {
-        generateName();
+        Debug.Log("JOINED SPECIFIC ROOM!");
         joinSpecificRoomButton.SetActive(false);
         RoomIDLog.text = "";
         string roomID = RoomIDInput.text.Substring(0,6);
@@ -141,7 +140,7 @@ public class LobbyController : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        Debug.Log("Joined Room");
+        Debug.Log("Joined Room!");
         generateName();
         giveProperties();
         PhotonNetwork.LoadLevel(1);
