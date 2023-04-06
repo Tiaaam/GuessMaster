@@ -32,8 +32,13 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
     public void EndOfRound()
     {
-        Debug.Log(this.photonView.ViewID);
+        Debug.Log("EIGENSE VIEW ID:" + PhotonNetwork.LocalPlayer.CustomProperties["ID"]);
         this.photonView.RPC("RequestPlayerAnswer", RpcTarget.Others);
+    }
+
+    public void MasterManager()
+    {
+
     }
 
     //[PunRPC]
