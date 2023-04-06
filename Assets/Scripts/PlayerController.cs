@@ -19,9 +19,9 @@ public class PlayerController : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    public void SendPlayerAnswer(string _answer, int _playerID) //Wird beim Master aufgerufen von jedem Spieler
+    public void SendPlayerAnswer(string _answer, string _playerID) //Wird beim Master aufgerufen von jedem Spieler
     {
-        Debug.Log(_answer + _playerID.ToString());
+        Debug.Log(_answer + _playerID);
     }
 
     [PunRPC]
