@@ -28,14 +28,14 @@ public class LobbyController : MonoBehaviourPunCallbacks
     [SerializeField]
     private TextMeshProUGUI PlayerNameInput;
 
-    private ExitGames.Client.Photon.Hashtable _myCustomProperties = new ExitGames.Client.Photon.Hashtable();
+    private ExitGames.Client.Photon.Hashtable myCustomProperties = new ExitGames.Client.Photon.Hashtable();
 
     private void giveProperties()
     {
-        _myCustomProperties["Score"] = 0;
-        _myCustomProperties["Rank"] = 1;
-        _myCustomProperties["ID"] = "#";
-        PhotonNetwork.LocalPlayer.CustomProperties = _myCustomProperties;
+        myCustomProperties["Score"] = 0;
+        myCustomProperties["Rank"] = 1;
+        myCustomProperties["ID"] = "#";
+        PhotonNetwork.LocalPlayer.CustomProperties = myCustomProperties;
     }
     private void generateName()
     {
@@ -91,13 +91,13 @@ public class LobbyController : MonoBehaviourPunCallbacks
     public void StartHosting()
     {
         Debug.Log(int.Parse(numberOfPlayers.GetParsedText()));
-        CreateRoom(int.Parse(numberOfPlayers.GetParsedText()), true);
+        CreateRoom(int.Parse(numberOfPlayers.GetParsedText()), 5, true);
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)
     {
         Debug.Log("Failed to join random Room");
-        CreateRoom(8, true);
+        CreateRoom(8, 5, true);
     }
 
     public override void OnJoinRoomFailed(short returnCode, string message)
@@ -106,11 +106,14 @@ public class LobbyController : MonoBehaviourPunCallbacks
         joinSpecificRoomButton.SetActive(true);
     }
 
-    public void CreateRoom(int roomSize, bool isPublic)
+    public void CreateRoom(int roomSize, int rounds, bool isPublic)
     {
         Debug.Log("Creating new Room");
         string roomid = generateRoomID();
         RoomOptions roomOps = new RoomOptions() { IsVisible = isPublic, IsOpen = true, MaxPlayers = (byte)roomSize };
+        ExitGames.Client.Photon.Hashtable roomProperties = new ExitGames.Client.Photon.Hashtable();
+        roomProperties["NumberOfRounds"] = rounds;
+        roomOps.CustomRoomProperties = roomProperties;
         PhotonNetwork.CreateRoom(roomid, roomOps, TypedLobby.Default);
         Debug.Log("Room(" + roomid + ") created");
     }
