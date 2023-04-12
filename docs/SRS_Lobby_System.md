@@ -40,5 +40,5 @@ The postcondition for this usecase are:
 
 ## 6 Effort estimation 
 
-·WIP·
+Effort estimation: Middle <-> High
 

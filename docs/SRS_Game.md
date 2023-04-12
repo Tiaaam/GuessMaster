@@ -39,4 +39,4 @@ The postconditions for this use case are:
 
 ## 6 Effort estimation 
 
-·WIP·
+Effort estimation: High
