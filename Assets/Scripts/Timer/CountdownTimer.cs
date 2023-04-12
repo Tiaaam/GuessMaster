@@ -46,7 +46,7 @@ public class CountdownTimer : MonoBehaviour
 
         uiFill.fillAmount = Mathf.InverseLerp(0, startingTime, currentTime);
 
-        if (currentTime <= 0 && currentTime >= -answerTime)
+        if (currentTime <= 0 && HideWhenAnswerShows.activeSelf)
         {
             Debug.Log("RESULT SCREEN");
             HideWhenQuestionShows.SetActive(true);
