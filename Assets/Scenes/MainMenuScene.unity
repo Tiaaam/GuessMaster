@@ -9190,6 +9190,7 @@ MonoBehaviour:
   HostRoomButton: {fileID: 1277126441}
   RoomIDInput: {fileID: 1860787723}
   RoomIDLog: {fileID: 1983012452}
+  numberOfPlayers: {fileID: 780259021}
   HostingPanel: {fileID: 2007500405}
   PlayerNameInput: {fileID: 1147151985}
 --- !u!4 &1945290049

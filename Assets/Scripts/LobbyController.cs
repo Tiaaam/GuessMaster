@@ -18,6 +18,8 @@ public class LobbyController : MonoBehaviourPunCallbacks
     private TextMeshProUGUI RoomIDInput;
     [SerializeField]
     private TextMeshProUGUI RoomIDLog;
+    [SerializeField] 
+    private TextMeshProUGUI numberOfPlayers;
 
 
     [SerializeField]
@@ -88,7 +90,8 @@ public class LobbyController : MonoBehaviourPunCallbacks
 
     public void StartHosting()
     {
-        CreateRoom(5, true);
+        Debug.Log(int.Parse(numberOfPlayers.GetParsedText()));
+        CreateRoom(int.Parse(numberOfPlayers.GetParsedText()), true);
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)
