@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,7 +9,7 @@ using UnityEngine.UI;
 public class CountdownTimer : MonoBehaviour
 {
     int currentround = 1;
-    int numberofrounds = 4;
+    int numberofrounds = (int)PhotonNetwork.CurrentRoom.CustomProperties["NumberOfRounds"];
     int questionCount = 0;
     float currentTime = 0f;
     float startingTime = 11f;
@@ -45,23 +46,27 @@ public class CountdownTimer : MonoBehaviour
 
         uiFill.fillAmount = Mathf.InverseLerp(0, startingTime, currentTime);
 
-        if (currentTime <= 0 && currentTime >= -answerTime)
+        if (currentTime <= 0 && HideWhenAnswerShows.activeSelf)
         {
+            Debug.Log("RESULT SCREEN");
             HideWhenQuestionShows.SetActive(true);
             HideWhenAnswerShows.SetActive(false);
         }
 
         if (currentTime <= -answerTime)
         {
+            Debug.Log("GIVE ANSWER SCREEN");
             HideWhenQuestionShows.SetActive(false);
             HideWhenAnswerShows.SetActive(true);
             currentround++;
             questionCount++;
             currentTime = startingTime;
+            
         }
 
         if (questionCount == numberofrounds)
         {
+            Debug.Log("ENDE ALLE FRAGEN DURCH");
             questionCount = 0;
             currentround = 1;
         }
@@ -70,6 +75,8 @@ public class CountdownTimer : MonoBehaviour
         answerText.text = answers[questionCount];
         roundText.text = $"Round {currentround}/{numberofrounds}";
     }
+
+
 
     private static List<string> GetQuestions()
     {
