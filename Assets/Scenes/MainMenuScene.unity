@@ -2844,7 +2844,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3811,7 +3811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5408,7 +5408,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7614,7 +7614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9131,6 +9131,8 @@ MonoBehaviour:
   HostRoomButton: {fileID: 1277126441}
   RoomIDInput: {fileID: 1860787723}
   RoomIDLog: {fileID: 1983012452}
+  numberOfPlayers: {fileID: 780259021}
+  numberOfRounds: {fileID: 1252424153}
   HostingPanel: {fileID: 2007500405}
   PlayerNameInput: {fileID: 1147151985}
 --- !u!4 &1945290049
@@ -9705,6 +9707,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2048582712}
+  - component: {fileID: 2048582713}
   m_Layer: 0
   m_Name: UIController
   m_TagString: Untagged
@@ -9727,6 +9730,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2048582713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048582711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089957bbe2759b448b3137976bf23ec9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSlider: {fileID: 1203245077}
+  roundSlider: {fileID: 1249716862}
+  numberOfPlayers: {fileID: 780259021}
+  numberOfRounds: {fileID: 1252424153}
 --- !u!1 &2052010058
 GameObject:
   m_ObjectHideFlags: 0
