@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Photon.Pun;
 
-public class PlayerController : MonoBehaviourPunCallbacks
+
+public class PlayerController : MonoBehaviour
 {
     public string answer;
     // Start is called before the first frame update
     void Start()
     {
-        answer = "this is an answer";
+        
     }
 
     // Update is called once per frame
@@ -18,22 +18,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
         
     }
 
-    [PunRPC]
-    public void SendPlayerAnswer(string _answer, int _playerID) //Wird beim Master aufgerufen von jedem Spieler
-    {
-        Debug.Log(_answer + _playerID.ToString());
-    }
-
-    [PunRPC]
-    public void RequestPlayerAnswer() //Wird bei jeden Spieler von Master aufgerufen
-    {
-        this.photonView.RPC("SendPlayerAnswer", RpcTarget.MasterClient,answer, 0);
-    }
-
-    public void EndOfRound()
-    {
-        this.photonView.RPC("RequestPlayerAnswer", RpcTarget.Others);
-    }
+   
 
     //[PunRPC]
     //public void SendDataToServer()
