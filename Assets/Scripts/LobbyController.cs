@@ -4,7 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using TMPro;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class LobbyController : MonoBehaviourPunCallbacks
 {
@@ -24,7 +24,8 @@ public class LobbyController : MonoBehaviourPunCallbacks
     private TextMeshProUGUI numberOfRounds;
     [SerializeField]
     private TextMeshProUGUI numberOfSeconds;
-
+    [SerializeField]
+    private Toggle togglePublicGame;
 
     [SerializeField]
     private GameObject HostingPanel;
@@ -97,7 +98,7 @@ public class LobbyController : MonoBehaviourPunCallbacks
         CreateRoom(int.Parse(numberOfPlayers.GetParsedText()),
                    int.Parse(numberOfRounds.GetParsedText()),
                    int.Parse(numberOfSeconds.GetParsedText()),
-                   true);
+                   togglePublicGame.isOn);
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)

@@ -7098,6 +7098,7 @@ MonoBehaviour:
   numberOfPlayers: {fileID: 780259021}
   numberOfRounds: {fileID: 1252424153}
   numberOfSeconds: {fileID: 2110734178}
+  togglePublicGame: {fileID: 1651033698}
   HostingPanel: {fileID: 2007500405}
   PlayerNameInput: {fileID: 1147151985}
 --- !u!4 &1945290049
