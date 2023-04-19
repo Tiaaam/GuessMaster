@@ -12,7 +12,7 @@ public class CountdownTimer : MonoBehaviour
     int numberofrounds = (int)PhotonNetwork.CurrentRoom.CustomProperties["NumberOfRounds"];
     int questionCount = 0;
     float currentTime = 0f;
-    float startingTime = 11f;
+    float startingTime = (int)PhotonNetwork.CurrentRoom.CustomProperties["NumberOfSeconds"];
     float answerTime = 5f;
 
     [SerializeField]

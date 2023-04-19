@@ -730,8 +730,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1349486979}
-  - {fileID: 322079695}
   - {fileID: 2110734177}
+  - {fileID: 322079695}
   m_Father: {fileID: 2016469364}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1341,7 +1341,7 @@ RectTransform:
   - {fileID: 2045939503}
   - {fileID: 349168666}
   m_Father: {fileID: 160977547}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -7097,6 +7097,7 @@ MonoBehaviour:
   RoomIDLog: {fileID: 1983012452}
   numberOfPlayers: {fileID: 780259021}
   numberOfRounds: {fileID: 1252424153}
+  numberOfSeconds: {fileID: 2110734178}
   HostingPanel: {fileID: 2007500405}
   PlayerNameInput: {fileID: 1147151985}
 --- !u!4 &1945290049
@@ -7609,8 +7610,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSlider: {fileID: 1203245077}
   roundSlider: {fileID: 1249716862}
+  timeSlider: {fileID: 322079696}
   numberOfPlayers: {fileID: 780259021}
   numberOfRounds: {fileID: 1252424153}
+  numberOfSeconds: {fileID: 2110734178}
 --- !u!1 &2052010058
 GameObject:
   m_ObjectHideFlags: 0
@@ -7929,7 +7932,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 160977547}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
