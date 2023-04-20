@@ -44,6 +44,7 @@ public class GameSetupController : MonoBehaviourPunCallbacks
     [PunRPC]
     public void RequestPlayerAnswer() //Wird bei jeden Spieler von Master aufgerufen
     {
+        roundStatus = 1;
         string tst = PhotonNetwork.LocalPlayer.ActorNumber.ToString();
         Debug.Log(tst);
         this.photonView.RPC("SendPlayerAnswer", RpcTarget.MasterClient, answer, PhotonNetwork.LocalPlayer.ActorNumber.ToString());
@@ -58,8 +59,10 @@ public class GameSetupController : MonoBehaviourPunCallbacks
     [PunRPC]
     public void SendNewRoundData(string _question, string _answer)
     {
+        
         question = _question;
         correct_answer = _answer;
+        roundStatus = 0;
     }
 
     public void NewRound()
@@ -69,6 +72,7 @@ public class GameSetupController : MonoBehaviourPunCallbacks
         correct_answer = AnswerList[questionID];
         this.photonView.RPC("SendNewRoundData", RpcTarget.Others, question, answer);
     }
+
 
     List<string> QuestionList = new List<string>{
         "How many inhabitants does Germany have?",

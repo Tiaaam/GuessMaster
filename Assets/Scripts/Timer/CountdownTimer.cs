@@ -57,6 +57,7 @@ public class CountdownTimer : MonoBehaviour
             if (currentTime <= 0 && HideWhenAnswerShows.activeSelf)
             {
                 Debug.Log("RESULT SCREEN");
+                this.gameObject.GetComponent<GameSetupController>().EndOfRound();
                 HideWhenQuestionShows.SetActive(true);
                 HideWhenAnswerShows.SetActive(false);
             }
