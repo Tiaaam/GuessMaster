@@ -5,7 +5,6 @@ using Photon.Pun;
 using System.IO;
 using System;
 using System.Threading.Tasks;
-using Photon.Pun;
 
 public class GameSetupController : MonoBehaviourPunCallbacks
 {
@@ -17,6 +16,8 @@ public class GameSetupController : MonoBehaviourPunCallbacks
     void Start()
     {
         answer = "this is an answer";
+        //TextAsset csvFile = Resources.Load<TextAsset>("DataTables/german_cities_area_questions_12_01_2022");
+        //Debug.Log(csvFile.text);
     }
 
     public void SendDataToPrefab()
