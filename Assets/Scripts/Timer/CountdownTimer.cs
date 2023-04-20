@@ -30,55 +30,127 @@ public class CountdownTimer : MonoBehaviour
     [SerializeField]
     private GameObject HideWhenQuestionShows;
 
+    private List<string> questions;
+    private List<string> answers;
+
     void Start()
     {
         currentTime = startingTime;
         HideWhenQuestionShows.SetActive(false);
+
+        //questions = GetQuestions();
+        //answers = GetAnswers();
     }
 
     void Update()
     {
-        var questions = GetQuestions();
-        var answers = GetAnswers();
-
-        currentTime -= 1 * Time.deltaTime;
-        countdownText.text = $"{((int)currentTime / 60).ToString("00")}:{((int)currentTime % 60).ToString("00")}";
-
-        uiFill.fillAmount = Mathf.InverseLerp(0, startingTime, currentTime);
-
-        if (currentTime <= 0 && HideWhenAnswerShows.activeSelf)
+        if (PhotonNetwork.IsMasterClient) 
         {
-            Debug.Log("RESULT SCREEN");
-            HideWhenQuestionShows.SetActive(true);
-            HideWhenAnswerShows.SetActive(false);
+            currentTime -= 1 * Time.deltaTime;
+            countdownText.text = $"{((int)currentTime / 60).ToString("00")}:{((int)currentTime % 60).ToString("00")}";
+
+            uiFill.fillAmount = Mathf.InverseLerp(0, startingTime, currentTime);
+
+            if (currentTime <= 0 && HideWhenAnswerShows.activeSelf)
+            {
+                Debug.Log("RESULT SCREEN");
+                HideWhenQuestionShows.SetActive(true);
+                HideWhenAnswerShows.SetActive(false);
+            }
+
+            if (currentTime <= -answerTime)
+            {
+                Debug.Log("GIVE ANSWER SCREEN");
+                this.gameObject.GetComponent<GameSetupController>().NewRound();
+                HideWhenQuestionShows.SetActive(false);
+                HideWhenAnswerShows.SetActive(true);
+                currentround++;
+                questionCount++;
+                currentTime = startingTime;
+
+            }
+
+            if (questionCount == numberofrounds)
+            {
+                Debug.Log("ENDE ALLE FRAGEN DURCH");
+                questionCount = 0;
+                currentround = 1;
+            }
+
+            questionText.text = GameSetupController.question;
+            answerText.text = GameSetupController.correct_answer;
+            roundText.text = $"Round {currentround}/{numberofrounds}";
+        }
+        else
+        {
+            if (currentTime >= 0) currentTime -= 1 * Time.deltaTime;
+            countdownText.text = $"{((int)currentTime / 60).ToString("00")}:{((int)currentTime % 60).ToString("00")}";
+
+            uiFill.fillAmount = Mathf.InverseLerp(0, startingTime, currentTime);
+
+            if (GameSetupController.roundStatus == 0)
+            {
+                    Debug.Log("GIVE ANSWER SCREEN");
+                    HideWhenQuestionShows.SetActive(false);
+                    HideWhenAnswerShows.SetActive(true);
+                    currentround++;
+                    questionCount++;
+                    currentTime = startingTime;
+            }
+            else if (GameSetupController.roundStatus == 1)
+            {
+                Debug.Log("RESULT SCREEN");
+                HideWhenQuestionShows.SetActive(true);
+                HideWhenAnswerShows.SetActive(false);
+            }
+
+            questionText.text = GameSetupController.question;
+            answerText.text = GameSetupController.correct_answer;
+            roundText.text = $"Round {currentround}/{numberofrounds}";
         }
 
-        if (currentTime <= -answerTime)
-        {
-            Debug.Log("GIVE ANSWER SCREEN");
-            HideWhenQuestionShows.SetActive(false);
-            HideWhenAnswerShows.SetActive(true);
-            currentround++;
-            questionCount++;
-            currentTime = startingTime;
-            
-        }
 
-        if (questionCount == numberofrounds)
-        {
-            Debug.Log("ENDE ALLE FRAGEN DURCH");
-            questionCount = 0;
-            currentround = 1;
-        }
 
-        questionText.text = questions[questionCount];
-        answerText.text = answers[questionCount];
-        roundText.text = $"Round {currentround}/{numberofrounds}";
+
+
+        /*currentTime -= 1 * Time.deltaTime;
+            countdownText.text = $"{((int)currentTime / 60).ToString("00")}:{((int)currentTime % 60).ToString("00")}";
+
+            uiFill.fillAmount = Mathf.InverseLerp(0, startingTime, currentTime);
+
+            if (currentTime <= 0 && HideWhenAnswerShows.activeSelf)
+            {
+                Debug.Log("RESULT SCREEN");
+                HideWhenQuestionShows.SetActive(true);
+                HideWhenAnswerShows.SetActive(false);
+            }
+
+            if (currentTime <= -answerTime)
+            {
+                Debug.Log("GIVE ANSWER SCREEN");
+                HideWhenQuestionShows.SetActive(false);
+                HideWhenAnswerShows.SetActive(true);
+                currentround++;
+                questionCount++;
+                currentTime = startingTime;
+
+            }
+
+            if (questionCount == numberofrounds)
+            {
+                Debug.Log("ENDE ALLE FRAGEN DURCH");
+                questionCount = 0;
+                currentround = 1;
+            }
+
+            questionText.text = GameSetupController.question;
+            answerText.text = answers[questionCount];
+            roundText.text = $"Round {currentround}/{numberofrounds}";*/
     }
 
 
 
-    private static List<string> GetQuestions()
+    /*private static List<string> GetQuestions()
     {
         return new List<string>{
         "How many inhabitants does Germany have?",
@@ -93,5 +165,5 @@ public class CountdownTimer : MonoBehaviour
             "Germany has 15.430.000 inhabitants under the age of 20.",
             "Austria has 9.073.648 inhabitants.",
             "3.677.472 people live in Berlin (Germany)." };
-    }
+    }*/
 }

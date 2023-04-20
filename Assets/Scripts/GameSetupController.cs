@@ -9,7 +9,9 @@ using Photon.Pun;
 
 public class GameSetupController : MonoBehaviourPunCallbacks
 {
-
+    public static int roundStatus = 0;
+    public static string question = "TestQuestion";
+    public static string correct_answer = "AnswerQuestion";
     private GameObject myplayer;
     public string answer;
     void Start()
@@ -22,7 +24,7 @@ public class GameSetupController : MonoBehaviourPunCallbacks
         EndOfRound();
     }
 
-    public async void ShowAnswers()
+    /*public async void ShowAnswers()
     {
         Debug.Log("Starting RoundManager");
         if (!PhotonNetwork.IsMasterClient) return;
@@ -30,8 +32,7 @@ public class GameSetupController : MonoBehaviourPunCallbacks
         await Task.Delay(TimeSpan.FromSeconds(3));
         EndOfRound();
 
-    }
-
+    }*/
 
 
     [PunRPC]
@@ -54,4 +55,47 @@ public class GameSetupController : MonoBehaviourPunCallbacks
         this.photonView.RPC("RequestPlayerAnswer", RpcTarget.Others);
     }
 
+    [PunRPC]
+    public void SendNewRoundData(string _question, string _answer)
+    {
+        question = _question;
+        correct_answer = _answer;
+    }
+
+    public void NewRound()
+    {
+        int questionID = UnityEngine.Random.Range(0, 4);
+        question = QuestionList[questionID];
+        correct_answer = AnswerList[questionID];
+        this.photonView.RPC("SendNewRoundData", RpcTarget.Others, question, answer);
+    }
+
+    List<string> QuestionList = new List<string>{
+        "How many inhabitants does Germany have?",
+        "How many inhabitants under the age of 20 does Germany have?",
+        "How many inhabitants does Austria have?",
+        "How many people live in Berlin (Germany)?"};
+
+    List<string> AnswerList = new List<string> {
+            "Germany has 83.240.000 inhabitants.",
+            "Germany has 15.430.000 inhabitants under the age of 20.",
+            "Austria has 9.073.648 inhabitants.",
+            "3.677.472 people live in Berlin (Germany)." };
+
+    /*private static List<string> GetQuestions()
+    {
+        return new List<string>{
+        "How many inhabitants does Germany have?",
+        "How many inhabitants under the age of 20 does Germany have?",
+        "How many inhabitants does Austria have?",
+        "How many people live in Berlin (Germany)?"};
+    }
+    private static List<string> GetAnswers()
+    {
+        return new List<string> {
+            "Germany has 83.240.000 inhabitants.",
+            "Germany has 15.430.000 inhabitants under the age of 20.",
+            "Austria has 9.073.648 inhabitants.",
+            "3.677.472 people live in Berlin (Germany)." };
+    }*/
 }
