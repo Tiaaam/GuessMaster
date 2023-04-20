@@ -33,6 +33,9 @@ public class CountdownTimer : MonoBehaviour
     private List<string> questions;
     private List<string> answers;
 
+    private bool questionScreen_Showed = false;
+    private bool answerScreen_Showed = false;
+
     void Start()
     {
         currentTime = startingTime;
@@ -88,17 +91,21 @@ public class CountdownTimer : MonoBehaviour
 
             uiFill.fillAmount = Mathf.InverseLerp(0, startingTime, currentTime);
 
-            if (GameSetupController.roundStatus == 0)
+            if (GameSetupController.roundStatus == 0 && !answerScreen_Showed)
             {
-                    Debug.Log("GIVE ANSWER SCREEN");
-                    HideWhenQuestionShows.SetActive(false);
-                    HideWhenAnswerShows.SetActive(true);
-                    currentround++;
-                    questionCount++;
-                    currentTime = startingTime;
+                answerScreen_Showed = true;
+                questionScreen_Showed = false;
+                Debug.Log("GIVE ANSWER SCREEN");
+                HideWhenQuestionShows.SetActive(false);
+                HideWhenAnswerShows.SetActive(true);
+                currentround++;
+                questionCount++;
+                currentTime = startingTime;
             }
-            else if (GameSetupController.roundStatus == 1)
+            else if (GameSetupController.roundStatus == 1 && !questionScreen_Showed)
             {
+                questionScreen_Showed = true;
+                answerScreen_Showed = false;
                 Debug.Log("RESULT SCREEN");
                 HideWhenQuestionShows.SetActive(true);
                 HideWhenAnswerShows.SetActive(false);
