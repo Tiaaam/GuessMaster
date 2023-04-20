@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class CountdownTimer : MonoBehaviour
 {
-    int currentround = 0;
+    int currentround = 1;
     int numberofrounds = (int)PhotonNetwork.CurrentRoom.CustomProperties["NumberOfRounds"];
     int questionCount = 0;
     float currentTime = 0f;
@@ -62,7 +62,7 @@ public class CountdownTimer : MonoBehaviour
                 HideWhenAnswerShows.SetActive(false);
             }
 
-            if (currentTime <= -answerTime || currentround == 0)
+            if (currentTime <= -answerTime)
             {
                 Debug.Log("GIVE ANSWER SCREEN");
                 this.gameObject.GetComponent<GameSetupController>().NewRound();
