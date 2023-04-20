@@ -70,7 +70,7 @@ public class GameSetupController : MonoBehaviourPunCallbacks
         int questionID = UnityEngine.Random.Range(0, 4);
         question = QuestionList[questionID];
         correct_answer = AnswerList[questionID];
-        this.photonView.RPC("SendNewRoundData", RpcTarget.Others, question, answer);
+        this.photonView.RPC("SendNewRoundData", RpcTarget.Others, question, correct_answer);
     }
 
 

@@ -43,6 +43,7 @@ public class CountdownTimer : MonoBehaviour
 
         //questions = GetQuestions();
         //answers = GetAnswers();
+        if (!PhotonNetwork.IsMasterClient) currentround = 0;
     }
 
     void Update()
