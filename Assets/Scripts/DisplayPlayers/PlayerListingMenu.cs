@@ -1,19 +1,15 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 using Photon.Pun;
 using Photon.Realtime;
 
 public class PlayerListingMenu : MonoBehaviourPunCallbacks
 {
-
     [SerializeField]
-    private Transform _content;
+    private Transform content;
     [SerializeField]
-    private PlayerList _playerList;
-
-    private List<PlayerList> _listings = new List<PlayerList>();
+    private PlayerList playerList;
+    private List<PlayerList> listings = new List<PlayerList>();
 
     private void Awake()
     {
@@ -30,11 +26,11 @@ public class PlayerListingMenu : MonoBehaviourPunCallbacks
 
     private void AddPLayerListing(Player player)
     {
-        PlayerList listing = Instantiate(_playerList, _content);
+        PlayerList listing = Instantiate(playerList, content);
         if (listing != null)
         {
             listing.SetPlayerInfo(player);
-            _listings.Add(listing);
+            listings.Add(listing);
         }
     }
 
@@ -42,17 +38,15 @@ public class PlayerListingMenu : MonoBehaviourPunCallbacks
     {
         Debug.Log("I entered");
         AddPLayerListing(newPlayer);
-        
     }
 
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
-        int index = _listings.FindIndex(x => x.Player == otherPlayer);
+        int index = listings.FindIndex(x => x.Player == otherPlayer);
         if (index != -1)
         {
-            Destroy(_listings[index].gameObject);
-            _listings.RemoveAt(index);
+            Destroy(listings[index].gameObject);
+            listings.RemoveAt(index);
         }
     }
-
 }
