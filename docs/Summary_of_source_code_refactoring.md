@@ -12,19 +12,17 @@
 ## 1. Refactorings
 
 ### 1.1 Comments
-The source code had multible instances of outdated code inside long comments. 
+The source code had multiple instances of outdated code inside of long comments. 
 Those comments have been removed to make the source code more readable.
 
 ### 1.2 Style
-The naming conventions for variables, functions and classes weren't the same everywhere in the source code. For example if a "_" should be written at the start of a private variable or method. 
-The names of a few variables got changed to to make the names more uniform.
-Redundant empty lines got removed as well.
+The naming conventions for variables, functions and classes weren't the same everywhere in the source code. For example, a "_" should be written at the start of a private variable or method.
+The names of a few variables were changed to to make the names more uniform.
+Redundant empty lines were removed as well.
 
 ### 1.3 Duplicate Code
-There were instances in the source code, where the same code needed to be executed by a commen client and by the master client. 
-Those intances of duplicate source code got refactored to new functions which replaced the duplicate code.
+There were instances in the source code where the same code needed to be executed by a common client and by the master client. 
+Those intances of duplicate source code were refactored to new functions which replaced the duplicate code.
 
 ### 1.4 Classes
-"CountdownTimer" was a bad name for a class, because it didn't really explain it's function correctly. The class got renamed to "RoundController".
-
-
+"CountdownTimer" was a bad name for a class, because it didn't really explain it's function correctly. The class was renamed to "RoundController".
