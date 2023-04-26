@@ -21,7 +21,7 @@ The names of a few variables got changed to to make the names more uniform.
 Redundant empty lines got removed as well.
 
 ### 1.3 Duplicate Code
-There were a instances in the source code where the same code needed to be executed by a commen client and by the master client. 
+There were instances in the source code, where the same code needed to be executed by a commen client and by the master client. 
 Those intances of duplicate source code got refactored to new functions which replaced the duplicate code.
 
 ### 1.4 Classes
