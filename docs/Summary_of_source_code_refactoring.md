@@ -6,7 +6,7 @@
 - [Refactorings](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Summary_of_source_code_refactoring.md#1-refactorings)
   - [Comments](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Summary_of_source_code_refactoring.md#11-comments)
   - [Style](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Summary_of_source_code_refactoring.md#12-style)
-  - [Duplicate Code](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Summary_of_source_code_refactoring.md#13-duplicate Code)
+  - [Duplicate Code](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Summary_of_source_code_refactoring.md#13-duplicate-code)
   - [Functions](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Summary_of_source_code_refactoring.md#14-functions)
   - [Classes](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Summary_of_source_code_refactoring.md#15-classes)
 
