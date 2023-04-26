@@ -36,7 +36,6 @@ public class PlayerListingMenu : MonoBehaviourPunCallbacks
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
-        Debug.Log("I entered");
         AddPLayerListing(newPlayer);
     }
 

@@ -9,7 +9,6 @@ public class PlayerGroupManager : MonoBehaviour
 
     void Update()
     {
-        
         usernames = new string[PhotonNetwork.PlayerList.Length];
         for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
         {         
