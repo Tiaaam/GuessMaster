@@ -6,9 +6,9 @@ using Photon.Realtime;
 public class PlayerListingMenu : MonoBehaviourPunCallbacks
 {
     [SerializeField]
-    private Transform content;
+    private Transform _content;
     [SerializeField]
-    private PlayerList playerList;
+    private PlayerList _playerList;
     private List<PlayerList> listings = new List<PlayerList>();
 
     private void Awake()
@@ -26,7 +26,7 @@ public class PlayerListingMenu : MonoBehaviourPunCallbacks
 
     private void AddPLayerListing(Player player)
     {
-        PlayerList listing = Instantiate(playerList, content);
+        PlayerList listing = Instantiate(_playerList, _content);
         if (listing != null)
         {
             listing.SetPlayerInfo(player);
