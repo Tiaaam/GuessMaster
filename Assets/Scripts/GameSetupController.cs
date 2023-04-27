@@ -13,6 +13,9 @@ public class GameSetupController : MonoBehaviourPunCallbacks
     public static string correct_answer = "AnswerQuestion";
     private GameObject myplayer;
     public string answer;
+
+    private List<string> answerList;
+    //private string[][] answerList;
     void Start()
     {
         answer = "this is an answer";
@@ -23,6 +26,11 @@ public class GameSetupController : MonoBehaviourPunCallbacks
     public void SendDataToPrefab()
     {
         EndOfRound();
+    }
+
+    private void CompareAnswers()
+    {
+        //Liste sortieren -> ID sagt welcher Spieler welchen Platz hat -> Punkte vergeben
     }
 
     /*public async void ShowAnswers()
@@ -40,14 +48,15 @@ public class GameSetupController : MonoBehaviourPunCallbacks
     public void SendPlayerAnswer(string _answer, string _playerID) //Wird beim Master aufgerufen von jedem Spieler
     {
         Debug.Log(_answer + _playerID);
+        answerList[int.Parse(_playerID)] = _answer;
+
     }
 
     [PunRPC]
     public void RequestPlayerAnswer() //Wird bei jeden Spieler von Master aufgerufen
     {
         roundStatus = 1;
-        string tst = PhotonNetwork.LocalPlayer.ActorNumber.ToString();
-        Debug.Log(tst);
+        Debug.Log(PhotonNetwork.LocalPlayer.ActorNumber.ToString());
         this.photonView.RPC("SendPlayerAnswer", RpcTarget.MasterClient, answer, PhotonNetwork.LocalPlayer.ActorNumber.ToString());
     }
 
