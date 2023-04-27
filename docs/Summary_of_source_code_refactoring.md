@@ -16,7 +16,7 @@ The source code had multiple instances of outdated code inside of long comments.
 Those comments have been removed to make the source code more readable.
 
 ### 1.2 Style
-The naming conventions for variables, functions and classes weren't the same everywhere in the source code. For example, a "_" should be written at the start of a private variable or method.
+The naming conventions for variables, functions and classes weren't the same everywhere in the source code. For example, we decided to remove any "_" at the start of private variables or methods.
 The names of a few variables were changed to to make the names more uniform.
 Redundant empty lines were removed as well.
 
