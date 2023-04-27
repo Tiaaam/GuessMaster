@@ -2,12 +2,12 @@
 
 ## Table of contents
 
-- [Table of contents]()
-- [Introduction]()
-- [Test Strategie]()
-- [Test Plan]()
-- [Test Cases]()
-- [Test Results]()
+- [Table of contents](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Test_Report.md#table-of-contents)
+- [Introduction](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Test_Report.md#1-introduction)
+- [Test Strategie](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Test_Report.md#2-test-strategie)
+- [Test Plan](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Test_Report.md#3-test-plan)
+- [Test Cases](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Test_Report.md#4-test-cases)
+- [Test Results](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Test_Report.md#5-test-results)
 - [Metrics]()
 - [Recommendations]()
 - [Conclusion]()
@@ -33,15 +33,15 @@
 
 ·WIP·
 
-## 7. Metrics
+## 6. Metrics
 
 ·WIP·
 
-## 8. Recommendations
+## 7. Recommendations
 
 ·WIP·
 
-## 9. Conclusion
+## 8. Conclusion
 
 ·WIP·
 
