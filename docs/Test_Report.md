@@ -23,7 +23,10 @@
 
 ## 3. Test Plan
 
-·WIP·
+Test-types: Unit Testing, Smoke Testing
+Target-Test-Coverage: every newly added major function (Smoke testing), 20% (Unit Testing)
+Testing-Tool: Unity Test Framework
+Manage-Test-Cases: Internal Unity test manager; through manual code exchanges different deplyoment versions can be tested
 
 ## 4. Test Cases
 
