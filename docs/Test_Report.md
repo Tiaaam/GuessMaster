@@ -8,9 +8,9 @@
 - [Test Plan](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Test_Report.md#3-test-plan)
 - [Test Cases](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Test_Report.md#4-test-cases)
 - [Test Results](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Test_Report.md#5-test-results)
-- [Metrics]()
-- [Recommendations]()
-- [Conclusion]()
+- [Metrics](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Test_Report.md#6-metrics)
+- [Recommendations](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Test_Report.md#7-recommendations)
+- [Conclusion](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Test_Report.md#8-conclusion)
 
 
 ## 1. Introduction
