@@ -24,3 +24,24 @@
 ## 3. Test Plan
 
 ·WIP·
+
+## 4. Test Cases
+
+·WIP·
+
+## 5. Test Results
+
+·WIP·
+
+## 7. Metrics
+
+·WIP·
+
+## 8. Recommendations
+
+·WIP·
+
+## 9. Conclusion
+
+·WIP·
+
