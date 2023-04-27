@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
@@ -26,20 +24,16 @@ public class LobbyController : MonoBehaviourPunCallbacks
     private TextMeshProUGUI numberOfSeconds;
     [SerializeField]
     private Toggle togglePublicGame;
-
     [SerializeField]
     private GameObject HostingPanel;
-
     [SerializeField]
     private TextMeshProUGUI PlayerNameInput;
-
     private ExitGames.Client.Photon.Hashtable myCustomProperties = new ExitGames.Client.Photon.Hashtable();
 
     private void giveProperties()
     {
         myCustomProperties["Score"] = 0;
         myCustomProperties["Rank"] = 1;
-        myCustomProperties["ID"] = "#";
         PhotonNetwork.LocalPlayer.CustomProperties = myCustomProperties;
     }
     private void generateName()
@@ -62,7 +56,6 @@ public class LobbyController : MonoBehaviourPunCallbacks
         joinRandomRoomButton.SetActive(true);
         joinSpecificRoomButton.SetActive(true);
         HostRoomButton.SetActive(true);
-        
         Debug.Log("Connected to Master!");
     }
 
