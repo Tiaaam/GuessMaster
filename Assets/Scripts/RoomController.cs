@@ -8,7 +8,6 @@ public class RoomController : MonoBehaviourPunCallbacks
     private TextMeshProUGUI roomNameField;
     [SerializeField]
     private GameObject masterPanel;
-    [SerializeField]
 
     void Start()
     {
