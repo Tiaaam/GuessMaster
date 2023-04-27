@@ -47,7 +47,7 @@ public class RoomController : MonoBehaviourPunCallbacks
         PhotonNetwork.LoadLevel(2);
     }
 
-    /*public string CreatePlayerHashtag()
+    /*public string GeneratePlayerHashtag()
     {
         bool isFree = false;
         string randomHashtag ="";
