@@ -30,7 +30,9 @@ Manage-Test-Cases: Internal Unity test manager; through manual code exchanges di
 
 ## 4. Test Cases
 
-·WIP·
+- In our first tests we check if the CSV file responsible for the questions & answers is present in the resource folder
+
+![image](https://github.com/Tiaaam/GuessMaster/assets/62339676/df719a81-a2b3-4175-92e8-5809712e7538)
 
 ## 5. Test Results
 
