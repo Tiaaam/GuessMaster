@@ -3,23 +3,21 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
+using System.IO;
 
 public class TestScript1
 {
-    // A Test behaves as an ordinary method
     [Test]
-    public void TestScript1SimplePasses()
+    public void CheckQuestionFile()
     {
-        // Use the Assert class to test conditions
+        TextAsset csvFile = Resources.Load<TextAsset>("DataTables/german_cities_area_questions_12_01_2022");
+        Assert.IsTrue(csvFile != null);
     }
 
-    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-    // `yield return null;` to skip a frame.
-    [UnityTest]
-    public IEnumerator TestScript1WithEnumeratorPasses()
+    [Test]
+    public void CheckQuestionContent()
     {
-        // Use the Assert class to test conditions.
-        // Use yield to skip a frame.
-        yield return null;
+        TextAsset csvFile = Resources.Load<TextAsset>("DataTables/german_cities_area_questions_12_01_2022");
+        Assert.IsFalse(csvFile.text.Length == 0);
     }
 }
