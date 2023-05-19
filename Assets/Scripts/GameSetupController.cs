@@ -5,6 +5,7 @@ using Photon.Pun;
 using System.IO;
 using System;
 using System.Threading.Tasks;
+using UnityEditor;
 
 public class GameSetupController : MonoBehaviourPunCallbacks
 {
@@ -14,10 +15,18 @@ public class GameSetupController : MonoBehaviourPunCallbacks
     private GameObject myplayer;
     public string answer;
 
-    private List<string> answerList;
-    //private string[][] answerList;
+    //
+    private List<string> playerAnswerList;
+    List<string> AnswerList = new List<string>();
+    List<string> QuestionList = new List<string>();
+    private static readonly System.Random rand = new System.Random();
+
+
+
     void Start()
     {
+        Debug.Log("EIGENSE VIEW ID:" + PhotonNetwork.LocalPlayer.ActorNumber);
+        GenerateQuestionsAndAnswersInhabitants(AnswerList, QuestionList, 5);
         answer = "this is an answer";
         //TextAsset csvFile = Resources.Load<TextAsset>("DataTables/german_cities_area_questions_12_01_2022");
         //Debug.Log(csvFile.text);
@@ -28,6 +37,52 @@ public class GameSetupController : MonoBehaviourPunCallbacks
         EndOfRound();
     }
 
+    public static bool numberExists(int[] arr, int n)
+    {
+        if (arr.Length == 0)
+        {
+            return false;
+        }
+
+        for (int i = 0; i < arr.Length; i++)
+        {
+            if (arr[i] == n) return true;
+        }
+
+        return false;
+    }
+
+    public static void GenerateQuestionsAndAnswersInhabitants(List<string> _l1, List<string> _l2, int _rounds)
+    {
+        //string path1 = "C:\\Users\\Marius\\Documents\\GitHub\\GuessMaster---Questions\\data\\questions\\german_cities_inhabitants_questions_12_01_2022.csv";
+        //string[] lines_inhabitants = File.ReadAllLines(path1);
+        TextAsset csvFile = Resources.Load<TextAsset>("DataTables/german_cities_inhabitants_questions_12_01_2022");
+        string[] lines_inhabitants = csvFile.text.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+        Debug.Log(lines_inhabitants.Length);
+        Debug.Log(lines_inhabitants[0]);
+        Debug.Log(lines_inhabitants[5]);
+
+        int row = 0;
+        //Both strings have the same amaount of lines
+        int max = lines_inhabitants.Length;
+
+        int[] rows1 = new int[_rounds];
+
+        for (int i = 0; i < _rounds; i++)
+        {
+            row = rand.Next(1, max);
+
+            while (numberExists(rows1, row))
+            {
+                row = rand.Next(1, max);
+            }
+
+            rows1[i] = row;
+            string[] splitArray = lines_inhabitants[row].Split(',');
+            _l1.Add(splitArray[0]);
+            _l2.Add(splitArray[1]);
+        }
+    }
     private void CompareAnswers()
     {
         //Liste sortieren -> ID sagt welcher Spieler welchen Platz hat -> Punkte vergeben
@@ -48,7 +103,7 @@ public class GameSetupController : MonoBehaviourPunCallbacks
     public void SendPlayerAnswer(string _answer, string _playerID) //Wird beim Master aufgerufen von jedem Spieler
     {
         Debug.Log(_answer + _playerID);
-        answerList[int.Parse(_playerID)] = _answer;
+        playerAnswerList[int.Parse(_playerID)] = _answer;
 
     }
 
@@ -75,41 +130,12 @@ public class GameSetupController : MonoBehaviourPunCallbacks
         roundStatus = 0;
     }
 
-    public void NewRound()
+    public void NewRound(int roundId)
     {
-        int questionID = UnityEngine.Random.Range(0, 4);
-        question = QuestionList[questionID];
-        correct_answer = AnswerList[questionID];
+        question = QuestionList[roundId];
+        correct_answer = AnswerList[roundId];
         this.photonView.RPC("SendNewRoundData", RpcTarget.Others, question, correct_answer);
     }
 
 
-    List<string> QuestionList = new List<string>{
-        "How many inhabitants does Germany have?",
-        "How many inhabitants under the age of 20 does Germany have?",
-        "How many inhabitants does Austria have?",
-        "How many people live in Berlin (Germany)?"};
-
-    List<string> AnswerList = new List<string> {
-            "Germany has 83.240.000 inhabitants.",
-            "Germany has 15.430.000 inhabitants under the age of 20.",
-            "Austria has 9.073.648 inhabitants.",
-            "3.677.472 people live in Berlin (Germany)." };
-
-    /*private static List<string> GetQuestions()
-    {
-        return new List<string>{
-        "How many inhabitants does Germany have?",
-        "How many inhabitants under the age of 20 does Germany have?",
-        "How many inhabitants does Austria have?",
-        "How many people live in Berlin (Germany)?"};
-    }
-    private static List<string> GetAnswers()
-    {
-        return new List<string> {
-            "Germany has 83.240.000 inhabitants.",
-            "Germany has 15.430.000 inhabitants under the age of 20.",
-            "Austria has 9.073.648 inhabitants.",
-            "3.677.472 people live in Berlin (Germany)." };
-    }*/
 }
