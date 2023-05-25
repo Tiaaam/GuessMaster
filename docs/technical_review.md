@@ -19,6 +19,9 @@
 ### Review Criteria
 
 1.	Questions code section:
+
+![image](https://github.com/Tiaaam/GuessMaster/assets/62339676/0cc8e40c-68ac-492d-9de4-83f3a49d3a4a)
+
 -	(Maintainability:) Every team member understands which part of code does what
 -	(Code quality:) share our ideas on how we could improve our code in the future
 -	(Code quality:) check if this code section is working as we want it to
