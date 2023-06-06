@@ -9,11 +9,11 @@
 
 | person      | hours | major constributions                          |                           
 | ------------|-------|-----------------------------------------------|
-| Marius M.   |   x   | backend question related work, generall tasks |
-| Daniel K.   |   x   | frontend, blog, general tasks                 |
-| Daniel S.   |   x   | frontend, comments, general tasks             |  
-| Tim S.      |   x   | backend game related work, general tasks      |
-| Tim G.      |   x   | backend Game related work, general tasks      |
+| Marius M.   | 83,75 | backend question related work, general tasks |
+| Daniel K.   |   81  | frontend, blog, general tasks                 |
+| Daniel S.   | 82,75 | frontend, comments, general tasks             |  
+| Tim S.      | 85,65 | backend game related work, general tasks      |
+| Tim G.      |   81  | backend Game related work, general tasks      |
 
 #### Hours per Workflow
 
