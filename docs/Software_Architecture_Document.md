@@ -95,8 +95,8 @@ The RoomController is responsible for the room/lobby in which the players are lo
  
  On this section you can find our class diagram.
  
-![Class-Diagram](https://user-images.githubusercontent.com/62339676/199744380-08408e17-e07b-4db5-bb9d-62a1bb99b51e.jpg)
- 
+![Class-Diagram](https://github.com/Tiaaam/GuessMaster/assets/62339676/0f4aff1a-141e-438b-99c7-b2333974abe0)
+
 ## 6. Process View
 
 It is differentiated between the following Heavy Weight Processes: Start Game, New Round, Compare Answer, Get Result. The Start Game process is called at the start of a game and initializes the game. Afterwards, this calls the Start Round process. This assigns all player variables and retrieves a question via a GET requester by the Light Weight Process Generate Question Process. Subsequently, the Compare Answer process causes the answers to be sent to the host to compare them there. The Get Result process stores all results, synchronizes it with all players and outputs it to the UI.
