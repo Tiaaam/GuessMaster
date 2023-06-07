@@ -9,7 +9,7 @@
 - [Test Cases](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Test_Report.md#4-test-cases)
 - [Test Results](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Test_Report.md#5-test-results)
 - [Metrics](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Test_Report.md#6-metrics)
-- [Recommendations & Conculsion](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Test_Report.md#7-recommendations)
+- [Recommendations & Conculsion](https://github.com/Tiaaam/GuessMaster/blob/master/docs/Test_Report.md#7-recommendations--conclusion)
 
 
 
