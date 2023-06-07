@@ -28,11 +28,11 @@ This section describes the overall approach to testing, including the testing me
 
 ### Testing Types: 
 - Functional Testing: This focuses on validating the game's functionalities, ensuring they operate as intended and meet the specified requirements (Unit Tests)
-- manuell tests 
+- manual tests 
 
 ## 3. Test Plan
 
-- Test-types: Unit Testing, manuell tests
+- Test-types: Unit Testing, manual tests
 - Target-Test-Coverage: every newly added major function (Smoke testing), 20% (Unit Testing)
 - Testing-Tool: Unity Test Framework
 - Manage-Test-Cases: Internal Unity test manager; through manual code exchanges different deplyoment versions can be tested
