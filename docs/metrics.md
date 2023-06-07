@@ -42,6 +42,6 @@ At the end of our project we were able to achieve the following metrics. The sel
 
 - DIT: 1
 - NOC: 1
-- cyclomatic complexity: ?
+- cyclomatic complexity: to be checked
 
 
