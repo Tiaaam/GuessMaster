@@ -1,7 +1,7 @@
 # Handout
 
 ### project name
-- Guessmaster
+- GuessMaster
 
 ### Statistics of effort
 
