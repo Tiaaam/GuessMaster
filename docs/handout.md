@@ -40,9 +40,29 @@
 
 ### Highlights of our demo
 
-
+- WIP - 
 
 ### Hightlights of our project
+
+### Architecture
+- we focus on usability and performance (⇒ we have chosen them, because we realized that user satisfaction is extremely important for our project and these two are very important for that)
+- Usability:
+  - Easy-to-use Userinterface, simple structure and no unnecessary buttons/information
+- Performance:
+  - minimize downtime caused by external circumstances (In the 4th semester, we took our idea of providing answers to questions based on an API off of an external site and to increase our potential uptime, we integrated question and answer data directly into our game and thus are no longer dependent on an API)
+
+### Software Tools, Platforms and Libaries
+
+- or our actual game GuessMaster we used Unity as development environment and photon as a hosting service
+- to create our dataset for question & answers we used a Python Jupyter Notebook and the Pyhton libary "pandas"
+- we used Github as version control system
+- for our weekly Blog posts we used Discord
+
+### Realisation of our Use-Case-Diagram
+
+- We were able to implement our initially created use case diagram:
+
+![Usecasediagram](https://github.com/Tiaaam/GuessMaster/assets/62339676/df78414e-335d-4c0c-9896-d2ddc83f5ef5)
 
 
 
