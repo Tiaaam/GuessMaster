@@ -18,7 +18,7 @@ Use-Case-Reasilation Specification for the results: [Results](https://github.com
 
 ## 3 Special requirement
 
-·WIP·
+There are no special requirements.
 
 ## 4 Preconditions
 
