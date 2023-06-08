@@ -95,7 +95,7 @@ The RoomController is responsible for the room/lobby in which the players are lo
  
  On this section you can find our class diagram.
  
-![Class-Diagram](https://github.com/Tiaaam/GuessMaster/assets/62339676/0f4aff1a-141e-438b-99c7-b2333974abe0)
+![Class-Diagram](https://github.com/Tiaaam/GuessMaster/assets/62339676/d32f2204-db64-4240-a008-69a3e71c0e23)
 
 ## 6. Process View
 
