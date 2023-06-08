@@ -23,7 +23,7 @@ Players will have the option to quit the lobby and the creator will additionally
 
 ## 3 Special requirement 
 
-·WIP·
+There are no special requirements.
 
 ## 4 Precondition
 
