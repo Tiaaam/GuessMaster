@@ -64,6 +64,8 @@
 
 ![Usecasediagram](https://github.com/Tiaaam/GuessMaster/assets/62339676/df78414e-335d-4c0c-9896-d2ddc83f5ef5)
 
+### Other Highlights
 
+- we use the german Federal Statistical Office as our data source to use current data from early 2022 for your sample solution
 
 
