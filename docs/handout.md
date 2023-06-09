@@ -53,8 +53,8 @@
 
 ### Software Tools, Platforms and Libaries
 
-- or our actual game GuessMaster we used Unity as development environment and photon as a hosting service
-- to create our dataset for question & answers we used a Python Jupyter Notebook and the Pyhton libary "pandas"
+- for our actual game GuessMaster we used Unity as development environment and photon as a hosting service
+- to create our dataset for question & answers we used a Python Jupyter Notebook and the Pyhton library "pandas"
 - we used Github as version control system
 - for our weekly Blog posts we used Discord
 
