@@ -86,11 +86,11 @@ public class GameSetupController : MonoBehaviourPunCallbacks
     void CompareAnswers()
     {
         //Liste sortieren -> ID sagt welcher Spieler welchen Platz hat -> Punkte vergeben
+        int list_len = playerAnswerList.Count;
         Debug.Log("Antworten Vergleich Listenlaenge:" + playerAnswerList.Count);
-        Debug.Log("Unsorted List:" + playerAnswerList);
         //playerAnswerList.Sort();
         //Debug.Log("Sorted List:" + playerAnswerList);
-        for (int i = 0; i < playerAnswerList.Count;  i++)
+        for (int i = 0; i < list_len;  i++)
         {
             float min = playerAnswerList[0];
             int index = 0;
@@ -103,7 +103,7 @@ public class GameSetupController : MonoBehaviourPunCallbacks
                 }
             }
 
-            Debug.Log("SpielerIndex: " + index + " bekommt " + i + " Punkte.");
+            Debug.Log("SpielerIndex: " + playerAnswerOrder[index] + " bekommt " + i+1 + " Punkte.");
 
             //Spieler playerAnswerOrder[index] bekommt i punkte
             playerAnswerList.RemoveAt(index);
@@ -167,5 +167,5 @@ public class GameSetupController : MonoBehaviourPunCallbacks
         {
             Debug.Log("Invalid Input");
         }
-    }
+    } //ANSWER MUSS NACH RUNDE AUF NULL GESETZT WERDEN, SONST WIRD ANTOWERT AUS VORHERIGER RUNDE UEBERNOMMEN
 }
