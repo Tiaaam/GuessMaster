@@ -6,17 +6,22 @@ using System.IO;
 using System;
 using System.Threading.Tasks;
 using UnityEditor;
+using System.Linq;
+using UnityEngine.UI;
 
 public class GameSetupController : MonoBehaviourPunCallbacks
 {
     public static int roundStatus = 0;
     public static string question = "TestQuestion";
     public static string correct_answer = "AnswerQuestion";
-    private GameObject myplayer;
-    public string answer;
+    [SerializeField]
+    private GameObject AnswerField;
+    private float answer;
+
 
     //
-    private List<string> playerAnswerList;
+    private List<float> playerAnswerList;
+    private List<int> playerAnswerOrder;
     List<string> AnswerList = new List<string>();
     List<string> QuestionList = new List<string>();
     private static readonly System.Random rand = new System.Random();
@@ -27,7 +32,7 @@ public class GameSetupController : MonoBehaviourPunCallbacks
     {
         Debug.Log("EIGENSE VIEW ID:" + PhotonNetwork.LocalPlayer.ActorNumber);
         GenerateQuestionsAndAnswersInhabitants(AnswerList, QuestionList, 5);
-        answer = "this is an answer";
+        answer = 5.6f;
         //TextAsset csvFile = Resources.Load<TextAsset>("DataTables/german_cities_area_questions_12_01_2022");
         //Debug.Log(csvFile.text);
     }
@@ -54,16 +59,10 @@ public class GameSetupController : MonoBehaviourPunCallbacks
 
     public static void GenerateQuestionsAndAnswersInhabitants(List<string> _l1, List<string> _l2, int _rounds)
     {
-        //string path1 = "C:\\Users\\Marius\\Documents\\GitHub\\GuessMaster---Questions\\data\\questions\\german_cities_inhabitants_questions_12_01_2022.csv";
-        //string[] lines_inhabitants = File.ReadAllLines(path1);
         TextAsset csvFile = Resources.Load<TextAsset>("DataTables/german_cities_inhabitants_questions_12_01_2022");
         string[] lines_inhabitants = csvFile.text.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
-        Debug.Log(lines_inhabitants.Length);
-        Debug.Log(lines_inhabitants[0]);
-        Debug.Log(lines_inhabitants[5]);
 
         int row = 0;
-        //Both strings have the same amaount of lines
         int max = lines_inhabitants.Length;
 
         int[] rows1 = new int[_rounds];
@@ -86,25 +85,37 @@ public class GameSetupController : MonoBehaviourPunCallbacks
     private void CompareAnswers()
     {
         //Liste sortieren -> ID sagt welcher Spieler welchen Platz hat -> Punkte vergeben
+        Debug.Log("Antworten Vergleich Listenlaenge:" + playerAnswerList.Count);
+        Debug.Log("Unsorted List:" + playerAnswerList);
+        //playerAnswerList.Sort();
+        //Debug.Log("Sorted List:" + playerAnswerList);
+        for (int i = 0; i < playerAnswerList.Count;  i++)
+        {
+            float min = playerAnswerList[0];
+            int index = 0;
+            for (int j = 1; j < playerAnswerList.Count; j++)
+            {
+                if(min >= playerAnswerList[j])
+                {
+                    min = playerAnswerList[j];
+                    index = j;
+                }
+            }
+
+            //Spieler playerAnswerOrder[index] bekommt j punkte
+            playerAnswerList.RemoveAt(index);
+            playerAnswerOrder.RemoveAt(index);
+        }
     }
-
-    /*public async void ShowAnswers()
-    {
-        Debug.Log("Starting RoundManager");
-        if (!PhotonNetwork.IsMasterClient) return;
-        Debug.Log("THIS IS THE MASTER --- WAITING 3 SECONDS ---- SHOW LOADING SCREEN");
-        await Task.Delay(TimeSpan.FromSeconds(3));
-        EndOfRound();
-
-    }*/
 
 
     [PunRPC]
-    public void SendPlayerAnswer(string _answer, string _playerID) //Wird beim Master aufgerufen von jedem Spieler
+    public void SendPlayerAnswer(float _answer, int _playerID) //Wird beim Master aufgerufen von jedem Spieler
     {
         Debug.Log(_answer + _playerID);
-        playerAnswerList[int.Parse(_playerID)] = _answer;
-
+        //playerAnswerList[int.Parse(_playerID)] = _answer;
+        playerAnswerOrder.Add(_playerID);
+        playerAnswerList.Add(_answer);
     }
 
     [PunRPC]
@@ -112,13 +123,15 @@ public class GameSetupController : MonoBehaviourPunCallbacks
     {
         roundStatus = 1;
         Debug.Log(PhotonNetwork.LocalPlayer.ActorNumber.ToString());
-        this.photonView.RPC("SendPlayerAnswer", RpcTarget.MasterClient, answer, PhotonNetwork.LocalPlayer.ActorNumber.ToString());
+        this.photonView.RPC("SendPlayerAnswer", RpcTarget.MasterClient, answer, PhotonNetwork.LocalPlayer.ActorNumber);
     }
 
     public void EndOfRound()
     {
         Debug.Log("EIGENSE VIEW ID:" + PhotonNetwork.LocalPlayer.ActorNumber);
         this.photonView.RPC("RequestPlayerAnswer", RpcTarget.Others);
+        Debug.Log("Kurze Pause");
+        Invoke("CompareAnswers", 2); //Wartet 2 Sekunden bevor Funktion aufgerufen wird
     }
 
     [PunRPC]
@@ -137,5 +150,16 @@ public class GameSetupController : MonoBehaviourPunCallbacks
         this.photonView.RPC("SendNewRoundData", RpcTarget.Others, question, correct_answer);
     }
 
-
+    public void SubmitAnswer()
+    {
+        Debug.Log("Answer Submit");
+        try
+        {
+            answer = float.Parse(AnswerField.GetComponent<Text>().text);
+        }
+        catch (Exception e)
+        {
+            Debug.Log("Invalid Input");
+        }
+    }
 }
