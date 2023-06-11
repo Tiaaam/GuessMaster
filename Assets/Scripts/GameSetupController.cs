@@ -82,7 +82,7 @@ public class GameSetupController : MonoBehaviourPunCallbacks
             _l2.Add(splitArray[1]);
         }
     }
-    private void CompareAnswers()
+    void CompareAnswers()
     {
         //Liste sortieren -> ID sagt welcher Spieler welchen Platz hat -> Punkte vergeben
         Debug.Log("Antworten Vergleich Listenlaenge:" + playerAnswerList.Count);
@@ -131,7 +131,7 @@ public class GameSetupController : MonoBehaviourPunCallbacks
         Debug.Log("EIGENSE VIEW ID:" + PhotonNetwork.LocalPlayer.ActorNumber);
         this.photonView.RPC("RequestPlayerAnswer", RpcTarget.Others);
         Debug.Log("Kurze Pause");
-        Invoke("CompareAnswers", 2); //Wartet 2 Sekunden bevor Funktion aufgerufen wird
+        Invoke("CompareAnswers", 2.0f); //Wartet 2 Sekunden bevor Funktion aufgerufen wird
     }
 
     [PunRPC]
