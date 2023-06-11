@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using UnityEditor;
 using System.Linq;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameSetupController : MonoBehaviourPunCallbacks
 {
@@ -20,8 +21,8 @@ public class GameSetupController : MonoBehaviourPunCallbacks
 
 
     //
-    private List<float> playerAnswerList;
-    private List<int> playerAnswerOrder;
+    private List<float> playerAnswerList = new List<float>();
+    private List<int> playerAnswerOrder = new List<int>();
     List<string> AnswerList = new List<string>();
     List<string> QuestionList = new List<string>();
     private static readonly System.Random rand = new System.Random();
@@ -102,7 +103,9 @@ public class GameSetupController : MonoBehaviourPunCallbacks
                 }
             }
 
-            //Spieler playerAnswerOrder[index] bekommt j punkte
+            Debug.Log("SpielerIndex: " + index + " bekommt " + i + " Punkte.");
+
+            //Spieler playerAnswerOrder[index] bekommt i punkte
             playerAnswerList.RemoveAt(index);
             playerAnswerOrder.RemoveAt(index);
         }
@@ -128,7 +131,9 @@ public class GameSetupController : MonoBehaviourPunCallbacks
 
     public void EndOfRound()
     {
-        Debug.Log("EIGENSE VIEW ID:" + PhotonNetwork.LocalPlayer.ActorNumber);
+        //Debug.Log("EIGENSE VIEW ID:" + PhotonNetwork.LocalPlayer.ActorNumber);
+        playerAnswerOrder.Add(PhotonNetwork.LocalPlayer.ActorNumber);
+        playerAnswerList.Add(answer);
         this.photonView.RPC("RequestPlayerAnswer", RpcTarget.Others);
         Debug.Log("Kurze Pause");
         Invoke("CompareAnswers", 2.0f); //Wartet 2 Sekunden bevor Funktion aufgerufen wird
@@ -137,7 +142,6 @@ public class GameSetupController : MonoBehaviourPunCallbacks
     [PunRPC]
     public void SendNewRoundData(string _question, string _answer)
     {
-        
         question = _question;
         correct_answer = _answer;
         roundStatus = 0;
@@ -152,10 +156,12 @@ public class GameSetupController : MonoBehaviourPunCallbacks
 
     public void SubmitAnswer()
     {
-        Debug.Log("Answer Submit");
+        string input = AnswerField.GetComponent<TextMeshProUGUI>().text;
+        //Debug.Log(AnswerField.GetComponent<TextMeshProUGUI>().text[1]);
         try
         {
-            answer = float.Parse(AnswerField.GetComponent<Text>().text);
+            answer = float.Parse(input.Substring(0, input.Length - 1));
+            Debug.Log("Answer Submitted Successfully: " + answer);
         }
         catch (Exception e)
         {
