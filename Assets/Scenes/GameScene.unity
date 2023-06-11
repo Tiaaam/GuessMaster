@@ -330,8 +330,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6b13e4e62b557f648bdddc6ae92f912b, type: 2}
-  m_sharedMaterial: {fileID: 1583155977792962479, guid: 6b13e4e62b557f648bdddc6ae92f912b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 253988ff48fd8134599ac4ab0d5264ee, type: 2}
+  m_sharedMaterial: {fileID: -9010942397717229711, guid: 253988ff48fd8134599ac4ab0d5264ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -465,8 +465,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: How many people live in Karlsruhe?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6b13e4e62b557f648bdddc6ae92f912b, type: 2}
-  m_sharedMaterial: {fileID: 1583155977792962479, guid: 6b13e4e62b557f648bdddc6ae92f912b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 253988ff48fd8134599ac4ab0d5264ee, type: 2}
+  m_sharedMaterial: {fileID: -9010942397717229711, guid: 253988ff48fd8134599ac4ab0d5264ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -490,7 +490,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70.55
+  m_fontSize: 72
   m_fontSizeBase: 84
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -600,8 +600,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'What''s your guess:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6b13e4e62b557f648bdddc6ae92f912b, type: 2}
-  m_sharedMaterial: {fileID: 1583155977792962479, guid: 6b13e4e62b557f648bdddc6ae92f912b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 253988ff48fd8134599ac4ab0d5264ee, type: 2}
+  m_sharedMaterial: {fileID: -9010942397717229711, guid: 253988ff48fd8134599ac4ab0d5264ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -735,8 +735,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Leave Lobby
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6b13e4e62b557f648bdddc6ae92f912b, type: 2}
-  m_sharedMaterial: {fileID: 1583155977792962479, guid: 6b13e4e62b557f648bdddc6ae92f912b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d9ba30ee4dc7b55458fb370a108d45ac, type: 2}
+  m_sharedMaterial: {fileID: -8671907308603092087, guid: d9ba30ee4dc7b55458fb370a108d45ac, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1052,7 +1052,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 308.436 people live in Karlsruhe.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6b13e4e62b557f648bdddc6ae92f912b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 253988ff48fd8134599ac4ab0d5264ee, type: 2}
   m_sharedMaterial: {fileID: 1583155977792962479, guid: 6b13e4e62b557f648bdddc6ae92f912b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1116,7 +1116,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &559409176
@@ -1405,8 +1405,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 253988ff48fd8134599ac4ab0d5264ee, type: 2}
+  m_sharedMaterial: {fileID: -9010942397717229711, guid: 253988ff48fd8134599ac4ab0d5264ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1601,8 +1601,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Score
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6b13e4e62b557f648bdddc6ae92f912b, type: 2}
-  m_sharedMaterial: {fileID: 1583155977792962479, guid: 6b13e4e62b557f648bdddc6ae92f912b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 253988ff48fd8134599ac4ab0d5264ee, type: 2}
+  m_sharedMaterial: {fileID: -9010942397717229711, guid: 253988ff48fd8134599ac4ab0d5264ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1812,8 +1812,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Round x/y
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6b13e4e62b557f648bdddc6ae92f912b, type: 2}
-  m_sharedMaterial: {fileID: 1583155977792962479, guid: 6b13e4e62b557f648bdddc6ae92f912b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 253988ff48fd8134599ac4ab0d5264ee, type: 2}
+  m_sharedMaterial: {fileID: -9010942397717229711, guid: 253988ff48fd8134599ac4ab0d5264ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2290,8 +2290,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 00:00
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6b13e4e62b557f648bdddc6ae92f912b, type: 2}
-  m_sharedMaterial: {fileID: 1583155977792962479, guid: 6b13e4e62b557f648bdddc6ae92f912b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d9ba30ee4dc7b55458fb370a108d45ac, type: 2}
+  m_sharedMaterial: {fileID: -8671907308603092087, guid: d9ba30ee4dc7b55458fb370a108d45ac, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2416,15 +2416,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.039215688, g: 0.14117648, b: 0.3882353, a: 1}
+  m_Color: {r: 0.6666667, g: 0.6666667, b: 0.6666667, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 81d3f4a14a01ce046be9f343db670996, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2501,8 +2501,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Submit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6b13e4e62b557f648bdddc6ae92f912b, type: 2}
-  m_sharedMaterial: {fileID: 1583155977792962479, guid: 6b13e4e62b557f648bdddc6ae92f912b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d9ba30ee4dc7b55458fb370a108d45ac, type: 2}
+  m_sharedMaterial: {fileID: -8671907308603092087, guid: d9ba30ee4dc7b55458fb370a108d45ac, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3051,8 +3051,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Enter your guess here...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6b13e4e62b557f648bdddc6ae92f912b, type: 2}
-  m_sharedMaterial: {fileID: 1583155977792962479, guid: 6b13e4e62b557f648bdddc6ae92f912b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: db19c31c7eef8764cafa95da47dc4740, type: 2}
+  m_sharedMaterial: {fileID: 1041535328740391380, guid: db19c31c7eef8764cafa95da47dc4740, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3186,8 +3186,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Rank
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6b13e4e62b557f648bdddc6ae92f912b, type: 2}
-  m_sharedMaterial: {fileID: 1583155977792962479, guid: 6b13e4e62b557f648bdddc6ae92f912b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 253988ff48fd8134599ac4ab0d5264ee, type: 2}
+  m_sharedMaterial: {fileID: -9010942397717229711, guid: 253988ff48fd8134599ac4ab0d5264ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
