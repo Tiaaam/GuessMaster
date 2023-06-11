@@ -17,7 +17,7 @@ If a user decides to create a game with custom settings he/she will be redirecte
 
 ## 3 Special requirement 
 
-·WIP·
+There are no special requirements.
 
 ## 4 Preconditions
 

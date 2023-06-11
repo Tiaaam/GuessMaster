@@ -22,7 +22,8 @@ Starting from our landing page our players will have to add their name (or alias
 Use-Case-Realization Specification: [Gamemode Selection](https://github.com/Tiaaam/GuessMaster/blob/master/docs/UCRS_Gamemode_Selection.md)
 
 ## 3 Special requirement 
-·WIP·
+
+There are no special requirements.
 
 ## 4 Precondition
 

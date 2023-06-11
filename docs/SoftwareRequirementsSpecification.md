@@ -77,7 +77,7 @@ The technology we use is:
 | Frontend           | Unity                                  |
 | IDE                | Visual Studio 2022                     |
 | Project Management | Azure DevOps, Github                   |
-| Testing            | ?                                      |
+| Testing            | Unity Test Framework                   |
 
 
 ## 3. Specific Requirements
