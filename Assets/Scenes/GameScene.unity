@@ -1211,9 +1211,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1200869522}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: EndOfRound
+      - m_Target: {fileID: 1200869519}
+        m_TargetAssemblyTypeName: GameSetupController, Assembly-CSharp
+        m_MethodName: SubmitAnswer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2120,8 +2120,6 @@ GameObject:
   - component: {fileID: 1200869519}
   - component: {fileID: 1200869521}
   - component: {fileID: 1200869523}
-  - component: {fileID: 1200869522}
-  - component: {fileID: 1200869524}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2141,7 +2139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8fbd8d765b00e545b556d84d0fe16c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  answer: 
+  AnswerField: {fileID: 651755917}
 --- !u!4 &1200869520
 Transform:
   m_ObjectHideFlags: 0
@@ -2176,19 +2174,6 @@ MonoBehaviour:
   roundText: {fileID: 1028291053}
   questionPanel: {fileID: 1087061264}
   answerPanel: {fileID: 1122811502}
---- !u!114 &1200869522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200869518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee04800b54cc9848873b768a002a95b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  answer: 
 --- !u!114 &1200869523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2211,25 +2196,6 @@ MonoBehaviour:
   sceneViewId: 1
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &1200869524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200869518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 934045bf76eed514c83c51961537e860, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countdownText: {fileID: 1211416599}
-  questionText: {fileID: 70186837}
-  answerText: {fileID: 559409175}
-  uiFill: {fileID: 451946042}
-  roundText: {fileID: 1028291053}
-  questionPanel: {fileID: 1087061264}
-  answerPanel: {fileID: 1122811502}
 --- !u!1 &1211416597
 GameObject:
   m_ObjectHideFlags: 0

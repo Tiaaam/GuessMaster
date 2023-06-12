@@ -5,20 +5,35 @@ using Photon.Pun;
 using System.IO;
 using System;
 using System.Threading.Tasks;
+using UnityEditor;
+using System.Linq;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameSetupController : MonoBehaviourPunCallbacks
 {
     public static int roundStatus = 0;
     public static string question = "TestQuestion";
     public static string correct_answer = "AnswerQuestion";
-    private GameObject myplayer;
-    public string answer;
+    [SerializeField]
+    private GameObject AnswerField;
+    private float answer;
 
-    private List<string> answerList;
-    //private string[][] answerList;
+
+    //
+    private List<float> playerAnswerList = new List<float>();
+    private List<int> playerAnswerOrder = new List<int>();
+    List<string> AnswerList = new List<string>();
+    List<string> QuestionList = new List<string>();
+    private static readonly System.Random rand = new System.Random();
+
+
+
     void Start()
     {
-        answer = "this is an answer";
+        Debug.Log("EIGENSE VIEW ID:" + PhotonNetwork.LocalPlayer.ActorNumber);
+        GenerateQuestionsAndAnswersInhabitants(AnswerList, QuestionList, 5);
+        answer = 5.6f;
         //TextAsset csvFile = Resources.Load<TextAsset>("DataTables/german_cities_area_questions_12_01_2022");
         //Debug.Log(csvFile.text);
     }
@@ -28,28 +43,82 @@ public class GameSetupController : MonoBehaviourPunCallbacks
         EndOfRound();
     }
 
-    private void CompareAnswers()
+    public static bool numberExists(int[] arr, int n)
     {
-        //Liste sortieren -> ID sagt welcher Spieler welchen Platz hat -> Punkte vergeben
+        if (arr.Length == 0)
+        {
+            return false;
+        }
+
+        for (int i = 0; i < arr.Length; i++)
+        {
+            if (arr[i] == n) return true;
+        }
+
+        return false;
     }
 
-    /*public async void ShowAnswers()
+    public static void GenerateQuestionsAndAnswersInhabitants(List<string> _l1, List<string> _l2, int _rounds)
     {
-        Debug.Log("Starting RoundManager");
-        if (!PhotonNetwork.IsMasterClient) return;
-        Debug.Log("THIS IS THE MASTER --- WAITING 3 SECONDS ---- SHOW LOADING SCREEN");
-        await Task.Delay(TimeSpan.FromSeconds(3));
-        EndOfRound();
+        TextAsset csvFile = Resources.Load<TextAsset>("DataTables/german_cities_inhabitants_questions_12_01_2022");
+        string[] lines_inhabitants = csvFile.text.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-    }*/
+        int row = 0;
+        int max = lines_inhabitants.Length;
+
+        int[] rows1 = new int[_rounds];
+
+        for (int i = 0; i < _rounds; i++)
+        {
+            row = rand.Next(1, max);
+
+            while (numberExists(rows1, row))
+            {
+                row = rand.Next(1, max);
+            }
+
+            rows1[i] = row;
+            string[] splitArray = lines_inhabitants[row].Split(',');
+            _l1.Add(splitArray[0]);
+            _l2.Add(splitArray[1]);
+        }
+    }
+    void CompareAnswers()
+    {
+        //Liste sortieren -> ID sagt welcher Spieler welchen Platz hat -> Punkte vergeben
+        int list_len = playerAnswerList.Count;
+        Debug.Log("Antworten Vergleich Listenlaenge:" + playerAnswerList.Count);
+        //playerAnswerList.Sort();
+        //Debug.Log("Sorted List:" + playerAnswerList);
+        for (int i = 0; i < list_len;  i++)
+        {
+            float min = playerAnswerList[0];
+            int index = 0;
+            for (int j = 1; j < playerAnswerList.Count; j++)
+            {
+                if(min >= playerAnswerList[j])
+                {
+                    min = playerAnswerList[j];
+                    index = j;
+                }
+            }
+
+            Debug.Log("SpielerIndex: " + playerAnswerOrder[index] + " bekommt " + i+1 + " Punkte.");
+
+            //Spieler playerAnswerOrder[index] bekommt i punkte
+            playerAnswerList.RemoveAt(index);
+            playerAnswerOrder.RemoveAt(index);
+        }
+    }
 
 
     [PunRPC]
-    public void SendPlayerAnswer(string _answer, string _playerID) //Wird beim Master aufgerufen von jedem Spieler
+    public void SendPlayerAnswer(float _answer, int _playerID) //Wird beim Master aufgerufen von jedem Spieler
     {
         Debug.Log(_answer + _playerID);
-        answerList[int.Parse(_playerID)] = _answer;
-
+        //playerAnswerList[int.Parse(_playerID)] = _answer;
+        playerAnswerOrder.Add(_playerID);
+        playerAnswerList.Add(_answer);
     }
 
     [PunRPC]
@@ -57,59 +126,46 @@ public class GameSetupController : MonoBehaviourPunCallbacks
     {
         roundStatus = 1;
         Debug.Log(PhotonNetwork.LocalPlayer.ActorNumber.ToString());
-        this.photonView.RPC("SendPlayerAnswer", RpcTarget.MasterClient, answer, PhotonNetwork.LocalPlayer.ActorNumber.ToString());
+        this.photonView.RPC("SendPlayerAnswer", RpcTarget.MasterClient, answer, PhotonNetwork.LocalPlayer.ActorNumber);
     }
 
     public void EndOfRound()
     {
-        Debug.Log("EIGENSE VIEW ID:" + PhotonNetwork.LocalPlayer.ActorNumber);
+        //Debug.Log("EIGENSE VIEW ID:" + PhotonNetwork.LocalPlayer.ActorNumber);
+        playerAnswerOrder.Add(PhotonNetwork.LocalPlayer.ActorNumber);
+        playerAnswerList.Add(answer);
         this.photonView.RPC("RequestPlayerAnswer", RpcTarget.Others);
+        Debug.Log("Kurze Pause");
+        Invoke("CompareAnswers", 2.0f); //Wartet 2 Sekunden bevor Funktion aufgerufen wird
     }
 
     [PunRPC]
     public void SendNewRoundData(string _question, string _answer)
     {
-        
         question = _question;
         correct_answer = _answer;
         roundStatus = 0;
     }
 
-    public void NewRound()
+    public void NewRound(int roundId)
     {
-        int questionID = UnityEngine.Random.Range(0, 4);
-        question = QuestionList[questionID];
-        correct_answer = AnswerList[questionID];
+        question = QuestionList[roundId];
+        correct_answer = AnswerList[roundId];
         this.photonView.RPC("SendNewRoundData", RpcTarget.Others, question, correct_answer);
     }
 
-
-    List<string> QuestionList = new List<string>{
-        "How many inhabitants does Germany have?",
-        "How many inhabitants under the age of 20 does Germany have?",
-        "How many inhabitants does Austria have?",
-        "How many people live in Berlin (Germany)?"};
-
-    List<string> AnswerList = new List<string> {
-            "Germany has 83.240.000 inhabitants.",
-            "Germany has 15.430.000 inhabitants under the age of 20.",
-            "Austria has 9.073.648 inhabitants.",
-            "3.677.472 people live in Berlin (Germany)." };
-
-    /*private static List<string> GetQuestions()
+    public void SubmitAnswer()
     {
-        return new List<string>{
-        "How many inhabitants does Germany have?",
-        "How many inhabitants under the age of 20 does Germany have?",
-        "How many inhabitants does Austria have?",
-        "How many people live in Berlin (Germany)?"};
-    }
-    private static List<string> GetAnswers()
-    {
-        return new List<string> {
-            "Germany has 83.240.000 inhabitants.",
-            "Germany has 15.430.000 inhabitants under the age of 20.",
-            "Austria has 9.073.648 inhabitants.",
-            "3.677.472 people live in Berlin (Germany)." };
-    }*/
+        string input = AnswerField.GetComponent<TextMeshProUGUI>().text;
+        //Debug.Log(AnswerField.GetComponent<TextMeshProUGUI>().text[1]);
+        try
+        {
+            answer = float.Parse(input.Substring(0, input.Length - 1));
+            Debug.Log("Answer Submitted Successfully: " + answer);
+        }
+        catch (Exception e)
+        {
+            Debug.Log("Invalid Input");
+        }
+    } //ANSWER MUSS NACH RUNDE AUF NULL GESETZT WERDEN, SONST WIRD ANTOWERT AUS VORHERIGER RUNDE UEBERNOMMEN
 }

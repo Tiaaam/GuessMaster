@@ -36,6 +36,7 @@ public class RoundController : MonoBehaviour
         currentTime = startingTime;
         answerPanel.SetActive(false);
         if (!PhotonNetwork.IsMasterClient) currentround = 0;
+        else this.gameObject.GetComponent<GameSetupController>().NewRound(0);
     }
 
     void Update()
@@ -53,7 +54,8 @@ public class RoundController : MonoBehaviour
 
             if (currentTime <= -answerTime)
             {
-                this.gameObject.GetComponent<GameSetupController>().NewRound();
+                Debug.Log("SHOW QUESTION PANEL" + currentround);
+                this.gameObject.GetComponent<GameSetupController>().NewRound(currentround - 1);
                 showQuestionPanel();
             }
 
