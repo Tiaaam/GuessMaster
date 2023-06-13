@@ -106,6 +106,7 @@ public class GameSetupController : MonoBehaviourPunCallbacks
             Debug.Log("SpielerIndex: " + playerAnswerOrder[index] + " bekommt " + i+1 + " Punkte.");
 
             //Spieler playerAnswerOrder[index] bekommt i punkte
+            savePlayerData(playerAnswerOrder[index], "TestAntwort", i);
             playerAnswerList.RemoveAt(index);
             playerAnswerOrder.RemoveAt(index);
         }
@@ -168,4 +169,10 @@ public class GameSetupController : MonoBehaviourPunCallbacks
             Debug.Log("Invalid Input");
         }
     } //ANSWER MUSS NACH RUNDE AUF NULL GESETZT WERDEN, SONST WIRD ANTOWERT AUS VORHERIGER RUNDE UEBERNOMMEN
+
+    public void savePlayerData(int actorID, string answer, int score)
+    {
+        PhotonNetwork.CurrentRoom.CustomProperties["answer" + actorID.ToString()] = answer;
+        PhotonNetwork.CurrentRoom.CustomProperties["score" + actorID.ToString()] = score;
+    }
 }

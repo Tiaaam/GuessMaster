@@ -108,7 +108,7 @@ public class RoundController : MonoBehaviour
         questionCount++;
         currentTime = startingTime;
     }
-    private void savePlayerData(int actorID, string answer, int score)
+    public void savePlayerData(int actorID, string answer, int score)
     {
         PhotonNetwork.CurrentRoom.CustomProperties["answer" + actorID.ToString()] = answer;
         PhotonNetwork.CurrentRoom.CustomProperties["score" + actorID.ToString()] = score;
