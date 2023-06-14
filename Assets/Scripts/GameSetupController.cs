@@ -9,6 +9,8 @@ using UnityEditor;
 using System.Linq;
 using UnityEngine.UI;
 using TMPro;
+using Photon.Realtime;
+using ExitGames.Client.Photon;
 
 public class GameSetupController : MonoBehaviourPunCallbacks
 {
@@ -106,7 +108,7 @@ public class GameSetupController : MonoBehaviourPunCallbacks
             Debug.Log("SpielerIndex: " + playerAnswerOrder[index] + " bekommt " + i+1 + " Punkte.");
 
             //Spieler playerAnswerOrder[index] bekommt i punkte
-            savePlayerData(playerAnswerOrder[index], "TestAntwort", i);
+            savePlayerData(playerAnswerOrder[index], "TestAntwort", 5);
             playerAnswerList.RemoveAt(index);
             playerAnswerOrder.RemoveAt(index);
         }
@@ -172,7 +174,24 @@ public class GameSetupController : MonoBehaviourPunCallbacks
 
     public void savePlayerData(int actorID, string answer, int score)
     {
-        PhotonNetwork.CurrentRoom.CustomProperties["answer" + actorID.ToString()] = answer;
-        PhotonNetwork.CurrentRoom.CustomProperties["score" + actorID.ToString()] = score;
+        foreach (Player player in PhotonNetwork.PlayerList)
+        {
+            if(player.ActorNumber == actorID)
+            {
+                var hash = player.CustomProperties;
+                hash["Score"] = score + (int)hash["Score"];
+                hash["Answer"] = answer;
+                player.SetCustomProperties(hash);
+
+                Debug.Log("S------------------------------------------------------------");
+                Debug.Log(player.CustomProperties["Score"]);
+
+                Debug.Log("S------------------------------------------------------------");
+            }
+        }
+
+
+        //PhotonNetwork.CurrentRoom.CustomProperties["answer" + actorID.ToString()] = answer;
+        //PhotonNetwork.CurrentRoom.CustomProperties["score" + actorID.ToString()] = score;
     }
 }

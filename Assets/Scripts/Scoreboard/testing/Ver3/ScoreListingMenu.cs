@@ -7,14 +7,14 @@ using Photon.Realtime;
 
 public class ScoreListingMenu : MonoBehaviourPunCallbacks
 {
-
+    /*
     [SerializeField]
     private Transform _content;
     [SerializeField]
     private ScoreList _scoreList;
 
     private List<ScoreList> _listings = new List<ScoreList>();
-
+    
     private void Awake()
     {
         GetCurrentPlayers();
@@ -53,5 +53,43 @@ public class ScoreListingMenu : MonoBehaviourPunCallbacks
             Destroy(_listings[index].gameObject);
             _listings.RemoveAt(index);
         }
+    }
+    */
+    [SerializeField]
+    private Transform container;
+    [SerializeField]
+    private ScoreList itemPrefab;
+
+    Dictionary<Player, ScoreList> scoreboardItems = new Dictionary<Player, ScoreList>();
+
+    void Start()
+    {
+        foreach(Player player in PhotonNetwork.PlayerList)
+        {
+            AddScoreboardItem(player);
+        }
+    }
+
+    void AddScoreboardItem(Player player)
+    {
+        ScoreList item = Instantiate(itemPrefab, container).GetComponent<ScoreList>();
+        item.Initialize(player);
+        scoreboardItems[player] = item;
+    }
+
+    public override void OnPlayerEnteredRoom(Player newPlayer)
+    {
+        AddScoreboardItem(newPlayer);
+    }
+
+    public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        RemoveScoreboardItem(otherPlayer);
+    }
+
+    void RemoveScoreboardItem(Player player)
+    {
+        Destroy(scoreboardItems[player].gameObject);
+        scoreboardItems.Remove(player);
     }
 }

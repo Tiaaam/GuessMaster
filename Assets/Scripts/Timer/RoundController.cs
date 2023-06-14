@@ -7,10 +7,10 @@ using UnityEngine.UI;
 public class RoundController : MonoBehaviour
 {
     private int currentround = 1;
-    private int numberofrounds = (int)PhotonNetwork.CurrentRoom.CustomProperties["NumberOfRounds"];
+    private int numberofrounds = 3;// (int)PhotonNetwork.CurrentRoom.CustomProperties["NumberOfRounds"];
     private int questionCount = 0;
     private float currentTime = 0f;
-    private float startingTime = (int)PhotonNetwork.CurrentRoom.CustomProperties["NumberOfSeconds"];
+    private float startingTime = 10;// (int)PhotonNetwork.CurrentRoom.CustomProperties["NumberOfSeconds"];
     private float answerTime = 5f;
 
     [SerializeField]

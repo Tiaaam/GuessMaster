@@ -2074,8 +2074,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b76c1fb807d403f43a61fc1e0e74a79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _content: {fileID: 781849891}
-  _scoreList: {fileID: 1160545000249717637, guid: 2abfcc5d942c987468a462d860f7efa7, type: 3}
+  container: {fileID: 781849891}
+  itemPrefab: {fileID: 1160545000249717637, guid: 2abfcc5d942c987468a462d860f7efa7, type: 3}
 --- !u!1 &1122811502
 GameObject:
   m_ObjectHideFlags: 0
