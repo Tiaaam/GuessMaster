@@ -43,9 +43,7 @@ public class RoundController : MonoBehaviour
         {
             startingTime = (int)PhotonNetwork.CurrentRoom.CustomProperties["NumberOfSeconds"];
         }
-
-
-                currentTime = startingTime;
+        currentTime = startingTime;
         answerPanel.SetActive(false);
         if (!PhotonNetwork.IsMasterClient) currentround = 0;
         else this.gameObject.GetComponent<GameSetupController>().NewRound(0);

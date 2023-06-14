@@ -3011,6 +3011,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomNameField: {fileID: 22421397}
+  playerCount: {fileID: 1737547037}
+  numberOfRounds: {fileID: 1774258934}
+  roundTime: {fileID: 429894771}
   masterPanel: {fileID: 1870076602}
 --- !u!1 &2053991997
 GameObject:
