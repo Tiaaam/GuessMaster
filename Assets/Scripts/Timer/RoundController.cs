@@ -119,20 +119,5 @@ public class RoundController : MonoBehaviour
         questionCount++;
         currentTime = startingTime;
     }
-    public void savePlayerData(int actorID, string answer, int score)
-    {
-        PhotonNetwork.CurrentRoom.CustomProperties["answer" + actorID.ToString()] = answer;
-        PhotonNetwork.CurrentRoom.CustomProperties["score" + actorID.ToString()] = score;
-    }
 
-
-    private int getPlayerAnswer(int actorID)
-    {
-        return (int)PhotonNetwork.CurrentRoom.CustomProperties["score" + actorID.ToString()];
-    }
-
-    private string getPlayerScore(int actorID)
-    {
-        return (string)PhotonNetwork.CurrentRoom.CustomProperties["answer" + actorID.ToString()];
-    }
 }
