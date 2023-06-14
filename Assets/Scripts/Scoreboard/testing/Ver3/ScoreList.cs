@@ -87,6 +87,7 @@ public class ScoreList : MonoBehaviourPunCallbacks
     {
         var hash = player.CustomProperties;
         score.text = hash["Score"].ToString();
+        rank.text = hash["Rank"].ToString() + ".";
     }
 
 }

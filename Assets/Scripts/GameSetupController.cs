@@ -108,10 +108,19 @@ public class GameSetupController : MonoBehaviourPunCallbacks
             Debug.Log("SpielerIndex: " + playerAnswerOrder[index] + " bekommt " + i+1 + " Punkte.");
 
             //Spieler playerAnswerOrder[index] bekommt i punkte
-            savePlayerData(playerAnswerOrder[index], "TestAntwort", 5);
+
+
+
+            System.Random random = new System.Random();
+            savePlayerData(playerAnswerOrder[index], "TestAntwort", random.Next(50));
+
+
+
+
             playerAnswerList.RemoveAt(index);
             playerAnswerOrder.RemoveAt(index);
         }
+        givePlayerRanking();
     }
 
 
@@ -174,6 +183,8 @@ public class GameSetupController : MonoBehaviourPunCallbacks
 
     public void savePlayerData(int actorID, string answer, int score)
     {
+        
+
         foreach (Player player in PhotonNetwork.PlayerList)
         {
             if(player.ActorNumber == actorID)
@@ -193,5 +204,33 @@ public class GameSetupController : MonoBehaviourPunCallbacks
 
         //PhotonNetwork.CurrentRoom.CustomProperties["answer" + actorID.ToString()] = answer;
         //PhotonNetwork.CurrentRoom.CustomProperties["score" + actorID.ToString()] = score;
+    }
+
+    public void givePlayerRanking()
+    {
+        int previousScore = 0;
+        int rank = 1;
+        List<Player> listing = new List<Player>();
+
+
+        foreach (Player player in PhotonNetwork.PlayerList)
+        {
+            listing.Add(player);
+        }
+
+
+        List<Player> sortedList = listing.OrderBy(p => p.CustomProperties["Score"]).ToList();
+        sortedList.Reverse();
+
+        foreach (Player player in sortedList)
+        {
+            var hash = player.CustomProperties;
+            hash["Rank"] = rank;
+            if(previousScore != (int)hash["Score"])
+            {
+                rank++;
+            }
+            player.SetCustomProperties(hash);
+        }
     }
 }
