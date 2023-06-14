@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Photon.Pun;
 using Photon.Realtime;
+using System.Linq;
 
 public class ScoreListingMenu : MonoBehaviourPunCallbacks
 {
@@ -61,6 +62,7 @@ public class ScoreListingMenu : MonoBehaviourPunCallbacks
     private ScoreList itemPrefab;
 
     Dictionary<Player, ScoreList> scoreboardItems = new Dictionary<Player, ScoreList>();
+    List<Player> currentListing = new List<Player>();
 
     void Start()
     {
@@ -75,6 +77,7 @@ public class ScoreListingMenu : MonoBehaviourPunCallbacks
         ScoreList item = Instantiate(itemPrefab, container).GetComponent<ScoreList>();
         item.Initialize(player);
         scoreboardItems[player] = item;
+        currentListing.Add(player);
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
@@ -91,5 +94,23 @@ public class ScoreListingMenu : MonoBehaviourPunCallbacks
     {
         Destroy(scoreboardItems[player].gameObject);
         scoreboardItems.Remove(player);
+        currentListing.Remove(player);
+    }
+
+    void Update()
+    {
+        List<Player> sortedList = currentListing.OrderBy(p => p.CustomProperties["Rank"]).ToList();
+
+        if (sortedList != currentListing)
+        {
+            foreach (Player player in PhotonNetwork.PlayerList)
+            {
+                RemoveScoreboardItem(player);
+            }
+            foreach (Player player in sortedList)
+            {
+                AddScoreboardItem(player);
+            }
+        }
     }
 }
