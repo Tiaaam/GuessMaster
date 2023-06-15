@@ -84,6 +84,8 @@ public class GameSetupController : MonoBehaviourPunCallbacks
             _l1.Add(splitArray[0]);
             _l2.Add(splitArray[1]);
         }
+
+        Debug.Log(_l2[0] + " " + _l2[1] );
     }
     void CompareAnswers()
     {
@@ -94,13 +96,13 @@ public class GameSetupController : MonoBehaviourPunCallbacks
         //Debug.Log("Sorted List:" + playerAnswerList);
         for (int i = 0; i < list_len;  i++)
         {
-            float min = playerAnswerList[0];
+            float max = playerAnswerList[0];
             int index = 0;
             for (int j = 1; j < playerAnswerList.Count; j++)
             {
-                if(min >= playerAnswerList[j])
+                if(max <= playerAnswerList[j])
                 {
-                    min = playerAnswerList[j];
+                    max = playerAnswerList[j];
                     index = j;
                 }
             }
@@ -162,11 +164,13 @@ public class GameSetupController : MonoBehaviourPunCallbacks
 
     public void SubmitAnswer()
     {
+        Debug.Log(Math.Abs(10));
+        Debug.Log(Math.Abs(-11));
         string input = AnswerField.GetComponent<TextMeshProUGUI>().text;
         //Debug.Log(AnswerField.GetComponent<TextMeshProUGUI>().text[1]);
         try
         {
-            answer = float.Parse(input.Substring(0, input.Length - 1));
+            answer = Math.Abs(float.Parse(correct_answer) - float.Parse(input.Substring(0, input.Length - 1)));
             Debug.Log("Answer Submitted Successfully: " + answer);
         }
         catch (Exception e)
