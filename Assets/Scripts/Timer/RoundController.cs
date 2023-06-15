@@ -36,6 +36,7 @@ public class RoundController : MonoBehaviour
 
     void Start()
     {
+        finalPanel.SetActive(false);
         PhotonNetwork.CurrentRoom.IsOpen = false;
         if (PhotonNetwork.CurrentRoom.CustomProperties.ContainsKey("NumberOfRounds"))
         {
