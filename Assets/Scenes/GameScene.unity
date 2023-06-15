@@ -3034,6 +3034,7 @@ MonoBehaviour:
   roundText: {fileID: 1028291053}
   questionPanel: {fileID: 1087061264}
   answerPanel: {fileID: 1122811502}
+  finalPanel: {fileID: 1340521017}
 --- !u!114 &1200869523
 MonoBehaviour:
   m_ObjectHideFlags: 0

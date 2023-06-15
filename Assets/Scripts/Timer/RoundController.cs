@@ -27,6 +27,8 @@ public class RoundController : MonoBehaviour
     private GameObject questionPanel;
     [SerializeField]
     private GameObject answerPanel;
+    [SerializeField]
+    private GameObject finalPanel;
 
     private bool questionScreen_Showed = false;
     private bool answerScreen_Showed = false;
@@ -72,6 +74,8 @@ public class RoundController : MonoBehaviour
             if (questionCount == numberofrounds)
             {
                 questionCount = 0;
+                this.gameObject.GetComponent<GameSetupController>().EndOfGame();
+                showFinalPanel();
                 currentround = 1;
             }
         }
@@ -79,6 +83,10 @@ public class RoundController : MonoBehaviour
         {
             if (currentTime >= 0) currentTime -= 1 * Time.deltaTime;
             updateTimer();
+            if (GameSetupController.isOver)
+            {
+                showFinalPanel();
+            }
 
             if (GameSetupController.roundStatus == 0 && !answerScreen_Showed)
             {
@@ -92,6 +100,7 @@ public class RoundController : MonoBehaviour
                 answerScreen_Showed = false;
                 showAnswerPanel();
             }
+            
         }
         questionText.text = GameSetupController.question;
         answerText.text = GameSetupController.correct_answer;
@@ -118,5 +127,11 @@ public class RoundController : MonoBehaviour
         questionCount++;
         currentTime = startingTime;
     }
+
+    private void showFinalPanel()
+    {
+        finalPanel.SetActive(true);
+    }
+
 
 }
