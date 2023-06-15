@@ -66,6 +66,6 @@
 
 ### Other Highlights
 
-- we use the german Federal Statistical Office as our data source to use current data from early 2022 for your sample solution
+- we use the german Federal Statistical Office as our data source to use current data from early 2022 for our sample solution
 
 
