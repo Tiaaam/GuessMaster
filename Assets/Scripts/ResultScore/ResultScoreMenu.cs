@@ -14,10 +14,11 @@ public class ResultScoreMenu : MonoBehaviourPunCallbacks
     List<Player> currentListing = new List<Player>();
 
 
-    void Update()
+    void Start()
     {
-        if (GameSetupController.isOver)
-        {
+        Debug.Log(GameSetupController.isOver);
+        //if (GameSetupController.isOver){
+            Debug.Log("aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
             foreach (Player player in PhotonNetwork.PlayerList)
             {
                 currentListing.Add(player);
@@ -29,7 +30,7 @@ public class ResultScoreMenu : MonoBehaviourPunCallbacks
             {
                 AddScoreboardItem(player);
             }
-        }
+        //}
     }
 
     void AddScoreboardItem(Player player)
