@@ -3,7 +3,7 @@
 ### Project Name
 - GuessMaster
 
-### Statistics of effort
+### Statistics of Effort
 
 #### Hours per person and the major constributions per person
 
