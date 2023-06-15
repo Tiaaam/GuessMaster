@@ -66,13 +66,6 @@ public class RoundController : MonoBehaviour
                 showAnswerPanel();
             }
 
-            if (currentTime <= -answerTime)
-            {
-                Debug.Log("SHOW QUESTION PANEL" + currentround);
-                this.gameObject.GetComponent<GameSetupController>().NewRound(currentround - 1);
-                showQuestionPanel();
-            }
-
             if (questionCount == numberofrounds)
             {
                 questionCount = 0;
@@ -81,6 +74,15 @@ public class RoundController : MonoBehaviour
                 currentround = 1;
                 isOver = true;
             }
+
+            if (currentTime <= -answerTime)
+            {
+                Debug.Log("SHOW QUESTION PANEL" + currentround);
+                this.gameObject.GetComponent<GameSetupController>().NewRound(currentround);
+                showQuestionPanel();
+            }
+
+            
         }
         else if(!isOver)
         {

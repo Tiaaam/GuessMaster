@@ -36,7 +36,7 @@ public class GameSetupController : MonoBehaviourPunCallbacks
     {
         Debug.Log("EIGENSE VIEW ID:" + PhotonNetwork.LocalPlayer.ActorNumber);
         GenerateQuestionsAndAnswersInhabitants(AnswerList, QuestionList, 5);
-        answer = 5.6f;
+        answer = 100000000;
         //TextAsset csvFile = Resources.Load<TextAsset>("DataTables/german_cities_area_questions_12_01_2022");
         //Debug.Log(csvFile.text);
     }
@@ -69,9 +69,9 @@ public class GameSetupController : MonoBehaviourPunCallbacks
         int row = 0;
         int max = lines_inhabitants.Length;
 
-        int[] rows1 = new int[_rounds];
+        int[] rows1 = new int[_rounds+1];
 
-        for (int i = 0; i < _rounds; i++)
+        for (int i = 0; i < _rounds+1; i++)
         {
             row = rand.Next(1, max);
 
@@ -111,7 +111,7 @@ public class GameSetupController : MonoBehaviourPunCallbacks
             Debug.Log("SpielerIndex: " + playerAnswerOrder[index] + " bekommt " + i+1 + " Punkte.");
 
             //Spieler playerAnswerOrder[index] bekommt i punkte
-            savePlayerData(playerAnswerOrder[index], "TestAntwort", i+1);
+            savePlayerData(playerAnswerOrder[index], playerAnswerList[index].ToString(), i+1);
 
 
             playerAnswerList.RemoveAt(index);
@@ -153,6 +153,7 @@ public class GameSetupController : MonoBehaviourPunCallbacks
     {
         question = _question;
         correct_answer = _answer;
+        answer = 100000000;
         roundStatus = 0;
     }
 
@@ -171,15 +172,17 @@ public class GameSetupController : MonoBehaviourPunCallbacks
 
     public void NewRound(int roundId)
     {
+        Debug.Log(roundId + "NEW ROUND ID");
         question = QuestionList[roundId];
         correct_answer = AnswerList[roundId];
+        playerAnswerOrder.Clear();
+        playerAnswerList.Clear();
+        answer = 100000000;
         this.photonView.RPC("SendNewRoundData", RpcTarget.Others, question, correct_answer);
     }
 
     public void SubmitAnswer()
     {
-        Debug.Log(Math.Abs(10));
-        Debug.Log(Math.Abs(-11));
         string input = AnswerField.GetComponent<TextMeshProUGUI>().text;
         //Debug.Log(AnswerField.GetComponent<TextMeshProUGUI>().text[1]);
         try
