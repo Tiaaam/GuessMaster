@@ -15,6 +15,7 @@ using ExitGames.Client.Photon;
 public class GameSetupController : MonoBehaviourPunCallbacks
 {
     public static int roundStatus = 0;
+    public static bool isOver = false;
     public static string question = "TestQuestion";
     public static string correct_answer = "AnswerQuestion";
     [SerializeField]
@@ -153,6 +154,19 @@ public class GameSetupController : MonoBehaviourPunCallbacks
         roundStatus = 0;
     }
 
+    public void EndOfGame()
+    {
+        this.photonView.RPC("showFinalScreen", RpcTarget.Others);
+        
+    }
+
+    [PunRPC]
+    public void showFinalScreen()
+    {
+        isOver = true;
+    }
+
+
     public void NewRound(int roundId)
     {
         question = QuestionList[roundId];
@@ -177,8 +191,6 @@ public class GameSetupController : MonoBehaviourPunCallbacks
 
     public void savePlayerData(int actorID, string answer, int score)
     {
-        
-
         foreach (Player player in PhotonNetwork.PlayerList)
         {
             if(player.ActorNumber == actorID)
@@ -187,17 +199,8 @@ public class GameSetupController : MonoBehaviourPunCallbacks
                 hash["Score"] = score + (int)hash["Score"];
                 hash["Answer"] = answer;
                 player.SetCustomProperties(hash);
-
-                Debug.Log("S------------------------------------------------------------");
-                Debug.Log(player.CustomProperties["Score"]);
-
-                Debug.Log("S------------------------------------------------------------");
             }
         }
-
-
-        //PhotonNetwork.CurrentRoom.CustomProperties["answer" + actorID.ToString()] = answer;
-        //PhotonNetwork.CurrentRoom.CustomProperties["score" + actorID.ToString()] = score;
     }
 
     public void givePlayerRanking()

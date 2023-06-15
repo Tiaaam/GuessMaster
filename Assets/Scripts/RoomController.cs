@@ -33,6 +33,13 @@ public class RoomController : MonoBehaviourPunCallbacks
             roundTime.text = PhotonNetwork.CurrentRoom.CustomProperties["NumberOfSeconds"].ToString();
         }
     }
+    void Update()
+    {
+        if (PhotonNetwork.IsMasterClient)
+        {
+            masterPanel.SetActive(true);
+        }
+    }
 
     public void StartGame()
     {

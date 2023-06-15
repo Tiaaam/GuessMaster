@@ -1108,6 +1108,7 @@ GameObject:
   - component: {fileID: 332618736}
   - component: {fileID: 332618735}
   - component: {fileID: 332618734}
+  - component: {fileID: 332618737}
   m_Layer: 5
   m_Name: ReturnButton
   m_TagString: Untagged
@@ -1180,9 +1181,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: LobbyController, Assembly-CSharp
-        m_MethodName: CloseHostPanel
+      - m_Target: {fileID: 332618737}
+        m_TargetAssemblyTypeName: LeaveLobbyButton, Assembly-CSharp
+        m_MethodName: OnClick_LeaveRoom
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1230,6 +1231,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332618732}
   m_CullTransparentMesh: 1
+--- !u!114 &332618737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332618732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ac7bf372f485f40aaff01228c9d6ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &385872998
 GameObject:
   m_ObjectHideFlags: 0
@@ -3034,6 +3047,7 @@ MonoBehaviour:
   roundText: {fileID: 1028291053}
   questionPanel: {fileID: 1087061264}
   answerPanel: {fileID: 1122811502}
+  finalPanel: {fileID: 1340521017}
 --- !u!114 &1200869523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3648,11 +3662,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1413713747}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9b326c77a31da84fbf231b1e6f0eaa1, type: 3}
+  m_Script: {fileID: 11500000, guid: 08f897fba68144b4eb34343836fc3c72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _content: {fileID: 1898340107}
-  _playerList: {fileID: 5389908890543960726, guid: 96af164a2c22a6c46afb4459af215a5d, type: 3}
+  container: {fileID: 1898340107}
+  itemPrefab: {fileID: 6040795964971970073, guid: 96af164a2c22a6c46afb4459af215a5d, type: 3}
 --- !u!1 &1418773219
 GameObject:
   m_ObjectHideFlags: 0

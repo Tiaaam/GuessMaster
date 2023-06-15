@@ -1714,7 +1714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _content: {fileID: 660019640}
-  _playerList: {fileID: 5389908890543960726, guid: 96af164a2c22a6c46afb4459af215a5d, type: 3}
+  _playerList: {fileID: 5389908890543960726, guid: 3ce420d3393632c4b868e093a3580b95, type: 3}
 --- !u!1 &1171833971
 GameObject:
   m_ObjectHideFlags: 0

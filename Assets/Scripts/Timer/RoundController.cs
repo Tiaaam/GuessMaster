@@ -12,6 +12,7 @@ public class RoundController : MonoBehaviour
     private float currentTime = 0f;
     private float startingTime = 10;
     private float answerTime = 5f;
+    private bool isOver = false;
 
     [SerializeField]
     private TextMeshProUGUI countdownText;
@@ -27,6 +28,8 @@ public class RoundController : MonoBehaviour
     private GameObject questionPanel;
     [SerializeField]
     private GameObject answerPanel;
+    [SerializeField]
+    private GameObject finalPanel;
 
     private bool questionScreen_Showed = false;
     private bool answerScreen_Showed = false;
@@ -51,7 +54,7 @@ public class RoundController : MonoBehaviour
 
     void Update()
     {
-        if (PhotonNetwork.IsMasterClient) 
+        if (PhotonNetwork.IsMasterClient && !isOver) 
         {
             currentTime -= 1 * Time.deltaTime;
             updateTimer();
@@ -72,13 +75,20 @@ public class RoundController : MonoBehaviour
             if (questionCount == numberofrounds)
             {
                 questionCount = 0;
+                this.gameObject.GetComponent<GameSetupController>().EndOfGame();
+                showFinalPanel();
                 currentround = 1;
+                isOver = true;
             }
         }
-        else
+        else if(!isOver)
         {
             if (currentTime >= 0) currentTime -= 1 * Time.deltaTime;
             updateTimer();
+            if (GameSetupController.isOver)
+            {
+                showFinalPanel();
+            }
 
             if (GameSetupController.roundStatus == 0 && !answerScreen_Showed)
             {
@@ -92,6 +102,7 @@ public class RoundController : MonoBehaviour
                 answerScreen_Showed = false;
                 showAnswerPanel();
             }
+            
         }
         questionText.text = GameSetupController.question;
         answerText.text = GameSetupController.correct_answer;
@@ -118,5 +129,11 @@ public class RoundController : MonoBehaviour
         questionCount++;
         currentTime = startingTime;
     }
+
+    private void showFinalPanel()
+    {
+        finalPanel.SetActive(true);
+    }
+
 
 }
