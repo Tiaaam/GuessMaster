@@ -1,6 +1,6 @@
 # Handout
 
-### project name
+### Project Name
 - GuessMaster
 
 ### Statistics of effort
@@ -17,32 +17,19 @@
 
 #### Hours per Workflow
 
-| workflow                             | hours |
-|--------------------------------------|-------|
-|Requirements                          |   x   |
-|Analysis & Design                     |   x   |
-|Implementation                        |   x   |
-|Test                                  |   x   |
-|Deployment                            |   x   |
-|Configuration & Change Management     |   x   |
-|Project Management                    |   x   |
-|Environment                           |   x   |
+![Hpurs per workflow](https://github.com/Tiaaam/GuessMaster/assets/62339676/08e9cf85-626d-4f72-a731-48adc43f5c79)
+
 
 #### Hours per Phase
 
-| phase               | hours |
-|---------------------|-------|
-|Inception            |   x   |
-|Elaboration          |   x   |
-|Construction         |   x   |
-|Transistion          |   x   |
+![Hours per phase](https://github.com/Tiaaam/GuessMaster/assets/62339676/d3feac9e-3062-44b4-bdc6-4ce2d5c11d8c)
 
 
-### Highlights of our demo
+### Highlights of our Demo
 
 - WIP - 
 
-### Hightlights of our project
+### Hightlights of our Project
 
 ### Architecture
 - we focus on usability and performance (⇒ we have chosen them, because we realized that user satisfaction is extremely important for our project and these two are very important for that)
