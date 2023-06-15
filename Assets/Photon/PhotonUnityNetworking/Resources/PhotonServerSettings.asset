@@ -40,6 +40,8 @@ MonoBehaviour:
   - RequestPlayerAnswer
   - SendPlayerAnswer
   - SendNewRoundData
+  - KickPlayer
+  - Kick_Player
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
