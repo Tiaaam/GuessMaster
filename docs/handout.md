@@ -27,8 +27,10 @@
 
 ### Highlights of our Demo
 
-- WIP - 
-
+- design is similar to our web engineering project for GuessMaster
+- many combinations for individual games are possible, as we have a large database
+- players can create private and public games and choose individual game settings
+  
 ### Hightlights of our Project
 
 ### Architecture
