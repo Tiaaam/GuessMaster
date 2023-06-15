@@ -1108,6 +1108,7 @@ GameObject:
   - component: {fileID: 332618736}
   - component: {fileID: 332618735}
   - component: {fileID: 332618734}
+  - component: {fileID: 332618737}
   m_Layer: 5
   m_Name: ReturnButton
   m_TagString: Untagged
@@ -1180,9 +1181,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: LobbyController, Assembly-CSharp
-        m_MethodName: CloseHostPanel
+      - m_Target: {fileID: 332618737}
+        m_TargetAssemblyTypeName: LeaveLobbyButton, Assembly-CSharp
+        m_MethodName: OnClick_LeaveRoom
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1230,6 +1231,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332618732}
   m_CullTransparentMesh: 1
+--- !u!114 &332618737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332618732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ac7bf372f485f40aaff01228c9d6ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &385872998
 GameObject:
   m_ObjectHideFlags: 0

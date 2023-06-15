@@ -12,6 +12,7 @@ public class RoundController : MonoBehaviour
     private float currentTime = 0f;
     private float startingTime = 10;
     private float answerTime = 5f;
+    private bool isOver = false;
 
     [SerializeField]
     private TextMeshProUGUI countdownText;
@@ -53,7 +54,7 @@ public class RoundController : MonoBehaviour
 
     void Update()
     {
-        if (PhotonNetwork.IsMasterClient) 
+        if (PhotonNetwork.IsMasterClient && !isOver) 
         {
             currentTime -= 1 * Time.deltaTime;
             updateTimer();
@@ -77,9 +78,10 @@ public class RoundController : MonoBehaviour
                 this.gameObject.GetComponent<GameSetupController>().EndOfGame();
                 showFinalPanel();
                 currentround = 1;
+                isOver = true;
             }
         }
-        else
+        else if(!isOver)
         {
             if (currentTime >= 0) currentTime -= 1 * Time.deltaTime;
             updateTimer();
