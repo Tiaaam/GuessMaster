@@ -108,13 +108,7 @@ public class GameSetupController : MonoBehaviourPunCallbacks
             Debug.Log("SpielerIndex: " + playerAnswerOrder[index] + " bekommt " + i+1 + " Punkte.");
 
             //Spieler playerAnswerOrder[index] bekommt i punkte
-
-
-
-            System.Random random = new System.Random();
-            savePlayerData(playerAnswerOrder[index], "TestAntwort", random.Next(50));
-
-
+            savePlayerData(playerAnswerOrder[index], "TestAntwort", i+1);
 
 
             playerAnswerList.RemoveAt(index);
