@@ -75,8 +75,17 @@ public class LobbyController : MonoBehaviourPunCallbacks
         Debug.Log("JOINED SPECIFIC ROOM!");
         joinSpecificRoomButton.SetActive(false);
         RoomIDLog.text = "";
-        string roomID = RoomIDInput.text.Substring(0,6);
-        PhotonNetwork.JoinRoom(roomID);
+        string roomID_input = RoomIDInput.text;
+        if (roomID_input.Length < 6)
+        {
+            RoomIDLog.text = "Room not found...";
+            joinSpecificRoomButton.SetActive(true);
+        }
+        else
+        {
+            PhotonNetwork.JoinRoom(roomID_input.Substring(0, 6));
+        }
+        
     }
 
     public void OpenHostPanel()
