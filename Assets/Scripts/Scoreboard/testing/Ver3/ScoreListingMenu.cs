@@ -61,7 +61,10 @@ public class ScoreListingMenu : MonoBehaviourPunCallbacks
             }
             foreach (Player player in sortedList)
             {
-                AddScoreboardItem(player);
+                if (!currentListing.Contains(player))
+                {
+                    AddScoreboardItem(player);
+                }
             }
         }
     }
