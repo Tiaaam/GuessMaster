@@ -6,12 +6,12 @@ using UnityEngine.UI;
 
 public class LobbyController : MonoBehaviourPunCallbacks
 {
-    [SerializeField]
-    private GameObject joinRandomRoomButton;
-    [SerializeField]
-    private GameObject joinSpecificRoomButton;
-    [SerializeField]
-    private GameObject HostRoomButton;
+    //[SerializeField]
+    //private GameObject joinRandomRoomButton;
+    //[SerializeField]
+    //private GameObject joinSpecificRoomButton;
+    //[SerializeField]
+    //private GameObject HostRoomButton;
     [SerializeField]
     private TextMeshProUGUI RoomIDInput;
     [SerializeField]
@@ -53,9 +53,9 @@ public class LobbyController : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         PhotonNetwork.AutomaticallySyncScene = true;
-        joinRandomRoomButton.SetActive(true);
-        joinSpecificRoomButton.SetActive(true);
-        HostRoomButton.SetActive(true);
+        //joinRandomRoomButton.SetActive(true);
+        //joinSpecificRoomButton.SetActive(true);
+        //HostRoomButton.SetActive(true);
         Debug.Log("Connected to Master!");
     }
 
@@ -64,7 +64,7 @@ public class LobbyController : MonoBehaviourPunCallbacks
         generateName();
         giveProperties();
         Debug.Log("JOINED RANDOM ROOM!");
-        joinRandomRoomButton.SetActive(false);
+        //joinRandomRoomButton.SetActive(false);
         PhotonNetwork.JoinRandomRoom();
     }
 
@@ -73,13 +73,13 @@ public class LobbyController : MonoBehaviourPunCallbacks
         generateName();
         giveProperties();
         Debug.Log("JOINED SPECIFIC ROOM!");
-        joinSpecificRoomButton.SetActive(false);
+        //joinSpecificRoomButton.SetActive(false);
         RoomIDLog.text = "";
         string roomID_input = RoomIDInput.text;
         if (roomID_input.Length < 6)
         {
             RoomIDLog.text = "Room not found...";
-            joinSpecificRoomButton.SetActive(true);
+            //joinSpecificRoomButton.SetActive(true);
         }
         else
         {
@@ -116,7 +116,7 @@ public class LobbyController : MonoBehaviourPunCallbacks
     public override void OnJoinRoomFailed(short returnCode, string message)
     {
         RoomIDLog.text = "Room not found...";
-        joinSpecificRoomButton.SetActive(true);
+        //joinSpecificRoomButton.SetActive(true);
     }
 
     public void CreateRoom(int roomSize, int rounds, int seconds, bool isPublic)

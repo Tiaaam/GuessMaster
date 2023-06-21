@@ -5263,9 +5263,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd670ad20137c584bb2328920e91585a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joinRandomRoomButton: {fileID: 200602557}
-  joinSpecificRoomButton: {fileID: 310118228}
-  HostRoomButton: {fileID: 1277126441}
   RoomIDInput: {fileID: 1860787723}
   RoomIDLog: {fileID: 1983012452}
   numberOfPlayers: {fileID: 780259021}

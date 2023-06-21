@@ -19,7 +19,9 @@ public class GameSetupController : MonoBehaviourPunCallbacks
     public static string question = "TestQuestion";
     public static string correct_answer = "AnswerQuestion";
     [SerializeField]
-    private GameObject AnswerField;
+    private TMP_InputField AnswerField;
+    [SerializeField]
+    private TextMeshProUGUI SubmittedAnswerField;
     private float answer;
 
 
@@ -37,6 +39,7 @@ public class GameSetupController : MonoBehaviourPunCallbacks
         Debug.Log("EIGENSE VIEW ID:" + PhotonNetwork.LocalPlayer.ActorNumber);
         GenerateQuestionsAndAnswersInhabitants(AnswerList, QuestionList, 5);
         answer = 100000000;
+        SubmittedAnswerField.text = "";
         //TextAsset csvFile = Resources.Load<TextAsset>("DataTables/german_cities_area_questions_12_01_2022");
         //Debug.Log(csvFile.text);
     }
@@ -154,6 +157,7 @@ public class GameSetupController : MonoBehaviourPunCallbacks
         question = _question;
         correct_answer = _answer;
         answer = 100000000;
+        SubmittedAnswerField.text = "";
         roundStatus = 0;
     }
 
@@ -178,23 +182,25 @@ public class GameSetupController : MonoBehaviourPunCallbacks
         playerAnswerOrder.Clear();
         playerAnswerList.Clear();
         answer = 100000000;
+        SubmittedAnswerField.text = "";
         this.photonView.RPC("SendNewRoundData", RpcTarget.Others, question, correct_answer);
     }
 
     public void SubmitAnswer()
     {
-        string input = AnswerField.GetComponent<TextMeshProUGUI>().text;
-        //Debug.Log(AnswerField.GetComponent<TextMeshProUGUI>().text[1]);
+        string input = AnswerField.text;
         try
         {
-            answer = Math.Abs(float.Parse(correct_answer) - float.Parse(input.Substring(0, input.Length - 1)));
-            Debug.Log("Answer Submitted Successfully: " + answer);
+            answer = Math.Abs(float.Parse(correct_answer) - float.Parse(input));
+            Debug.Log("Answer Submitted Successfully: " + input);
         }
         catch (Exception e)
         {
             Debug.Log("Invalid Input");
         }
-    } //ANSWER MUSS NACH RUNDE AUF NULL GESETZT WERDEN, SONST WIRD ANTOWERT AUS VORHERIGER RUNDE UEBERNOMMEN
+        AnswerField.text = "";
+        SubmittedAnswerField.text = "Your Guess: " + input;
+    }
 
     public void savePlayerData(int actorID, string answer, int score)
     {
