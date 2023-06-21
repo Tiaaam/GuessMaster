@@ -7,21 +7,16 @@ using UnityEngine.SceneManagement;
 
 public class LeaveLobbyButton : MonoBehaviourPunCallbacks
 {
-    [SerializeField]
-    private GameObject finalPanel;
-
     public void OnClick_LeaveRoom()
     {
         PhotonNetwork.LeaveRoom();
         Debug.Log("Left Room");
-        if (finalPanel)
-        {
-            finalPanel.SetActive(false);
-        }
     }
 
     public override void OnLeftRoom()
     {
         PhotonNetwork.LoadLevel(0);
     }
+
+
 }
