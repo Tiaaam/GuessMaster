@@ -270,6 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50ac7bf372f485f40aaff01228c9d6ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RankingPanel: {fileID: 0}
 --- !u!1 &44128934
 GameObject:
   m_ObjectHideFlags: 0
@@ -1108,7 +1109,6 @@ GameObject:
   - component: {fileID: 332618736}
   - component: {fileID: 332618735}
   - component: {fileID: 332618734}
-  - component: {fileID: 332618737}
   m_Layer: 5
   m_Name: ReturnButton
   m_TagString: Untagged
@@ -1181,7 +1181,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 332618737}
+      - m_Target: {fileID: 1200869524}
         m_TargetAssemblyTypeName: LeaveLobbyButton, Assembly-CSharp
         m_MethodName: OnClick_LeaveRoom
         m_Mode: 1
@@ -1231,18 +1231,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332618732}
   m_CullTransparentMesh: 1
---- !u!114 &332618737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332618732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50ac7bf372f485f40aaff01228c9d6ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &383493330
 GameObject:
   m_ObjectHideFlags: 0
@@ -3128,6 +3116,7 @@ GameObject:
   - component: {fileID: 1200869519}
   - component: {fileID: 1200869521}
   - component: {fileID: 1200869523}
+  - component: {fileID: 1200869524}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3206,6 +3195,19 @@ MonoBehaviour:
   sceneViewId: 1
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &1200869524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200869518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ac7bf372f485f40aaff01228c9d6ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RankingPanel: {fileID: 1340521017}
 --- !u!1 &1211416597
 GameObject:
   m_ObjectHideFlags: 0

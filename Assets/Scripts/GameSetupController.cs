@@ -193,13 +193,14 @@ public class GameSetupController : MonoBehaviourPunCallbacks
         {
             answer = Math.Abs(float.Parse(correct_answer) - float.Parse(input));
             Debug.Log("Answer Submitted Successfully: " + input);
+            SubmittedAnswerField.text = "Your Guess: " + input;
         }
         catch (Exception e)
         {
             Debug.Log("Invalid Input");
         }
         AnswerField.text = "";
-        SubmittedAnswerField.text = "Your Guess: " + input;
+        
     }
 
     public void savePlayerData(int actorID, string answer, int score)
