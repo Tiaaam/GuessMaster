@@ -15,14 +15,14 @@ public class PlayerList : MonoBehaviourPunCallbacks
     {
         Player = player;
         nametext.text = player.NickName;
-        if (!PhotonNetwork.IsMasterClient)
+        /*if (!PhotonNetwork.IsMasterClient)
         {
             kickButton.SetActive(false);
         }
         if (player.IsMasterClient)
         {
             //kickButton.SetActive(false);
-        }
+        }*/
     }
     [PunRPC]
     private void Kick_Player()

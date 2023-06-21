@@ -44,5 +44,5 @@ MonoBehaviour:
   - Kick_Player
   - showFinalScreen
   DisableAutoOpenWizard: 1
-  ShowSettings: 0
+  ShowSettings: 1
   DevRegionSetOnce: 1
