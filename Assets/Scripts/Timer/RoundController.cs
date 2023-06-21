@@ -136,6 +136,7 @@ public class RoundController : MonoBehaviour
     private void showFinalPanel()
     {
         finalPanel.SetActive(true);
+        GameSetupController.isOver = false;
     }
 
 
